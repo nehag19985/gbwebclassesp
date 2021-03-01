@@ -19,6 +19,97 @@ GlobalControl
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="P:GlobalControl.Variables.userid0_mdf_0">
+	<summary>
+  user id of 0_mdf_0 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.userid_0_srv_0">
+	<summary>
+  user id of 0_srv_0 server
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.UserServerDatabase">
+	<summary>
+  pwd of 0_srv_0 server
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.TemplateServerDatabase">
+	<summary>
+  pwd of 0_srv_0 server
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.MainServerDatabase">
+	<summary>
+  Name of Main server Database to keep information of gainbooks
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.pwd_0_srv_0">
+	<summary>
+  pwd of 0_srv_0 server
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.userid1_mdf_1">
+	<summary>
+  user id of 1_mdf_1 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.userid2_mdf_2">
+	<summary>
+  user id of 2_mdf_2 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.userid3_mdf_3">
+	<summary>
+  user id of 3_mdf_3 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.pwd2_mdf_2">
+	<summary>
+  password of 2_mdf_2 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.pwd0_mdf_0">
+	<summary>
+  password of 0_mdf_0 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.pwd1_mdf_1">
+	<summary>
+  password of 1_mdf_1 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.pwd3_mdf_3">
+	<summary>
+  password of 3_mdf_3 database
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
 </member><member name="P:GlobalControl.Variables.CustomKeyBoardValues">
 	<summary>
   Gets or Sets HashTable of values of custom keyboard. where key is e.keycode and value is string corressponding to this keycode ,Values are set or get in ApplicationControlData.

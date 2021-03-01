@@ -64,6 +64,246 @@ Public Class Variables
     Private Shared _ConversionTypeHashTable As Hashtable = InitializeConversionHashTable()
     Private Shared _entFormStru As DataTable = Nothing
     Private Shared _LastProcessingData As Object = Nothing
+    Private Shared _userid0_mdf_0 As String = ""
+    Private Shared _userid1_mdf_1 As String = ""
+    Private Shared _userid2_mdf_2 As String = ""
+    Private Shared _userid3_mdf_3 As String = ""
+
+    Private Shared _pwd1_mdf_1 As String = ""
+    Private Shared _pwd2_mdf_2 As String = ""
+    Private Shared _pwd3_mdf_3 As String = ""
+    Private Shared _pwd0_mdf_0 As String = ""
+
+    Private Shared _userid_0_srv_0 As String = ""
+    Private Shared _pwd_0_srv_0 As String = ""
+
+
+
+    ''' <summary>
+    '''  user id of 0_mdf_0 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property userid0_mdf_0() As String
+        Get
+            Return _userid0_mdf_0
+        End Get
+        Set(ByVal value As String)
+            _userid0_mdf_0 = value
+        End Set
+    End Property
+
+
+
+    ''' <summary>
+    '''  user id of 0_srv_0 server
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property userid_0_srv_0() As String
+        Get
+            Return _userid_0_srv_0
+            ' _userid_0_srv_0
+        End Get
+        Set(ByVal value As String)
+            _userid_0_srv_0 = value
+        End Set
+    End Property
+
+    Private Shared _userserverdatabase As String = ""
+
+    ''' <summary>
+    '''  pwd of 0_srv_0 server
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property UserServerDatabase() As String
+        Get
+            Return _userserverdatabase
+        End Get
+        Set(ByVal value As String)
+            _userserverdatabase = value
+        End Set
+    End Property
+
+
+    Private Shared _Templateserverdatabase As String = ""
+
+    ''' <summary>
+    '''  pwd of 0_srv_0 server
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property TemplateServerDatabase() As String
+        Get
+            Return _Templateserverdatabase
+        End Get
+        Set(ByVal value As String)
+            _Templateserverdatabase = value
+        End Set
+    End Property
+
+
+
+
+    Private Shared _MainServerDatabase As String = ""
+
+    ''' <summary>
+    '''  Name of Main server Database to keep information of gainbooks
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property MainServerDatabase() As String
+        Get
+            Return _Mainserverdatabase
+        End Get
+        Set(ByVal value As String)
+            _Mainserverdatabase = value
+        End Set
+    End Property
+
+
+
+
+
+
+
+    ''' <summary>
+    '''  pwd of 0_srv_0 server
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property pwd_0_srv_0() As String
+        Get
+            Return _pwd_0_srv_0
+        End Get
+        Set(ByVal value As String)
+            _pwd_0_srv_0 = value
+        End Set
+    End Property
+
+    ''' <summary>
+    '''  user id of 1_mdf_1 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property userid1_mdf_1() As String
+        Get
+            Return _userid1_mdf_1
+        End Get
+        Set(ByVal value As String)
+            _userid1_mdf_1 = value
+        End Set
+    End Property
+
+
+    ''' <summary>
+    '''  user id of 2_mdf_2 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property userid2_mdf_2() As String
+        Get
+            Return _userid2_mdf_2
+        End Get
+        Set(ByVal value As String)
+            _userid2_mdf_2 = value
+        End Set
+    End Property
+
+
+    ''' <summary>
+    '''  user id of 3_mdf_3 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property userid3_mdf_3() As String
+        Get
+            Return _userid3_mdf_3
+        End Get
+        Set(ByVal value As String)
+            _userid3_mdf_3 = value
+        End Set
+    End Property
+
+
+    ''' <summary>
+    '''  password of 2_mdf_2 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property pwd2_mdf_2() As String
+        Get
+            Return _pwd2_mdf_2
+        End Get
+        Set(ByVal value As String)
+            _pwd2_mdf_2 = value
+        End Set
+    End Property
+
+
+
+
+    ''' <summary>
+    '''  password of 0_mdf_0 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property pwd0_mdf_0() As String
+        Get
+            Return _pwd0_mdf_0
+        End Get
+        Set(ByVal value As String)
+            _pwd0_mdf_0 = value
+        End Set
+    End Property
+
+
+    ''' <summary>
+    '''  password of 1_mdf_1 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property pwd1_mdf_1() As String
+        Get
+            Return _pwd1_mdf_1
+        End Get
+        Set(ByVal value As String)
+            _pwd1_mdf_1 = value
+        End Set
+    End Property
+
+
+
+
+    ''' <summary>
+    '''  password of 3_mdf_3 database
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Property pwd3_mdf_3() As String
+        Get
+            Return _pwd3_mdf_3
+        End Get
+        Set(ByVal value As String)
+            _pwd3_mdf_3 = value
+        End Set
+    End Property
+
+
     ''' <summary>
     '''  Gets or Sets HashTable of values of custom keyboard. where key is e.keycode and value is string corressponding to this keycode ,Values are set or get in ApplicationControlData.
     ''' </summary>   

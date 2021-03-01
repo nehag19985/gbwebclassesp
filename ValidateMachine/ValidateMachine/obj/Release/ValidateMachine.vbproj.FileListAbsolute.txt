@@ -49,3 +49,12 @@ D:\saralwin_old\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateM
 D:\saralwin_old\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.dll
 D:\saralwin_old\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.xml
 D:\saralwin_old\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.pdb
+D:\TECHNO_SAAS\webdlls\ValidateMachine.dll
+D:\TECHNO_SAAS\webdlls\ValidateMachine.pdb
+D:\TECHNO_SAAS\webdlls\ValidateMachine.xml
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.vbprojResolveAssemblyReference.cache
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.Resources.resources
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.vbproj.GenerateResource.Cache
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.dll
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.xml
+D:\TECHNO_SAAS\Webclasses\ValidateMachine\ValidateMachine\obj\Release\ValidateMachine.pdb

@@ -55,3 +55,12 @@ D:\saralwin_old\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions
 D:\saralwin_old\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.dll
 D:\saralwin_old\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.xml
 D:\saralwin_old\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.pdb
+D:\TECHNO_SAAS\webdlls\DataFunctions.dll
+D:\TECHNO_SAAS\webdlls\DataFunctions.pdb
+D:\TECHNO_SAAS\webdlls\DataFunctions.xml
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\ResolveAssemblyReference.cache
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.Resources.resources
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.vbproj.GenerateResource.Cache
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.dll
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.xml
+D:\TECHNO_SAAS\Webclasses\DataFunctions\DataFunctions\obj\Release\DataFunctions.pdb

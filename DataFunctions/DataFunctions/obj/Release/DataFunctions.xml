@@ -43,7 +43,7 @@ DataFunctions
 	<returns>Return a list of server name and data base name</returns>
 	<remarks></remarks>
 </member><member name="M:DataFunctions.DataFunctions.OpenSqlConnection(System.String,System.Int32,System.Int32)">
-	<summary>
+	<summary>  
  To open new SQL connection
  </summary>
 	<param name="ServerDataBase">Full identifier of a database eg. server1.database1</param>
@@ -99,6 +99,26 @@ DataFunctions
 	<param name="MaxPoolSize">Max pool size connections at a time default is 100</param>
 	<param name="ConnectionTimeOut">Connection time out in seconds defau</param>
 	<returns>An Sql connection</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateDBOwnerLogin(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates User Login for one database
+ </summary>
+	<param name="servername">server name</param>
+	<param name="databasename"> database name</param>
+	<param name="dbLoginName">login name</param>
+	<param name="dbpassword">password</param>
+	<returns>result as boolean</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateReadOnlyLogin(System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates Read only User Login
+ </summary>
+	<param name="servername">server name</param>
+	<param name="databasename"> database name</param>
+	<param name="dbLoginName">login name</param>
+	<param name="dbpassword">password</param>
+	<returns>result as boolean</returns>
 	<remarks></remarks>
 </member><member name="M:DataFunctions.DataFunctions.AttachDataBase(System.String,System.String,System.Boolean,System.Boolean)">
 	<summary>

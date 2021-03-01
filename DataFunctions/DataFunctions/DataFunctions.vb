@@ -152,7 +152,7 @@ Public Class DataFunctions
         Return Alist
     End Function
 
-    ''' <summary>
+    ''' <summary>  
     ''' To open new SQL connection
     ''' </summary>
     ''' <param name="ServerDataBase">Full identifier of a database eg. server1.database1</param>
@@ -164,6 +164,13 @@ Public Class DataFunctions
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Return Nothing : Exit Function
         Dim lcons As New SqlConnection
         Try
+            Dim serverstr As String = ConvertFromSrv0Mdf0(ServerDataBase)
+            Dim convenserverdb As String = ""
+            If ServerDataBase.Equals(serverstr) Then
+                convenserverdb = getServerMdfFromServerDatabase(ServerDataBase)
+            Else
+                convenserverdb = ServerDataBase
+            End If
             Dim AList As List(Of String) = BreakServerDataBase(ConvertFromSrv0Mdf0(ServerDataBase))
             Dim MSqlServer As String = AList(0)
             Dim MdataBase As String = AList(1)
@@ -172,20 +179,90 @@ Public Class DataFunctions
             Dim mUserPwd As String = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "SqlUserPassword").ToString.Trim
             If IsLocalServer(MSqlServer) = False Then
                 Dim mSaralType As String = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "SaralType").ToString.Trim
-                Select Case LCase(mSaralType)
+                '  MsgBox(LCase(Trim(mSaralType)))
+                Select Case LCase(Trim(mSaralType))
+
                     Case "lan"
                         mUserId = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "LANSqlUserName").ToString.Trim
                         mUserPwd = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "LANSqlUserPassword").ToString.Trim
                     Case "weblocal"
                         mUserId = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "WebSqlUserName").ToString.Trim
                         mUserPwd = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "WebSqlUserPassword").ToString.Trim
-                    Case "webgodaddy", "webazure"
+                    Case "webgodaddy" ', "webazure"
+                    
                         mUserId = GlobalControl.Variables.WebHostingUserName.ToString.Trim
                         mUserPwd = GlobalControl.Variables.WebHostingUserPassword.ToString.Trim
+                        Dim convenservearr() As String = Split(convenserverdb, ".", -1)
+                        If convenservearr.Count = 2 Then
+                            Select Case convenservearr(1)
+                                Case "0_mdf_0"
+                                    mUserId = GlobalControl.Variables.userid0_mdf_0.ToString.Trim
+                                    mUserPwd = GlobalControl.Variables.pwd0_mdf_0.ToString.Trim
+                                Case "1_mdf_1"
+                                    mUserId = GlobalControl.Variables.userid1_mdf_1.ToString.Trim
+                                    mUserPwd = GlobalControl.Variables.pwd1_mdf_1.ToString.Trim
+                                Case "2_mdf_2"
+                                    mUserId = GlobalControl.Variables.userid2_mdf_2.ToString.Trim
+                                    mUserPwd = GlobalControl.Variables.pwd2_mdf_2.ToString.Trim
+
+                                Case "3_mdf_3"
+                                    mUserId = GlobalControl.Variables.userid3_mdf_3.ToString.Trim
+                                    mUserPwd = GlobalControl.Variables.pwd3_mdf_3.ToString.Trim
+
+                                Case "master"
+                                    mUserId = GlobalControl.Variables.userid_0_srv_0.ToString.Trim
+                                    mUserPwd = GlobalControl.Variables.pwd_0_srv_0.ToString.Trim
+                            End Select
+
+                        End If
+
                     Case "cloud"
                         mUserId = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "CloudSqlUserName").ToString.Trim
                         mUserPwd = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "CloudSqlUserPassword").ToString.Trim
+                    Case "gainbooks"
+
+                        Select Case ServerDataBase
+                            Case "0_srv_0.0_mdf_0"
+                                mUserId = GlobalControl.Variables.userid0_mdf_0.ToString.Trim
+                                mUserPwd = GlobalControl.Variables.pwd0_mdf_0.ToString.Trim
+                            Case "0_srv_0.1_mdf_1"
+                                mUserId = GlobalControl.Variables.userid1_mdf_1.ToString.Trim
+                                mUserPwd = GlobalControl.Variables.pwd1_mdf_1.ToString.Trim
+                            Case "0_srv_0.2_mdf_2"
+                                mUserId = GlobalControl.Variables.userid2_mdf_2.ToString.Trim
+                                mUserPwd = GlobalControl.Variables.pwd2_mdf_2.ToString.Trim
+
+                            Case "0_srv_0.3_mdf_3"
+                                mUserId = GlobalControl.Variables.userid3_mdf_3.ToString.Trim
+                                mUserPwd = GlobalControl.Variables.pwd3_mdf_3.ToString.Trim
+
+
+
+                        End Select
+
+                        mUserId = GlobalControl.Variables.WebHostingUserName.ToString.Trim
+                        mUserPwd = GlobalControl.Variables.WebHostingUserPassword.ToString.Trim
                 End Select
+            Else
+                'Select Case ServerDataBase
+                '    Case "0_srv_0.0_mdf_0"
+                '        mUserId = GlobalControl.Variables.userid0_mdf_0.ToString.Trim
+                '        mUserPwd = GlobalControl.Variables.pwd0_mdf_0.ToString.Trim
+                '    Case "0_srv_0.1_mdf_1"
+                '        mUserId = GlobalControl.Variables.userid1_mdf_1.ToString.Trim
+                '        mUserPwd = GlobalControl.Variables.pwd1_mdf_1.ToString.Trim
+                '    Case "0_srv_0.2_mdf_2"
+                '        mUserId = GlobalControl.Variables.userid2_mdf_2.ToString.Trim
+                '        mUserPwd = GlobalControl.Variables.pwd2_mdf_2.ToString.Trim
+
+                '    Case "0_srv_0.3_mdf_3"
+                '        mUserId = GlobalControl.Variables.userid3_mdf_3.ToString.Trim
+                '        mUserPwd = GlobalControl.Variables.pwd3_mdf_3.ToString.Trim
+
+                '    Case "0_srv_0.master"
+                '        mUserId = GlobalControl.Variables.userid_0_srv_0.ToString.Trim
+                '        mUserPwd = GlobalControl.Variables.pwd_0_srv_0.ToString.Trim
+                'End Select
             End If
             Dim Retryduration As TimeSpan = TimeSpan.FromSeconds(ConnectionTimeOut)
             Dim StartTime As DateTime = Now()
@@ -415,10 +492,64 @@ GoToTry:
                 Case "webgodaddy", "webazure"
                     mUserId = GlobalControl.Variables.WebHostingUserName.ToString.Trim
                     mUserPwd = GlobalControl.Variables.WebHostingUserPassword.ToString.Trim
+
+                    Select Case DataBaseName
+                        Case "0_mdf_0"
+                            mUserId = GlobalControl.Variables.userid0_mdf_0.ToString.Trim
+                            mUserPwd = GlobalControl.Variables.pwd0_mdf_0.ToString.Trim
+                        Case "1_mdf_1"
+                            mUserId = GlobalControl.Variables.userid1_mdf_1.ToString.Trim
+                            mUserPwd = GlobalControl.Variables.pwd1_mdf_1.ToString.Trim
+                        Case "2_mdf_2"
+                            mUserId = GlobalControl.Variables.userid2_mdf_2.ToString.Trim
+                            mUserPwd = GlobalControl.Variables.pwd2_mdf_2.ToString.Trim
+
+                        Case "3_mdf_3"
+                            mUserId = GlobalControl.Variables.userid3_mdf_3.ToString.Trim
+                            mUserPwd = GlobalControl.Variables.pwd3_mdf_3.ToString.Trim
+
+                        Case "master"
+
+                            mUserId = GlobalControl.Variables.userid_0_srv_0.ToString.Trim
+                            mUserPwd = GlobalControl.Variables.pwd_0_srv_0.ToString.Trim
+
+
+
+                    End Select
+
+
+
+
+
                 Case "cloud"
                     mUserId = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "CloudSqlUserName").ToString.Trim
                     mUserPwd = GF1.GetValueFromHashTable(GlobalControl.Variables.AppControlHashTable, "CloudSqlUserPassword").ToString.Trim
             End Select
+        Else
+            'Select Case DataBaseName
+            '    Case "0_mdf_0"
+            '        mUserId = GlobalControl.Variables.userid0_mdf_0.ToString.Trim
+            '        mUserPwd = GlobalControl.Variables.pwd0_mdf_0.ToString.Trim
+            '    Case "1_mdf_1"
+            '        mUserId = GlobalControl.Variables.userid1_mdf_1.ToString.Trim
+            '        mUserPwd = GlobalControl.Variables.pwd1_mdf_1.ToString.Trim
+            '    Case "2_mdf_2"
+            '        mUserId = GlobalControl.Variables.userid2_mdf_2.ToString.Trim
+            '        mUserPwd = GlobalControl.Variables.pwd2_mdf_2.ToString.Trim
+
+            '    Case "3_mdf_3"
+            '        mUserId = GlobalControl.Variables.userid3_mdf_3.ToString.Trim
+            '        mUserPwd = GlobalControl.Variables.pwd3_mdf_3.ToString.Trim
+
+            '    Case "master"
+
+            '        mUserId = GlobalControl.Variables.userid_0_srv_0.ToString.Trim
+            '        mUserPwd = GlobalControl.Variables.pwd_0_srv_0.ToString.Trim
+
+
+
+            'End Select
+
         End If
         Dim lcons As New SqlConnection
         Dim Retryduration As TimeSpan = TimeSpan.FromSeconds(30)
@@ -446,6 +577,119 @@ GoToTry:
         End Try
         Return lcons
     End Function
+
+    ''' <summary>
+    ''' Creates User Login for one database
+    ''' </summary>
+    ''' <param name="servername">server name</param>
+    ''' <param name="databasename"> database name</param>
+    ''' <param name="dbLoginName">login name</param>
+    ''' <param name="dbpassword">password</param>
+    ''' <returns>result as boolean</returns>
+    ''' <remarks></remarks>
+    Public Function CreateDBOwnerLogin(ByVal servername As String, ByVal databasename As String, ByVal dbLoginName As String, ByVal dbpassword As String, ByVal sapwd As String)
+        Dim connection As SqlConnection
+        Dim command As SqlCommand
+        Dim sql, dbLogUser, Grant As String
+        Dim result As String = "True"
+        Dim servername1 As String
+        servername1 = GetServerDataBase(servername)
+        sconn = "Data Source=" & servername1 & ";Initial Catalog=" & databasename & ";User Id=sa" & ";Password=" & sapwd
+        connection = New SqlConnection(sconn)
+
+        connection.Open()
+        Dim userdt As DataTable = SqlExecuteDataTable(connection, "SELECT * FROM sys.database_principals WHERE name = '" & dbLoginName & "'")
+        If userdt.Rows.Count > 0 Then
+            SqlExecuteNonQuery(connection, "DROP USER " & dbLoginName & " ")
+        End If
+        Dim logindt As DataTable = SqlExecuteDataTable(connection, "select * from master.dbo.syslogins where loginname='" & dbLoginName & "'")
+        If logindt.Rows.Count > 0 Then
+            SqlExecuteNonQuery(connection, "DROP LOGIN " & dbLoginName & " ")
+        End If
+        connection.Close()
+
+        Try
+            connection.Open()
+            sql = "CREATE LOGIN " & dbLoginName & " WITH PASSWORD= '" & dbpassword & "'"
+            dbLogUser = "USE " & databasename & " CREATE USER " & dbLoginName & " FOR LOGIN " & dbLoginName & ""
+            Grant = "exec sp_addrolemember 'db_owner', '" & dbLoginName & "'"
+            Dim finalStr As String = sql & " " & dbLogUser & " " & Grant
+            command = New SqlCommand(finalStr, connection)
+            result = command.ExecuteNonQuery()
+            connection.Close()
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+        Return result
+    End Function
+
+
+    ''' <summary>
+    ''' Creates Read only User Login
+    ''' </summary>
+    ''' <param name="servername">server name</param>
+    ''' <param name="databasename"> database name</param>
+    ''' <param name="dbLoginName">login name</param>
+    ''' <param name="dbpassword">password</param>
+    ''' <returns>result as boolean</returns>
+    ''' <remarks></remarks>
+    Public Function CreateReadOnlyLogin(ByVal servername As String, ByVal databasename As String, ByVal dbLoginName As String, ByVal dbpassword As String) As Boolean
+        Dim connectionString As String
+        Dim connection As SqlConnection
+        Dim command As SqlCommand
+        Dim sql, dbLogUser, Grant As String
+        Dim result As Boolean
+        Dim servername1 As String
+        servername1 = GetServerDataBase(servername)
+        connectionString = "Data Source=" & servername1 & ";Initial Catalog=" & databasename & ";Integrated Security=True"
+        connection = New SqlConnection(connectionString)
+        Try
+            connection.Open()
+            'FOR CREATE LOGIN
+            sql = "CREATE LOGIN " & dbLoginName & " WITH PASSWORD= '" & dbpassword & "'"
+            command = New SqlCommand(sql, connection)
+            command.ExecuteNonQuery()
+            'FOR CREATING USER ON DATABASE
+            dbLogUser = "USE " & databasename & " CREATE USER " & dbLoginName & " FOR LOGIN " & dbLoginName & ""
+            command = New SqlCommand(dbLogUser, connection)
+            command.ExecuteNonQuery()
+            'FOR GRANTING  Permission on database.
+            Grant = "GRANT SELECT, INSERT, UPDATE, DELETE  ON DATABASE :: " & databasename & " TO " & dbLoginName & ""
+            command = New SqlCommand(Grant, connection)
+            result = command.ExecuteNonQuery()
+            connection.Close()
+        Catch ex As Exception
+            Try
+                'FOR CREATING USER ON DATABASE
+                dbLogUser = "USE " & databasename & " CREATE USER " & dbLoginName & " FOR LOGIN " & dbLoginName & ""
+                command = New SqlCommand(dbLogUser, connection)
+                result = command.ExecuteNonQuery()
+                'FOR GRANTING ONLY VIEW NO DML OPERATION PERFORMED ON DATABASE
+                'GrantSelect = "GRANT SELECT ON DATABASE :: " & databasename & " TO " & LoginName & ""
+                'command = New SqlCommand(GrantSelect, connection)
+                'result = command.ExecuteNonQuery()
+                connection.Close()
+            Catch ex1 As Exception
+                'FOR GRANTING ONLY READ ONLY PERMISSION WHEN USER IS ALREADY EXIST BUT NOT HAVE READ ONLY PERMISSION.
+                'GrantSelect = "GRANT SELECT ON DATABASE :: " & databasename & " TO " & LoginName & ""
+                'command = New SqlCommand(GrantSelect, connection)
+                'Try
+                '    result = command.ExecuteNonQuery()
+                '    connection.Close()
+                'Catch ex3 As Exception
+                '    result = False
+                'End Try
+            End Try
+        End Try
+        Return result
+    End Function
+
+
+
+
+
+
+
 
     ''' <summary>
     ''' Attach a database to server
@@ -619,8 +863,10 @@ GoToTry:
     ''' <returns></returns>
     ''' <remarks></remarks>
 
-    Public Function CreateDataBase(ByVal SqlServer As String, ByVal DataBaseFolder As String, ByVal DataBaseName As String) As Boolean
+
+    Public Function CreateDataBase(ByVal SqlServer As String, ByVal DataBaseFolder As String, ByVal DataBaseName As String) As String
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Return Nothing : Exit Function
+        '  Dim kjl As String = "databaseexists"
         Try
             SqlServer = ConvertFromSrv0(SqlServer)
             DataBaseName = ConvertFromMdf0(DataBaseName)
@@ -628,9 +874,14 @@ GoToTry:
             afiles.Add(DataBaseFolder)
             afiles.Add(DataBaseName)
             afiles.Add("mdf")
+
+
+
             If Not DataBaseExists(SqlServer, afiles(1).Trim) Then
+                '  Dim klj As String = "databasenotexists"
                 Dim FullFileName As String = GF1.GetFullFileName(afiles)
                 Dim LSqlStr As String = "Create DataBase " & afiles(1) & " on primary"
+                GlobalControl.Variables.SqlVersion = 2012
                 Select Case GlobalControl.Variables.SqlVersion
                     Case 2005
                         LSqlStr = LSqlStr & " " _
@@ -654,14 +905,15 @@ GoToTry:
                                           & "FILEGROWTH = 10%)"
                 End Select
                 GlobalControl.Variables.ErrorString = LSqlStr
-                SqlExecuteNonQuery(SqlServer, "master", LSqlStr)
+                Return SqlExecuteNonQuery(SqlServer, "master", LSqlStr)
                 Return True
                 Exit Function
             End If
         Catch ex As Exception
+            Return ex.Message
             QuitError(ex, Err, " Unable to execute DATAFUNCTION.CreateDataBase(ByVal SqlServer As String, ByVal DataBaseFolder As String, ByVal DataBaseName As String) As Boolean")
         End Try
-        Return False
+        Return True
     End Function
 
     ''' <summary>
@@ -674,6 +926,7 @@ GoToTry:
     ''' <remarks></remarks>
 
 
+
     Private Sub CopyDatabase(ByVal SourceFolder As String, ByVal SourceDatabaseName As String, ByVal TargetFolder As String, ByVal TargetDatabaseName As String)
         Try
             System.IO.File.Copy(SourceFolder & SourceDatabaseName & ".mdf", TargetFolder & TargetDatabaseName & ".mdf", True)
@@ -681,6 +934,10 @@ GoToTry:
         Catch ex As Exception
             QuitError(ex, Err, SourceDatabaseName & "   " & TargetDatabaseName)
         End Try
+    End Sub
+
+    Public Sub test()
+
     End Sub
     ''' <summary>
     ''' To check wether a server name contained by local server
@@ -2615,6 +2872,10 @@ GoToTry:
         '    For j = 0 To aValue.Count - 1
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Return Nothing : Exit Function
         Dim jvalue() As String = FieldAssignExpression.Split("#")
+        If jvalue.Count < 2 Then
+            Return Nothing
+            Exit Function
+        End If
         Dim mfield As String = jvalue(0)
         Dim mexpr As String = jvalue(1)
         Dim aObject As New Object
@@ -4791,7 +5052,7 @@ GoToTry:
     ''' <returns>No. of rows affected</returns>
     ''' <remarks></remarks>
 
-    Public Function SqlExecuteNonQuery(ByVal ServerName As String, ByVal LDataBase As String, ByVal SqlStr As String, Optional ByVal SqlParameterArr() As SqlParameter = Nothing) As Integer
+    Public Function SqlExecuteNonQuery(ByVal ServerName As String, ByVal LDataBase As String, ByVal SqlStr As String, Optional ByVal SqlParameterArr() As SqlParameter = Nothing) As String
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Return Nothing : Exit Function
         Dim k As Integer = 0
         Try
@@ -4811,9 +5072,10 @@ GoToTry:
             sqlcmd.Dispose()
             sqlcon.Close()
         Catch ex As Exception
+            Return ex.Message & " " & SqlStr
             GF1.QuitError(ex, Err, GlobalControl.Variables.ErrorString)
         End Try
-        Return k
+        Return k & " " & SqlStr
     End Function
     ''' <summary>
     ''' Execute T-SQL non query string command
@@ -4839,21 +5101,58 @@ GoToTry:
                 End If
             End If
             k = Lcommand.ExecuteNonQuery()
+            '  Sql_Transaction.Commit()
         Catch ex As Exception
+            MsgBox(ex.Message)
             GF1.QuitError(ex, Err, GlobalControl.Variables.ErrorString)
+            Sql_Transaction.Rollback()
         End Try
+
         Lcommand.Dispose()
+        '   Sql_Transaction.Dispose()
+
         Return k
     End Function
-    ''' <summary>
-    ''' Execute T-SQL non query string command
-    ''' </summary>
-    ''' <param name="Sql_Transaction" >Sql Transaction by reference</param>
-    ''' <param name="Lcommand" >sql command</param>
-    ''' <param name="SqlStr">Non querry string to be executed</param>
-    ''' <param name="SqlParameterArr" >Sql parameters as array</param>
-    ''' <returns>No. of rows affected</returns>
-    ''' <remarks></remarks>
+
+
+    Public Function getServerMdfFromServerDatabase(ByVal serverdatabase As String)
+        Dim serverarr() As String = Split(serverdatabase, ".")
+        Dim inpdb As String = serverarr(serverarr.Count - 1)
+        serverarr = GF1.ArrayShrink(serverarr, serverarr.Count - 1)
+
+        Dim inpsrv As String = Strings.Join(serverarr, ".")
+        Dim serverstr As String = ""
+        Dim dbStr As String = ""
+        For i = 0 To GlobalControl.Variables.AllServers.Count - 1
+            If LCase(inpsrv).Equals(LCase(GlobalControl.Variables.AllServers.Values(i))) Then
+                serverstr = GlobalControl.Variables.AllServers.Keys(i)
+                serverstr = "0_srv_0"
+                Exit For
+            End If
+        Next
+        For i = 0 To GlobalControl.Variables.MDFFiles.Count - 1
+            If LCase(inpdb).Equals(LCase(GlobalControl.Variables.MDFFiles.Values(i))) Then
+                dbStr = GlobalControl.Variables.MDFFiles.Keys(i)
+                Exit For
+            End If
+        Next
+        Return serverstr & "." & dbStr
+    End Function
+
+
+
+
+
+
+        ''' <summary>
+        ''' Execute T-SQL non query string command
+        ''' </summary>
+        ''' <param name="Sql_Transaction" >Sql Transaction by reference</param>
+        ''' <param name="Lcommand" >sql command</param>
+        ''' <param name="SqlStr">Non querry string to be executed</param>
+        ''' <param name="SqlParameterArr" >Sql parameters as array</param>
+        ''' <returns>No. of rows affected</returns>
+        ''' <remarks></remarks>
     Public Function SqlExecuteNonQuery(ByRef Sql_Transaction As SqlTransaction, ByRef Lcommand As SqlCommand, ByVal SqlStr As String, Optional ByVal SqlParameterArr() As SqlParameter = Nothing) As Integer
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Return Nothing : Exit Function
         Lcommand.CommandText = SqlStr
@@ -4869,11 +5168,15 @@ GoToTry:
                 End If
             End If
             k = Lcommand.ExecuteNonQuery()
+            ' Sql_Transaction.Commit()
         Catch ex As Exception
             GF1.QuitError(ex, Err, GlobalControl.Variables.ErrorString)
+            '   Sql_Transaction.Rollback()
         End Try
         Return k
+        '  Sql_Transaction.Dispose()
         Lcommand.Dispose()
+
     End Function
 
 
@@ -5048,6 +5351,7 @@ GoToTry:
             sqlcmd.Dispose()
             sqlcon.Close()
         Catch ex As Exception
+            '  MsgBox("  y   " & ex.Message)
             GF1.QuitError(ex, Err, SqlStr)
         End Try
         Return dtble

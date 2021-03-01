@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ValidateMachine
+</name>
+</assembly>
+<members>
+<member name="M:ValidateMachine.ValidateClass.TextToAscii(System.String)">
+	<summary>
+ Convert Character string into ascii string
+ </summary>
+	<param name="TextString "></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ValidateMachine.ValidateClass.AsciiToText(System.String)">
+	<summary>
+ Convert Ascii string into character string
+ </summary>
+	<param name="AsciiString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ValidateMachine.ValidateClass.GetHashTableFromClientReg(System.String)">
+	<summary>
+ Read Client EPL/EGR/EAA files and return hashtable
+ </summary>
+	<param name="RegFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ValidateMachine.ValidateClass.GetHashTableFromXReg(System.String)">
+	<summary>
+ Read Client EPL/EGR/EAA files and return hashtable
+ </summary>
+	<param name="RegFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable_new(System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ Create Client registration file.
+ </summary>
+	<param name="ClientRegHashTable"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable(System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ Create Client registration file.
+ </summary>
+	<param name="ClientRegHashTable"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

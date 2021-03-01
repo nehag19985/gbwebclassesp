@@ -4639,41 +4639,19 @@ startfor:
         End Try
         Return mnumber - 1
     End Function
-
-
-
     Public Sub SetGlobalVariables(ByVal TxtFileFullPath As String, Optional ByVal Encripted As Boolean = False, Optional ByVal Delimeter As String = vbCrLf)
         If GlobalControl.Variables.AuthenticationChecked <> dllInteger Then Exit Sub
         Try
             Dim aline() As String = {}
-            'If Delimeter = vbCrLf Then
-            '    aline = StringReadAllLines(TxtFileFullPath, System.Text.Encoding.UTF8)
-            'Else
-            '    Dim bline As String = StringRead(TxtFileFullPath)
-            '    If Encripted = True Then
-            '        bline = StringDecript(bline, 20)
-            '    End If
-            '    aline = Split(bline, Delimeter)
-            'End If
-            Dim vm1 As New ValidateMachine.ValidateClass
-
-            If Encripted = True Then
-                ' Dim TxtFileFullPath As String = fullpath '"D:\encTxt.txt"
-
-                '  TxtFileFullPath = ""
-                ' Dim aline() As String = {}
-                Dim bline() As String = {}
-                bline = StringReadAllLines(TxtFileFullPath, System.Text.Encoding.UTF8)
-                For ty = 0 To bline.Count - 1
-                    Dim bline1 As String = ""
-                    bline1 = vm1.StringDecryptWeb(bline(ty))
-                    aline = ArrayAppend(aline, bline1)
-                Next
+            If Delimeter = vbCrLf Then
+                aline = StringReadAllLines(TxtFileFullPath, System.Text.Encoding.UTF8)
+            Else
+                Dim bline As String = StringRead(TxtFileFullPath)
+                If Encripted = True Then
+                    bline = StringDecript(bline, 20)
+                End If
+                aline = Split(bline, Delimeter)
             End If
-
-
-
-
             For i = 0 To aline.Length - 1
                 Dim valuepair() As String = Split(aline(i), "=")
                 If valuepair.Length = 2 Then
@@ -4827,11 +4805,38 @@ startfor:
                             AddItemToHashTable(GlobalControl.Variables.AppControlHashTable, "WebHostingUserPassword", valuepair(1).Trim)
                         Case LCase("WebHostingServer")
                             GlobalControl.Variables.WebHostingServer = valuepair(1).Trim
+                        Case LCase("userid0_mdf_0")
+                            GlobalControl.Variables.userid0_mdf_0 = valuepair(1).Trim
+                        Case LCase("pwd0_mdf_0")
+                            GlobalControl.Variables.pwd0_mdf_0 = valuepair(1).Trim
+                        Case LCase("userid1_mdf_1")
+                            GlobalControl.Variables.userid1_mdf_1 = valuepair(1).Trim
+                        Case LCase("pwd1_mdf_1")
+                            GlobalControl.Variables.pwd1_mdf_1 = valuepair(1).Trim
+                        Case LCase("userid2_mdf_2")
+                            GlobalControl.Variables.userid2_mdf_2 = valuepair(1).Trim
+                        Case LCase("pwd2_mdf_2")
+                            GlobalControl.Variables.pwd2_mdf_2 = valuepair(1).Trim
+                        Case LCase("userid3_mdf_3")
+                            GlobalControl.Variables.userid3_mdf_3 = valuepair(1).Trim
+                        Case LCase("pwd3_mdf_3")
+                            GlobalControl.Variables.pwd3_mdf_3 = valuepair(1).Trim
+                        Case LCase("userid_0_srv_0")
+                            GlobalControl.Variables.userid_0_srv_0 = valuepair(1).Trim
+
+                        Case LCase("pwd_0_srv_0")
+                            GlobalControl.Variables.pwd_0_srv_0 = valuepair(1).Trim
+
                         Case LCase("LocalHostNo")
                             GlobalControl.Variables.LocalHostNo = valuepair(1).Trim
                         Case LCase("DataFolderServerPhysicalPath")
                             GlobalControl.Variables.DataFolderServerPhysicalPath = valuepair(1).Trim
-
+                        Case LCase("MainServerDatabase")
+                            GlobalControl.Variables.MainServerDatabase = valuepair(1).Trim
+                        Case LCase("TemplateServerDatabase")
+                            GlobalControl.Variables.TemplateServerDatabase = valuepair(1).Trim
+                        Case LCase("UserServerDatabase")
+                            GlobalControl.Variables.UserServerDatabase = valuepair(1).Trim
 
 
 

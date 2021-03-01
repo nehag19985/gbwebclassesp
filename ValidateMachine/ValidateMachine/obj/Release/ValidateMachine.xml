@@ -6,48 +6,69 @@ ValidateMachine
 </name>
 </assembly>
 <members>
+<member name="T:ValidateMachine.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ValidateMachine.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ValidateMachine.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
 <member name="M:ValidateMachine.ValidateClass.TextToAscii(System.String)">
-	<summary>
+ <summary>
  Convert Character string into ascii string
  </summary>
-	<param name="TextString "></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:ValidateMachine.ValidateClass.AsciiToText(System.String)">
-	<summary>
+ <param name="TextString "></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ValidateMachine.ValidateClass.AsciiToText(System.String)">
+ <summary>
  Convert Ascii string into character string
  </summary>
-	<param name="AsciiString"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:ValidateMachine.ValidateClass.GetHashTableFromClientReg(System.String)">
-	<summary>
+ <param name="AsciiString"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ValidateMachine.ValidateClass.GetHashTableFromClientReg(System.String)">
+ <summary>
  Read Client EPL/EGR/EAA files and return hashtable
  </summary>
-	<param name="RegFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:ValidateMachine.ValidateClass.GetHashTableFromXReg(System.String)">
-	<summary>
+ <param name="RegFileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ValidateMachine.ValidateClass.GetHashTableFromXReg(System.String)">
+ <summary>
  Read Client EPL/EGR/EAA files and return hashtable
  </summary>
-	<param name="RegFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable_new(System.Collections.Hashtable,System.String,System.String)">
-	<summary>
+ <param name="RegFileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable_new(System.Collections.Hashtable,System.String,System.String)">
+ <summary>
  Create Client registration file.
  </summary>
-	<param name="ClientRegHashTable"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable(System.Collections.Hashtable,System.String,System.String)">
-	<summary>
+ <param name="ClientRegHashTable" ></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:ValidateMachine.ValidateClass.CreateRegFileFromHashTable(System.Collections.Hashtable,System.String,System.String)">
+ <summary>
  Create Client registration file.
  </summary>
-	<param name="ClientRegHashTable"></param>
-	<returns></returns>
-	<remarks></remarks>
+ <param name="ClientRegHashTable" ></param>
+ <returns></returns>
+ <remarks></remarks>
 </member>
 </members>
 </doc>

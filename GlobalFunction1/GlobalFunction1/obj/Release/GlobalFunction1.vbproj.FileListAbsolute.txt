@@ -7,3 +7,12 @@ D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFun
 D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.dll
 D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.xml
 D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.pdb
+D:\TECHNO_SAAS\webdlls\GlobalFunction1.dll
+D:\TECHNO_SAAS\webdlls\GlobalFunction1.pdb
+D:\TECHNO_SAAS\webdlls\GlobalFunction1.xml
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\ResolveAssemblyReference.cache
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.Resources.resources
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.vbproj.GenerateResource.Cache
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.dll
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.xml
+D:\TECHNO_SAAS\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.pdb
