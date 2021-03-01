@@ -1,0 +1,252 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GlobalFunction2
+</name>
+</assembly>
+<members>
+<member name="P:GlobalFunction2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GlobalFunction2.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GlobalFunction2.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateProject(System.String,System.String,System.String,System.String)">
+	<summary>
+ To create the project.
+ </summary>
+	<param name="SubFolder"></param>Represent the Folder in which project is to be saved
+ <param name="ProjectType"></param>Represent the type of Project i.e. windows application,control library etc.
+ <param name="ProjectName"></param>Represent the name of the project
+ <param name="ProjectTypeID"></param>Represent the type.i.e.it is of visual studio 8 or visual studio 15 project
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateWindowsApplicationProject(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To create Windows application project
+ </summary>
+	<param name="ProjectPath"></param>The path of the project to be saved..eg..E:\Newfolder
+ <param name="ProjectName"></param>The name given to the project.
+ <param name="FormName"></param>It represent comma separated values of path of form file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Form1.vb
+ <param name="ClassName"></param>It represent comma separated values of path of class file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Class1.vb
+ <param name="DllName"></param>It represent comma separated values of path of dll file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Golbal1.dll
+ <param name="ProjectTypeID"></param>It represent the projectId i.e. For project 2008-"VisualStudio.DTE.9.0" and for project 2015-"VisualStudio.DTE.14.0"
+ <param name="BuildPath"></param>It represent the path where build dll have to be saved
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.AddCodeinVbprojWindowsApp(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)">
+	<summary>
+ to add code in vbproj file of windows application
+ </summary>
+	<param name="Vbprojpath"></param>Path of Vbproj file
+ <param name="VbProjCodelist"></param>Code of Form and class that has to be added in vbproj file
+ <param name="VbProjCodeResxlist"></param>Code of Resx that has to be added in vbproj file
+ <param name="VbProjCodeDlllist"></param>Code of dll that has to be added in vbproj file
+ <param name="BuildPath"></param> Represent the path where build dll have to be saved
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.DeleteCodeinVbprojWindowsApp(System.String)">
+	<summary>
+ Code That has to be deleted from vbproj
+ </summary>
+	<param name="Vbprojpath"></param>Path of Vbproj file
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.ChangeAppDesignerVal(System.String,System.String)">
+	<summary>
+ To set the Value to the current form
+ </summary>
+	<param name="FormName"></param>The form name that has to be set
+ <param name="Apppath"></param>The app path of file
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateClassLibraryProject(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To create Class library project
+ </summary>
+	<param name="ProjectPath"></param>The path of the project to be saved..eg..E:\Newfolder
+ <param name="ProjectName"></param>The name given to the project.
+ <param name="FormName"></param>It represent comma separated values of path of form file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Form1.vb
+ <param name="ClassName"></param>It represent comma separated values of path of class file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Class1.vb
+ <param name="DllName"></param>It represent comma separated values of path of dll file with extension...eg..E:\Testing\WindowsApp\WindowsApp\Golbal1.dll
+ <param name="ProjectTypeID"></param>It represent the projectId i.e. For project 2008-"VisualStudio.DTE.9.0" and for project 2015-"VisualStudio.DTE.14.0"
+ <param name="BuildPath"></param>It represent the path where build dll have to be saved
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.AddCodeinVbprojClassLibrary(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)">
+	<summary>
+ to add code in vbproj file of class library
+ </summary>
+	<param name="Vbprojpath"></param>Path of Vbproj file
+ <param name="VbProjCodelist"></param>Code of Form and class that has to be added in vbproj file
+ <param name="VbProjCodeRefFormlist"></param>Code of Reference that has to be added in vbproj file
+ <param name="VbProjCodeResxlist"></param>Code of Resx that has to be added in vbproj file
+ <param name="VbProjCodeDlllist"></param>Code of dll that has to be added in vbproj file
+ <param name="BuildPath"></param> Represent the path where build dll have to be saved
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.DeleteCodeinVbprojClassLibrary(System.String)">
+	<summary>
+ Code that has to be deleted from the class library vbproj file
+ </summary>
+	<param name="Vbprojpath"></param>Path of vbproj file
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojFormexcessCode">
+	<summary>
+ The code that need to be added in vbproj file
+ </summary>
+	<returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojResxCode(System.String[])">
+	<summary>
+ The resx code that need to be added in vbproj file
+ </summary>
+	<param name="Filenames"></param>The name of the form file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojClassCode(System.String[])">
+	<summary>
+  The Class code that need to be added in vbproj file
+ </summary>
+	<param name="Classnames"></param>The name of the class file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojFormCode(System.String[])">
+	<summary>
+ The Form code that need to be added in vbproj file
+ </summary>
+	<param name="Filenames"></param>The name of the form file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojDllCode(System.String[],System.String[])">
+	<summary>
+ The dll code that need to be added in vbproj file
+ </summary>
+	<param name="Dllnames"></param>The name of the dll file
+ <param name="DllPath"></param>The path of the dll file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateVbprojDllCodeUserControl(System.String[],System.String)">
+	<summary>
+ The dll code that need to be added in vbproj file for usercontrol
+ </summary>
+	<param name="Dllnames"></param>The name of the dll file
+ <param name="DllFileFolder"></param>The path of the dll file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.UpdateCodeinVbprojClassLibraryOrWindowsApp(System.String,System.String)">
+	<summary>
+ To update BuildPathcode in Vbproj file
+ </summary>
+	<param name="Vbprojpath"></param>Path of Vbproj file
+ <param name="BuildPath"></param>Represent the path where build dll have to be saved
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.GetSpitString(System.String)">
+	<summary>
+ to get the spit separated string array
+ </summary>
+	<param name="Value"></param>the value that has to be split
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.GetValueArrayfromValuePath(System.String,System.String)">
+	<summary>
+ To get a array of file that has to coped or replace.
+ </summary>
+	<param name="ValueName"></param>The name of path of the file
+ <param name="ValType"></param>To get the type of the file i.e. "Form","Class","Dll"
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.GetFilePathArr(System.String[],System.String)">
+	<summary>
+ To get the array of the exist file
+ </summary>
+	<param name="FilterStr"></param>Contain extension for the files
+ <param name="ValueName"></param>The name of path of the file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.GetFileName(System.String[])">
+	<summary>
+ To get the name of the file from the path
+ </summary>
+	<param name="Filepath"></param>The path of the file
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CopyFilefromOnepathtoOther(System.String[],System.String)">
+	<summary>
+ To copy one file to another position
+ </summary>
+	<param name="InitialPath"></param>The initial path of the file
+ <param name="FinalPath"></param>The path where the file has to be copied
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.ReplaceFilefromOnepathtoOther(System.String[],System.String)">
+	<summary>
+  To replaced one file to another position
+ </summary>
+	<param name="InitialPath"></param>The initial path of the file
+ <param name="FinalPath"></param>The path where the file has to be replaced
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.GetUniqueId(System.String)">
+	<summary>
+ To get the unique id
+ </summary>
+	<param name="VbprojfilePath"></param>The path of vbproj file 
+ <returns></returns>
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateSlNFile15(System.String,System.String,System.String)">
+	<summary>
+ To cretae the sln of 2015
+ </summary>
+	<param name="Uniqueid"></param>represent the unique id
+ <param name="ProjectName"></param>To get the name of the file
+ <param name="MainFolderPath"></param>To get the main folder of the file
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.CreateSlNFile08(System.String,System.String,System.String)">
+	<summary>
+ To cretae the sln of 2008
+ </summary>
+	<param name="Uniqueid"></param>represent the unique id
+ <param name="ProjectName"></param>To get the name of the file
+ <param name="MainFolderPath"></param>to get the main folder of the file
+
+</member><member name="M:GlobalFunction2.CreateProjectClass.BuildProject(System.String,System.String,System.String,System.String)">
+	<summary>
+ To build the the Project of the vbproj file provided.
+ </summary>
+	<param name="VbprojFullPath">Represent the path of vbproj file.. eg-"E:\laveena\DemoClassLib\DemoClassLib\DemoClassLib.vbproj</param>
+	<param name="OutputPath">Path where dll will be created</param>
+	<param name="BuildType">Type of BuildType i.e "Coded" or "Normal".Bydefault, BuildType is coded,then OutputPath can be "",As output path is alraedy set in vbproj.</param>
+	<param name="MsBuildExePath">Path of MSBuildExe</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.QuitError(System.Exception,Microsoft.VisualBasic.ErrObject,System.String)">
+	<summary>
+ Error Message box before quitting the application
+ </summary>
+	<param name="ex">Error on exception </param>
+	<param name="err"> error object </param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.QuitMessage(System.String,System.String)">
+	<summary>
+ Message box before quitting the application
+ </summary>
+	<param name="MessageString"> message as string</param>
+	<param name="QuitProcedure">Function or sunroutine name from exception thrown</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.Edit_NT_Files(System.String,System.String,System.Boolean)">
+	<summary>
+ Function is used to edit existing Config.NT or Autoexec.NT files  separately
+ </summary>
+	<param name="FullNTFile">Name of NT file with path</param>
+	<param name="EditingLines">Comma separated Entries to be edited, such as files=145 or set clipper=F:145;swapk:32000,set l_n=Y,set ydi=c:\nod1 etc. </param>
+	<param name="RemoveFlag">True if EditingLines are to be removed from FullNTFile or False if editted</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.GetTempFileName(System.String,System.String)">
+	<summary>
+ To creates temporary file at particular path by adding any suffix in original file name-----------'
+ </summary>
+	<param name="FileFullPath"></param>
+	<param name="AddSuffix"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.SendingEmail(System.String,System.String,System.String,System.String)">
+	<summary>
+ To send emails with attatchments
+ </summary>
+	<param name="ToMailId">Email id to which mail to be sent</param>
+	<param name="MailSubject">Subject of email</param>
+	<param name="MyMailText">Body of email</param>
+	<param name="AttachmentFileName">Comma separated FileNames with path to be attatched</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

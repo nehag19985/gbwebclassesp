@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RegistrationLib
+</name>
+</assembly>
+<members>
+<member name="T:RegistrationLib.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:RegistrationLib.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:RegistrationLib.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetServiceNoCservices(System.Int32)">
+ <summary>
+ This Function fetches service no from CustomerService table. 
+ </summary>
+ <param name="P_customers"></param>
+ <returns>Service no</returns>
+</member>
+</members>
+</doc>

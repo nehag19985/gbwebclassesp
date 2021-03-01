@@ -1,0 +1,1511 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GlobalFunction1
+</name>
+</assembly>
+<members>
+<member name="P:GlobalFunction1.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GlobalFunction1.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GlobalFunction1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:GlobalFunction1.GlobalFunction1.InstanceName">
+	<summary>
+ Instance variable name as string, if taken as constructor of new class.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToResourceFile(System.Collections.Hashtable,System.String)">
+	<summary>
+ To add resources to *.resx file from a hash table. 
+ </summary>
+	<param name="ResourceEntries">Resource Entries as hash table , where key as name, and value as content</param>
+	<param name="ResourceFilePath">Full path Name of resource file</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetKeywordValueFromCompositeField(System.String,System.String,System.String,System.String)">
+	<summary>
+ Function to get value of a keyword from a composite fields value string
+ </summary>
+	<param name="CompositeFieldString">String value of composite fields, where default pair separator is chrw(200) and default key=value separtor is chrw(210)</param>
+	<param name="Keyword">Keyword/field name to be searched</param>
+	<param name="ValuePairSeparator">separator between two fields,default is chrw(200)</param>
+	<param name="ValueKeySeparator">separator between  field and value ,default is chrw(201)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetItemFromResources(System.String,System.String)">
+	<summary>
+ Get item from resources (resx) file
+ </summary>
+	<param name="KeyName">Key name of resource to be found</param>
+	<param name="ResourceFilePath">Full path Name of resource file</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.String[]@,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Add string element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">string element added at last position </param>
+	<returns> Output array after adding new string </returns>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(System.String[]@,System.String[],System.Boolean,System.Boolean)">
+	<summary>
+ Add Two arrays of string elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(System.Int32[]@,System.Int32[],System.Boolean)">
+	<summary>
+ Add Two arrays of integer elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(System.Decimal[]@,System.Decimal[],System.Boolean)">
+	<summary>
+ Add Two arrays of decimal elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(System.Object[]@,System.Object[],System.Boolean)">
+	<summary>
+ Add Two arrays of object elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoHashTable(System.Collections.Hashtable@,System.Collections.Hashtable,System.Boolean)">
+	<summary>
+ Add Two HashTables  
+ </summary>
+	<param name="FirstHashTable"> FirstHashTable to be added</param>
+	<param name="SecondHashTable ">SecondHashTable to be added </param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(System.IO.FileInfo[]@,System.IO.FileInfo[],System.Boolean)">
+	<summary>
+ Add Two arrays of fileinfo elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTwoArrays(Microsoft.VisualBasic.Collection[]@,Microsoft.VisualBasic.Collection[],System.Boolean)">
+	<summary>
+ Add Two arrays of Collection elements
+ </summary>
+	<param name="FirstArray"> FirstArray to be added</param>
+	<param name="SecondArray ">Second Array to be added </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after addition </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Int32[]@,System.Int32,System.Boolean)">
+	<summary>
+ Add an integer element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">Integer element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new integer </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.IsHashValuesEmpty(System.Collections.Hashtable)">
+	<summary>
+ True,if hashtable has all keyvalues nothing/empty
+ </summary>
+	<param name="mhashTable"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Decimal[]@,System.Decimal,System.Boolean)">
+	<summary>
+ Add a decimal element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">decimal element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new decimal </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Single[]@,System.Single,System.Boolean)">
+	<summary>
+ Add a Single element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">Single element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new decimal </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Drawing.Color[]@,System.Drawing.Color,System.Boolean)">
+	<summary>
+ Add a Color element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">Color element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new decimal </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Object[]@,System.Object,System.Boolean)">
+	<summary>
+ Add a object element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">object element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new object </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.IO.FileInfo[]@,System.IO.FileInfo,System.Boolean)">
+	<summary>
+ Add a fileinfo element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">object element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new object </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(Microsoft.VisualBasic.Collection[]@,Microsoft.VisualBasic.Collection,System.Boolean)">
+	<summary>
+ Add a object element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">Collection element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new object </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Collections.Hashtable[]@,System.Collections.Hashtable,System.Boolean)">
+	<summary>
+ Add a object element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">HashTable element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new object </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Data.DataColumn[]@,System.Data.DataColumn,System.Boolean)">
+	<summary>
+ Add a object element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">DataColumn element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new DataColumn </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Data.DataRow[]@,System.Data.DataRow,System.Boolean)">
+	<summary>
+ Add a datarow  element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">DataColumn element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new DataColumn </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayAppend(System.Windows.Forms.Control[]@,System.Windows.Forms.Control,System.Boolean)">
+	<summary>
+ Add a control element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">Control element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new control </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayFind(System.String[],System.String,System.Boolean)">
+	<summary>
+ Get index no of an element of an array 
+ </summary>
+	<param name="ArrayToSearch">Array of string to searched</param>
+	<param name="Element">Element to be searched in the above array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayCollectionFind(Microsoft.VisualBasic.Collection[],System.String,System.String,System.Int32)">
+	<summary>
+ Get collection from an array collection. 
+ </summary>
+	<param name="ArrayCollection">Array of string to searched</param>
+	<param name="KeyName">KeyName of collection</param>
+	<param name="KeyValue">Key value to find in array collection</param>
+	<returns>Collection matched for keyname=keyvalue</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayCollectionFind(Microsoft.VisualBasic.Collection[],System.String,System.Object,System.Int32)">
+	<summary>
+ Get collection from an array collection. 
+ </summary>
+	<param name="ArrayCollection">Array of string to searched</param>
+	<param name="KeyName">KeyName of collection</param>
+	<param name="KeyValue">Key value to find in array collection</param>
+	<returns>Collection matched for keyname=keyvalue</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayFind(System.Int32[],System.Int32)">
+	<summary>
+ Get index no of an element of an array
+ </summary>
+	<param name="ArrayToSearch"></param>
+	<param name="Element">Element to be searched in the above array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayFind(System.Decimal[],System.Decimal)">
+	<summary>
+ Get index no of an element of an array
+ </summary>
+	<param name="ArrayToSearch"></param>
+	<param name="Element">Element to be searched in the above array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayFind(System.Object[],System.Object)">
+	<summary>
+ Get index no of an element of an array
+ </summary>
+	<param name="ArrayToSearch"></param>
+	<param name="Element">Element to be searched in the above array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.QuitError(System.Exception,Microsoft.VisualBasic.ErrObject,System.String)">
+	<summary>
+ Error Message box before quitting the application
+ </summary>
+	<param name="ex">Error on exception </param>
+	<param name="err"> error object </param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.QuitMessage(System.String,System.String,System.String)">
+	<summary>
+ Message box before quitting the application
+ </summary>
+	<param name="MessageString"> message as string</param>
+	<param name="QuitProcedure">Function or sunroutine name from exception thrown</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.DateTostring(System.DateTime,System.String,System.String@)">
+	<summary>
+ To convert date to string as per given format
+ </summary>
+	<param name="InputDate"> Date to be converted</param>
+	<param name="DateFormat ">Custom date format,eg "dd/MM/yyyy" </param>
+	<param name="DisplayDate "> display date as string in above custome format</param>
+	<returns>String output the the format "yyyyMMdd" </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetDosFileName(System.String,System.Int32)">
+	<summary>
+ Get dos file name from input string name
+ </summary>
+	<param name="LName"> Input string to be converted to dos file name</param>
+	<param name="LSize">Size of dos file name</param>
+	<returns>Output file name</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWrite(System.String,System.String,System.Boolean,System.Text.Encoding)">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="TxtFile">Output full file name </param>
+	<param name="TxtString">Sring to be written</param>
+	<param name="AddLast">True,if string is added to an existing file </param>
+	<returns> string to be written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWrite(System.IO.FileStream@,System.String)">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="LFileStream">FileStream as already defined</param>
+	<param name="TxtString">Text String to be written</param>
+	<returns>Text string has been written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWriteLine(System.String,System.String[],System.Boolean)">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="TxtFile">Output full file name </param>
+	<param name="TxtString">Array of text lines to be written</param>
+	<param name="AddLast">True,if string is added to an existing file </param>
+	<returns> string to be written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWriteAllLines(System.String,System.String[],System.Text.Encoding,System.Boolean)">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="TxtFile">Output full file name </param>
+	<param name="TxtString">Array of text lines to be written</param>
+	<param name="Mencoding">Text Format as system.text.encoding</param>
+	<param name="AddLast">True,if string is added to an existing file </param>
+	<returns> string to be written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWriteLine(System.IO.FileStream@,System.String[])">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="LFileStream">FileStream as already defined</param>
+	<param name="TxtString">Array of text lines to be written</param>
+	<returns>Text string has been written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWriteLine(System.IO.StreamWriter@,System.Collections.Generic.List{System.String})">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="LStreamWriter">StreamWriter  already defined</param>
+	<param name="TxtList">List  of text lines to be written</param>
+	<returns>Text string has been written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringWriteLine(System.IO.StreamWriter@,System.String)">
+	<summary>
+ Write string to a file
+ </summary>
+	<param name="LStreamWriter">StreamWriter  already defined</param>
+	<param name="TxtLine">Text line to be written</param>
+	<returns>Text string has been written</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringRead(System.String,System.Text.Encoding)">
+	<summary>
+ Read  contents of a file into string
+ </summary>
+	<param name="TxtFile">Full file name to be read </param>
+	<returns> String as output</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringReadLine(System.String)">
+	<summary>
+ Read  line contents of a file into string array
+ </summary>
+	<param name="TxtFile">Full file name to be read </param>
+	<returns> String as output</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringReadAllLines(System.String,System.Text.Encoding)">
+	<summary>
+ Read  line contents of a file into string array
+ </summary>
+	<param name="TxtFile">Full file name to be read </param>
+	<param name="mEncoding">Text Encoding Format eg. utf-8</param>
+	<returns> String as output</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.StringReadLine(System.IO.FileStream)">
+	<summary>
+ Read  line contents of a file into string array
+ </summary>
+	<param name="LFileStream"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetHashTableFromString(System.String,System.String,System.String)">
+	<summary>
+ Convert string layout (key1+chrw(217)+val1+chrw(218)+key2+chrw(217)+val2+chrw(217)+key3+chrw(217)+val3) into hashtable object
+ </summary>
+	<param name="InputString">Input string of hashtable layout eg .(key1+chrw(217)+val1+chrw(218)+key2+chrw(217)+val2+chrw(217)+key3+chrw(217)+val3)</param>
+	<param name="VarHook"> Hashtable Keys separator default is chrw(218)</param>
+	<param name="ValHook">Separator of key and its value,default is chrw(217)</param>
+	<returns> Hash Table object</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetHashTableFromKeys(System.Collections.Hashtable,System.String[])">
+	<summary>
+ Create a new HashTable by filtering a MainHashTable on an array of keys already exist in MainHashTable.
+ </summary>
+	<param name="MainHashTable">MainHashTable from which new hashtable extracted.</param>
+	<param name="HashKeys">An array of hashkeys to be filtered.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetStringFromHashTable(System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ Convert hashtable object into string layout (key1+chrw(217)+val1+chrw(218)+key2+chrw(217)+val2+chrw(217)+key3+chrw(217)+val3)
+ </summary>
+	<param name="InputHashTable"> Input hash table object</param>
+	<param name="VarHook">Separator of two hashtable keys, Default value= chrw(218) </param>
+	<param name="ValHook">Separator of hashtable key and its item, Default value =  chrw(217)</param>
+	<returns>Output string of layout (key1+chrw(217)+val1+chrw(218)+key2+chrw(217)+val2+chrw(217)+key3+chrw(217)+val3)) </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetStringConditionFromHashTable(System.Collections.Hashtable,System.Boolean,System.String,System.String)">
+	<summary>
+ Convert hashtable object into string
+ </summary>
+	<param name="InputHashTable"> Input hash table object</param>
+	<param name="SqlStringFormat">Optional if True, String values are converted with single quotes otherwise with double quotes.</param>
+	<param name="LogicalOperator"> any logical operator default value  "=" , not equal to symbol ,less than symbol,greater than symbol </param>
+	<param name="LogicGate">Logic gate placed between two columns default is " and "</param>
+	<returns>Output condition string  </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetServerDataBase(System.String,System.String)">
+	<summary>
+ Get ServerDatabase from globalcontrol hashtable by server and database keys eg. 0_srv_0 and 0_mdf_0
+ </summary>
+	<param name="ServerKey">eg 0_srv_0 or 1_srv_1</param>
+	<param name="MdfKey">eg 0_mdf_0 or 1_mdf_1</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromHashTable(System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ Get Value from hash table of given key
+ </summary>
+	<param name="AHashTable">Hash table to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AlternateKeyName">Alternate key if first key value not found, If Alternate Key is "Nothing" then returns nothing object</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.MissingKeysInHashTable(System.Collections.Hashtable,System.String)">
+	<summary>
+ Get missing keys of  hash table
+ </summary>
+	<param name="AHashTable">Hash table to be searched</param>
+	<param name="KeyNames">Comma separated Keynames to find in hash table</param>
+	<returns>Return comma separated missing keynames in hash table </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetKeyFromHashTable(System.Collections.Hashtable,System.Object)">
+	<summary>
+ Get hash table key of a given given value
+ </summary>
+	<param name="AHashTable">Hash table to be searched</param>
+	<param name="mValue">Value to find in hash table</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateHashTable(System.String,System.Object)">
+	<summary>
+ Create a one key hashtable.
+ </summary>
+	<param name="mkey">Key of item</param>
+	<param name="mValue">Value of item</param>
+	<returns>A new HashTable </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateHashTable(System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Create a hashtable from all columns of a datarow. Where ColumnName is key and ColumnValue is its value
+ </summary>
+	<param name="mRow">A DataRow which is converted into hashtable</param>
+	<param name="ExcludeColumns">Name of rowcolumns to be excluded</param>
+	<param name="IncludeColumns">Name of rowcolumns to be excluded,default is all</param>
+	<returns>A new HashTable </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateHashTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ Create a hashtable from all columns of a datarow. Where ColumnName is key and ColumnValue is its value
+ </summary>
+	<param name="mTable">A DataTable whoose first row , which is converted into hashtable</param>
+	<param name="ExcludeColumns">Name of rowcolumns to be excluded</param>
+	<param name="IncludeColumns">Name of rowcolumns to be excluded,default is all</param>
+	<returns>A new HashTable </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateDataTableFromHashTable(System.Collections.Hashtable,System.String)">
+	<summary>
+ Convert a Hashtable into datatable where key is ColumnNames and value is column value. 
+ </summary>
+	<param name="mHashTable">HashTable for which output datatable to be obtained</param>
+	<param name="ExtraFields">, separated string of Columns to be included in the string</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromCollection(Microsoft.VisualBasic.Collection,System.String,System.String)">
+	<summary>
+ Get Value from a collection of given key
+ </summary>
+	<param name="ACollection">Collection to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AlternateKeyName">Alternate key if first key value not found</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromCollection(Microsoft.VisualBasic.Collection[],System.String,System.String)">
+	<summary>
+ Get colletion object from an array of collections by keyname and its value.
+ </summary>
+	<param name="ACollection">array of Collections to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AkeyValue">Key Value to be searched in array of collections</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetCollectionFromCollection(Microsoft.VisualBasic.Collection[],System.String,System.String)">
+	<summary>
+ Get colletion object from an array of collections by keyname and its value.
+ </summary>
+	<param name="ACollection">array of Collections to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AkeyValue">Key Value/comma separated keyvalues  to be searched in array of collections</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromCollection(Microsoft.VisualBasic.Collection[],System.String,System.Int32)">
+	<summary>
+ Get colletion object from an array of collections by keyname and its value.
+ </summary>
+	<param name="ACollection">Array of Collections to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AkeyValue">Key Value to be searched in array of collections</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromHashTable(System.Collections.Hashtable[],System.String,System.Int32)">
+	<summary>
+ Get HashTable object from an array of HashTables by keyname and its value.
+ </summary>
+	<param name="AHashTable">Array of HashTables to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AkeyValue">Key Value to be searched in array of hashtable</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetValueFromHashTable(System.Collections.Hashtable[],System.String,System.String)">
+	<summary>
+ Get HashTable object from an array of HashTables by keyname and its value.
+ </summary>
+	<param name="AHashTable">Array of HashTables to be searched</param>
+	<param name="AKeyName">Key name to find</param>
+	<param name="AkeyValue">Key Value to be searched in array of hashtable</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetNetworkFolders(System.Windows.Forms.FolderBrowserDialog)">
+	<summary>
+ Get Network folder accessible to the system.
+ </summary>
+	<param name="oFolderBrowserDialog"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SearchFiles0(System.String,System.String,System.Boolean)">
+	<summary>
+Return a list of string having the items of full file name matching the wildcard criteria (*.*)  
+ </summary>
+	<param name="SourcePath"> Path to be searched </param>
+	<param name="WildCard"> wild card string such as "*.*" ,"*.dat" etc.,default value="*.* </param>
+	<param name="TopLevel"> False , if searched for child folder also,default value=False</param>
+	<returns>List object of fullfile name</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SearchFiles(System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+Return a list of string having the items of full file name matching the wildcard criteria (*.*)  
+ </summary>
+	<param name="SourcePath"> Comma separated Folders or drives to be searched </param>
+	<param name="SearchPattern"> wild card string such as "*.*" ,"*.dat" etc.,default value="*.* </param>
+	<param name="TopLevel"> False , if searched for child folder also,default value=False</param>
+	<returns>List object of fullfile name</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.BackwardFileSearching(System.String,System.String)">
+	<summary>
+ To backward searching of a directory path for existence of a filename. 
+ </summary>
+	<param name="FullPath">Full path of searching backward</param>
+	<param name="FileName">File name to be searched, * wild cards are permissible </param>
+	<returns>Folder name / location where seaching file exists </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.RemoveChar(System.String,System.String,System.String)">
+	<summary>
+ Remove characters from a string
+ </summary>
+	<param name="InputString">Input string</param>
+	<param name="RemChar"> comma separated characters to be removed</param>
+	<param name="RemoveAllExcept">comma separated characters which are left in the new string</param>
+	<returns>Output string</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.FullFileNameToList(System.String,System.Boolean)">
+	<summary>
+ Convert fullfileName into a list object '0=path(dot(.)=for current directory,1=filename,2=extension,3=DriveLetter, if ExcludeDriveLetter =True
+ </summary>
+	<param name="FullFileName">Full file name as string </param>
+	<returns></returns>
+	<remarks> List object</remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.FullFileNameToCollection(System.String)">
+	<summary>
+ Convert fullfileName into a collection object of three string columns keys are "folder" ,"filename","extension" . If folder value is (.) then take current directory.
+ </summary>
+	<param name="FullFileName">Full file name as string </param>
+	<returns></returns>
+	<remarks> Collection object</remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.DateFormatConversion(System.String,System.String,System.String)">
+	<summary>
+ To convert a Formatted Date String to other formatted date string .
+ </summary>
+	<param name="InputDateString"> Date to be converted</param>
+	<param name="InputFormat ">Input custom date format,eg "dd/MM/yyyy" </param>
+	<param name="OutputFormat "> display date as string in above custome format</param>
+	<returns>String output the date  </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToCollection(Microsoft.VisualBasic.Collection@,System.Object,System.String)">
+	<summary>
+ Add an item to a collection
+ </summary>
+	<param name="mCollection">Collection to be added</param>
+	<param name="ValueItem">Value of Item as object</param>
+	<param name="keyItem">Key of Item</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToCollection(Microsoft.VisualBasic.Collection@,System.String,System.String)">
+	<summary>
+ Add an item to a collection
+ </summary>
+	<param name="mCollection">Collection to be added</param>
+	<param name="ValueItem">Value of Item as string</param>
+	<param name="keyItem">Key of Item</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToCollection(Microsoft.VisualBasic.Collection@,System.Int32,System.String)">
+	<summary>
+ Add an item to a collection
+ </summary>
+	<param name="mCollection">Collection to be added</param>
+	<param name="ValueItem">Value of Item as integer</param>
+	<param name="keyItem">Key of Item</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetFullFileName(System.Collections.Generic.List{System.String})">
+	<summary>
+ Get file name with extension and path from a list control  '0=path(dot(.)=for current directory,1=filename,2=extension
+ </summary>
+	<param name="PathNameExt"> List control of size 3  '0=path(dot(.)=for current directory,1=filename,2=extension </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetFullFileName(Microsoft.VisualBasic.Collection)">
+	<summary>
+ Get file name with extension and path from a collection object keys are "folder" ,"filename","extension" . If folder value is (.) then take current directory.
+ </summary>
+	<param name="PathNameExt"> List control of size 3  '0=path(dot(.)=for current directory,1=filename,2=extension </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EnablePreviousControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make previous form controls enable with respect to a controlName
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet">Comma separated string of control names ,(*) for all controls of the form</param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="EnableTrue">Enable value ,Default value =True</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetPreviousControlObject(System.Object@,System.String,System.String,System.String,System.Boolean,System.Int32,System.Boolean)">
+	<summary>
+ To get previous form control as object with respect to a controlName
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet">Comma separated string of control names ,(*) for all controls of the form</param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="NoOfControls">No of control to be fetched</param>
+	<param name="OnlyVisibleEnabledControls">To get the previous control as VisibleEnabled ,default is false </param>
+	<returns>An array of objects </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetPreviousControlObject(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ To get previous form control as object with respect to a controlName
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet">Comma separated string of control names ,(*) for all controls of the form</param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="OnlyVisibleEnabledControls">To get the previous control as VisibleEnabled ,default is false </param>
+	<returns>A Control object returned </returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetPreviousControlObject(System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ To get previous passed control as object with respect to a controlName
+ </summary>
+	<param name="PassingControls">A hash table having the controls which has passed by the user</param>
+	<param name="ControlName">Control name from which previous seraching executed</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<returns></returns>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetPreviousControlObject(System.Collections.Hashtable,System.String,System.Int32,System.String,System.Boolean)">
+	<summary>
+ To get previous passed controls() as object with respect to a controlName
+ </summary>
+	<param name="PassingControls">A hash table having the controls which has passed by the user</param>
+	<param name="ControlName">Control name from which previous seraching executed</param>
+	<param name="NoOfControls">No. of controls returned</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<returns>An array of controls</returns>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetNextControlObject(System.Collections.Hashtable,System.String)">
+	<summary>
+ To get next passed control as object with respect to a controlName
+ </summary>
+	<param name="PassingControls">A hash table having the controls which has passed by the user</param>
+	<param name="ControlName">Control name from which previous seraching executed</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToHashTable(System.Collections.Hashtable@,System.String,System.Object,System.Boolean)">
+	<summary>
+ To Add item in a hashtable with key and its value
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+	<param name="ItemValue">Item value of hash table item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToHashTable(System.Collections.Hashtable@,System.String,System.Collections.Hashtable,System.Boolean)">
+	<summary>
+ To Add item in a hashtable with key and its value
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string hashtable item</param>
+	<param name="ItemValue">Item value of hash table item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToHashTable(System.Collections.Hashtable@,System.String,System.String,System.Boolean)">
+	<summary>
+ To Add item in a hashtable with key and its value
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+	<param name="ItemValue">Item value of hash table item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToHashTable(System.Collections.Hashtable@,System.String,System.Int32,System.Boolean)">
+	<summary>
+ To Add item in a hashtable with key and its value
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+	<param name="ItemValue">Item value of hash table item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTextToRadioButtonsGroup(System.String,System.Windows.Forms.Control@,System.Data.DataTable)">
+	<summary>
+ Set Text to radiobutton items  from global MasterOptions datatable of radiobuttons Group
+ </summary>
+	<param name="OptionKeyAndChecked">Key of MasterOptions and checked position separated by ~ sign</param>
+	<param name="RadioButtonsContainer">Panel/Groupbox  of radiobuttons</param>
+	<param name="DtMasterOptions">Datatable of master options</param>
+	<returns>A hashtable containing key as name of radiobutton and value as radiobutton controls in the panel</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetRadioButtonChecked(System.Windows.Forms.Control@)">
+	<summary>
+ Get Radiobutton checked in a container.(Panel/Groupbox)
+ </summary>
+	<param name="RadioButtonsContainer">Panel/Groupbox  of radiobuttons</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetRadioButtonChecked(System.Windows.Forms.Control@,System.Int16)">
+	<summary>
+ Set  Radiobutton checked in a container.(Panel/Groupbox)
+ </summary>
+	<param name="RadioButtonsContainer">Panel/Groupbox  of radiobuttons</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetCheckBoxesChecked(System.Windows.Forms.Control@)">
+	<summary>
+ Get CheckBoxes checked in a container.(Panel/Groupbox)
+ </summary>
+	<param name="RadioButtonsContainer">Panel/Groupbox  of Checkboxes</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTextToRadioButtonsGroup(System.Windows.Forms.Control@,System.String,System.Int16)">
+	<summary>
+ Set Text to radiobutto items  from global MasterOptions datatable of radiobuttons Group
+ </summary>
+	<param name="RadioButtonsContainer">Panel/Groupbox  of radiobuttons</param>
+	<param name="TextOptions"> A ~ separated string of containing of radiobutton texts</param>
+	<param name="RbnPosition">positions in textoption of radiobutton checked </param>
+	<returns>A hashtable containing key as name of radiobutton and value as radiobutton controls in the panel</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayReverse(System.String[])">
+	<summary>
+ This function returns reverse array of strings
+ </summary>
+	<param name="str">Array of string to reverse</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTextToCheckBoxesGroup(System.String,System.Windows.Forms.Control@,System.Data.DataTable)">
+	<summary>
+ Set text to Checkbox items  from global MasterOptions datatable of CheckBox Group
+ </summary>
+	<param name="OptionKeyAndChecked">Key of MasterOptions and checked position separated by ~ sign,multiple checked positions are separated by comma(,)</param>
+	<param name="CheckBoxesContainer">Panel/Groupbox  of checkboxes</param>
+	<param name="DtMasterOptions">Datatable of master options</param>
+	<returns>A hashtable containing key as name of checkboxes and values as checkbox controls in the panel/groupbox</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddTextToCheckBoxesGroup(System.Windows.Forms.Control@,System.String,System.String)">
+	<summary>
+ Set text to Checkbox items  from global MasterOptions datatable of CheckBox Group
+ </summary>
+	<param name="CheckBoxesContainer">Panel/Groupbox  of radiobuttons</param>
+	<param name="TextOptions"> A ~ separated string of containing of radiobutton texts</param>
+	<param name="CheckedPositions">Comma separated positions in textoption of check boxes checked </param>
+	<returns>A hashtable containing key as name of radiobutton and value as radiobutton controls in the panel</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddItemToHashTable(System.Collections.Hashtable@,System.String[],System.Object[],System.Boolean)">
+	<summary>
+ To Add item in a hashtable with keys() and its values()
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+	<param name="ItemValue">Item value of hash table item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.RemoveItemFromHashTable(System.Collections.Hashtable@,System.String)">
+	<summary>
+ To Remove item from a hashtable with key and its value
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.RemoveItemFromHashTable(System.Collections.Hashtable@,System.String[])">
+	<summary>
+ To Remove item from a hashtable with keys() and  values()
+ </summary>
+	<param name="HashTableControl">A hash table control in which values to be added</param>
+	<param name="KeyValue">Key value as string of hashtable item</param>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetNextControlObject(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ To get next form control as object with respect to a controlName
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet">Comma separated string of control names ,(*) for all controls of the form</param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="VisibleControl">To get the previous control as visible </param>
+	<param name="EnabledControl">To get the previous control as enabled</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EnableNextControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make next form controls enable with respect to a ControlName  
+ </summary>
+	<param name="FormName"> Parent form</param>
+	<param name="FormControlsSet">Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlName">Control name for which next controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array.</param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="EnableTrue">Enable value ,Default value =True</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EnableControls(System.Object@,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make form controls enable
+ </summary>
+	<param name="FormName">Parent form , whose controls to make enable</param>
+	<param name="ControlNames">Comma separated string of control names to make enable,(*) for all controls of the form</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array.</param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="EnableTrue">Enable value ,Default value =True</param>
+	<param name="ExceptControls">Comma separated string of control names which are not considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EnableControlsTemp(System.Object@,System.String,System.Boolean,System.String)">
+	<summary>
+ To make form controls enable
+ </summary>
+	<param name="FormName">Parent form , whose controls to make enable</param>
+	<param name="ControlNames">Comma separated string of control names to make enable,(*) for all controls of the form</param>
+	<param name="EnableTrue">Enable value ,Default value =True</param>
+	<param name="ExceptControls">Comma separated string of control names which are not considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.VisiblePreviousControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make previous form controls visible with respect to a controlName  
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet"> Comma separated string of control names ,(*) for all controls of the form </param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="VisibleTrue">Visible value ,Default value =True</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.VisibleNextControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make next form controls visible with respect to a ControlName  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlName"> Control name from  which next controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="VisibleTrue">Visible value ,Default value =True</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.VisibleControls(System.Object@,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To make form controls visible
+ </summary>
+	<param name="LForm">Parent form , whose controls to make visible</param>
+	<param name="ControlNames">Comma separated string of control names to make visible,(*) for all controls of the form</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames </param>
+	<param name="VisibleTrue">Visible value ,Default value =True</param>
+	<param name="ExceptControls">Comma separated string of control names which are not considered </param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetTabIndex(System.Object@,System.String,System.String,System.Boolean,System.Int32)">
+	<summary>
+ To set  form controls tab index sequentially.
+ </summary>
+	<param name="LForm">Parent form , whose controls to make visible</param>
+	<param name="ControlNames">Comma separated string of control names to make visible,(*) for all controls of the form</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames </param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SendToBackNextControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To SendToBack() overlaping next controls in z-order.  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlName"> Control name from  which next controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.BringToFrontNextControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+ To BringToFront() overlaping next controls in z-order.  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlName"> Control name from  which next controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.BringToFrontControls(System.Object@,System.String,System.String,System.Boolean)">
+	<summary>
+ To BringToFront() overlaping controls in z-order.  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SentToBackControls(System.Object@,System.String,System.String,System.Boolean)">
+	<summary>
+ To SentToBack() overlaping controls in z-order.  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SentToBackPreviousControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+   To SendToBack() overlaping previous controls in z-order.  
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet"> Comma separated string of control names ,(*) for all controls of the form </param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.BringToFrontPreviousControls(System.Object@,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+	<summary>
+   To SendToBack() overlaping previous controls in z-order.  
+ </summary>
+	<param name="FormName">Parent forms</param>
+	<param name="FormControlsSet"> Comma separated string of control names ,(*) for all controls of the form </param>
+	<param name="ControlName">Control name for which previous controls are to be  considered</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence,""=As in control array. </param>
+	<param name="OnlyTopLevel">False,If also executed for child controls of controlnames</param>
+	<param name="IncludeCurrentControl ">True if above control name included in visible controls list</param>
+	<param name="ExceptControls">Comma separated string of control names which are not to be considered</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetAllControlNames(System.Object,System.String,System.Boolean,System.String)">
+	<summary>
+ Get all control names of a form as a string separated by sep0 default(",")
+ </summary>
+	<param name="lform"> Parent form</param>
+	<param name="ControlSequence">Sequence of controls in the string, "T" =As per TabIndex,"L"=As per Location,"R"=As per Rectangle Sequence.</param>
+	<param name="OnlyTopLevel"> Included only top level controls ,Default value=False </param>
+	<param name="Sep0"> Control name's separator default is "," </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ControlNameToObject(System.Object,System.String,System.String@)">
+	<summary>
+ Get the object/control of the form  by its name (string)  
+ </summary>
+	<param name="lform"> Parent form of the object / control </param>
+	<param name="ControlName"> Name of control or object as string</param>
+	<param name="TypeOfControlName">Output as control type,F=Form,C=Control,V=Form variables,E=External variables</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.MakeControlSize(System.String,System.Windows.Forms.Control@)">
+	<summary>
+ To change control  size for active font accoarding to  Text string.  
+ </summary>
+	<param name="TextString"> Largest text string to be fitted in the control</param>
+	<param name="LControl"> Control-which size to be changed</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EvalNumericExpression(System.String,System.Boolean@)">
+	<summary>
+ To evalute an numeric expression entered in text string
+ </summary>
+	<param name="NumericExpression">Text String of numeric expression </param>
+	<param name="ErrorInExpression">Stores true if an error in found in numeric expression</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EvaluateExpression(System.String,System.Boolean@)">
+	<summary>
+ To evalute an numeric expression entered in text string
+ </summary>
+	<param name="ExpressionString">Text String of numeric expression </param>
+	<param name="ErrorInExpression">Stores true if an error in found in expression</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.EvaluateBooleanExpression(System.String,System.Boolean@)">
+	<summary>
+ To evalute an numeric expression entered in text string
+ </summary>
+	<param name="ExpressionString">Text String of numeric expression </param>
+	<param name="ErrorInExpression">Stores true if an error in found in expression</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SortCollection(Microsoft.VisualBasic.Collection[],System.String,System.String)">
+	<summary>
+ This function sorts an array of collection on a column specified
+ </summary>
+	<param name="Lcollection">An array of collection to be sorted</param>
+	<param name="SortColumnKey">Key of collection column on which sorting done</param>
+	<param name="SortOrder">Order of sorting ASC or DESC,Default is ASC</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SortCollection(Microsoft.VisualBasic.Collection[],System.String[],System.String)">
+	<summary>
+ This function sorts an array of collection on a column specified
+ </summary>
+	<param name="Lcollection">An array of collection to be sorted</param>
+	<param name="SortColumnKeys">An Array of Keys of collection on which sorting done</param>
+	<param name="SortOrder">Order of sorting ASC or DESC,Default is ASC</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ConvertHashTableToArrays(System.Collections.Hashtable,System.String[]@,System.Object[]@)">
+	<summary>
+ Convert hashtable to two same size arrays i.e keyaray and value array
+ </summary>
+	<param name="LHashTable">Hashtable to be converted </param>
+	<param name="KeysArray">Array contains the keys of hashtable</param>
+	<param name="ValuesArray">Array contains the values of hashtable</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ConvertTwoArraysToHashTable(System.String[],System.Object[])">
+	<summary>
+ Convert two same size arrays to hash table,where first array has unique values
+ </summary>
+	<param name="FirstArray">First string array to be used as key of hashtable</param>
+	<param name="SecondArray">Second object array to be used as value of hashtable</param>
+	<returns>New hash table</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrink(System.Object[],System.Int32)">
+	<summary>
+ Remove item from array at specified Index and shrink
+ </summary>
+	<param name="ArrayName">An array of object to be shrink</param>
+	<param name="ItemIndex">Index no. to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrink(System.String[],System.Int32)">
+	<summary>
+ Remove item from array at specified Index and shrink
+ </summary>
+	<param name="ArrayName">An array of string to be shrink</param>
+	<param name="ItemIndex">Index no. to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrink(System.String[],System.Int32[])">
+	<summary>
+ Remove item from array at specified Index and shrink
+ </summary>
+	<param name="ArrayName">An array of string to be shrink</param>
+	<param name="ItemIndex">Array of Indexes  to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayNew(System.String[],System.Int32[])">
+	<summary>
+ Create a new array from a given array.
+ </summary>
+	<param name="ArrayName">An array of string be given</param>
+	<param name="ItemIndex">Array of Indexes  which will be elements of new array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrink(System.Int32[],System.Int32)">
+	<summary>
+ Remove item from array at specified Index and shrink
+ </summary>
+	<param name="ArrayName">An array of integer to be shrink</param>
+	<param name="ItemIndex">Index no. to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrink(System.Decimal[],System.Int32)">
+	<summary>
+ Remove item from array at specified Index and shrink
+ </summary>
+	<param name="ArrayName">An array of decimal/numeric to be shrink</param>
+	<param name="ItemIndex">Index no. to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Object[],System.Object)">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValue">Item value to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Object[],System.Object[])">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValues">Item values array  to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.String[],System.String)">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValue">Item value to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.String[],System.String[])">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValues">Array of item values removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Decimal[],System.Decimal)">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValue">Item value to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Decimal[],System.Decimal[])">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValues">Item values array to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Int32[],System.Int32)">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValue">Item value to be removed</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ArrayShrinkByValue(System.Int32[],System.Int32[])">
+	<summary>
+Remove item from array by specifying item value and shrink
+ </summary>
+	<param name="ArrayName">Array to be shrinked</param>
+	<param name="ItemValue">Array of Item Values </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetCommonPropertyValue(System.Object@,System.String,System.String,System.Object)">
+	<summary>
+ To Set a common value to a property to specified controls.  
+ </summary>
+	<param name="FormName"> Parent form </param>
+	<param name="FormControlsSet"> Comma separated string of control names,(*) for all controls of the form </param>
+	<param name="PropertyName ">Property name which is set </param>
+	<param name="PropertyValue ">Property Value which to be set</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ConvertFiguresInToWords(System.Decimal,System.String,System.String,System.String,System.Int32,System.String)">
+	<summary>
+ Convert decimal numerics in to words 
+ </summary>
+	<param name="InputNumber">Input decimal value to be converted into words</param>
+	<param name="CurrencyName">Currency name in words eg. "Rupees" </param>
+	<param name="FractionName">Name of fraction of currency eg. "Paise"</param>
+	<param name="CurrencyPosition">Position of currency prefix or suffix</param>
+	<param name="DigitsAfterDecimal ">Digits after decimal eg. 2</param>
+	<param name="FigureToWordsSystem">indian or british</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetTimeDifferenceString(System.DateTime,System.DateTime)">
+	<summary>
+ Returns time difference between two dates in days, hours, minute format
+ </summary>
+	<param name="date1"></param>
+	<param name="date2"></param>
+	<returns></returns>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetNextPrevcontrol(System.Object,System.Object,System.String)">
+	<summary>
+ Return the previous or next control in a form using entrycontrol property
+ </summary>
+	<param name="MForm">Parent form on which controls are placed</param>
+	<param name="sender">Reference control for which next and previous control to be determined</param>
+	<param name="NavDirection">Navigation Direction. It can be either prev or fwd</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetControlFromParentString(System.Windows.Forms.Control,System.String[],System.Int32)">
+	<summary>
+ Returns an object of type control if parent controls are given in a comma
+ </summary>
+	<param name="ParentControl">top level control e.g. form</param>
+	<param name="CtrlString"> String array of parent controls </param>
+	<param name="index"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.FindIndexListOfString(System.Collections.Generic.List{System.String},System.String,System.Boolean)">
+	<summary>
+ Finds index of string in a list of string
+ </summary>
+	<param name="listStr">List of string in which element has to be searched</param>
+	<param name="StringVal">Element to be searched</param>
+	<param name="exactMatch">boolean option to ignore case. True for exact search</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetAbsoluteLocation(System.Object,System.Windows.Forms.Control)">
+	<summary>
+  To get the absolute location of the given control.
+ </summary>
+	<param name="Mform">Form as object</param>
+	<param name="MainControl">Control whose location has to be determined</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetControlListFromParentString(System.Windows.Forms.Control,System.String[],System.Int32)">
+	<summary>
+ To get a list of control from the Ctrlstring.
+ </summary>
+	<param name="ParentControl"></param>The main control-Generally Me.
+ <param name="CtrlString"></param>The parent string comma separatedin form of string array.
+ <param name="index"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.setGridlocationCorrection(System.Drawing.Point)">
+	<summary>
+ Add hardcoded offsets to location so that grid opens overlaaping with correspondig control
+ </summary>
+	<param name="Loc">Absolute Location of parent control</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetComputerName">
+	<summary>
+ Get the computer name on which application is running
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ReplaceValuesInExpression(System.String,System.Collections.Hashtable,System.String)">
+	<summary>
+ Replace values into expression containing the elements such as @Var1,@Var2,@var3 etc. within the expression from a hashtable values with keys var1,var2,var3..
+ </summary>
+	<param name="ExpressionString">String Expression containing the elements such as @Var1,@Var2,@var3 etc.</param>
+	<param name="Variables">A hashtable object with keys var1,var2,var3 etc. and its values only numerics,strings and datetime are acceptable.</param>
+	<param name="StringFormat">Optional ,Permissible values SQL,VB,None, SQL=String values are enclosed in single quotes ,VB=String values enclosed in double quotes,None=String values without quotes.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.ExtractVariables(System.String,System.Boolean,System.String)">
+	<summary>
+ Extract variables as string array from an expression . 
+ </summary>
+	<param name="Expression">Expression as string having constants,variables,operators</param>
+	<param name="NumericExpression">True if it is a numeric expression.</param>
+	<param name="StartLetter">Start letter to prefix on variable to define , default is @</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.UpdateRowFromHashtable(System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ To add a row to the given datatable with the values extracted from hashtable 
+ </summary>
+	<param name="dt"> Datatable in with datarow has to be appended</param>
+	<param name="mhash">Hashtable containing key value pairs of columns of datatable</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.IsDataRowEmpty(System.Data.DataRow)">
+	<summary>
+ Check wether a datarow has all fields empty.
+ </summary>
+	<param name="LDataRow">DataRow to be checked</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CountNetworkPc">
+	<summary>
+ Count pc 's on network
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetIPAddress(System.String)">
+	<summary>
+ Get IP address of a computer name
+ </summary>
+	<param name="CompName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CheckNetworkConnection">
+	<summary>
+ Check network connection on a computer
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CheckNetworkPC(System.String)">
+	<summary>
+ Check a pcname, wether it is on the network or not.
+ </summary>
+	<param name="PCName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.DownloadFileFromNetwork(System.String,System.String)">
+	<summary>
+ Download file from network.
+ </summary>
+	<param name="SourceFile"></param>
+	<param name="DestinationFile"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.UploadFileOnNetwork(System.String,System.String)">
+	<summary>
+ Upload file on network.
+ </summary>
+	<param name="SourceFile"></param>
+	<param name="DestinationFile"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.FormattedValue(System.Object,System.String,System.Data.DataTable,System.Collections.Hashtable,System.Collections.Generic.List{System.String}@)">
+	<summary>
+ To Convert a value in a formatted string or get value from DtMasterOptions or evaluate an expression
+ </summary>
+	<param name="mValue">Value to </param>
+	<param name="mFormatString"></param>
+	<param name="DtMasterOptions"></param>
+	<param name="PublicVariables"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetColumnOrder(System.Object@,System.Windows.Forms.DataGridView@)">
+	<summary>
+ Set order of columns as per columnorder in GridColumns table
+ </summary>
+	<param name="DataGridView1"></param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetColumnWidth(System.Object@,System.Windows.Forms.DataGridView@)">
+	<summary>
+ Set Width of columns as per column width in gridcolumns table
+ </summary>
+	<param name="DataGridView1"></param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetColumnHeading(System.Object@,System.Windows.Forms.DataGridView@)">
+	<summary>
+ Set heading of columns as per columnheading in gridcolumns table
+ </summary>
+	<param name="DataGridView1"></param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetMasterOptionsValue(System.String,System.Data.DataTable)">
+	<summary>
+ Get Option Value as string from  MasterOptions datatable ,input string is MasterOption_key~Index,Conversion code "AFV0"
+ </summary>
+	<param name="KeyOfValuesAndIndex"> String type value as MasterOption_key~Index </param>
+	<returns>String correspnding to Index in MasterOption_key row of MasterOptions datatable</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CheckInternetConnection(System.Int16)">
+	<summary>
+ Check Internet connection on a default port 80
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.DecimalToString(System.Decimal,System.String)">
+	<summary>
+ Convert a decimal value in to a comma separated grouped value.
+ </summary>
+	<param name="NumericValue">Numeric value as decimal</param>
+	<param name="NumericFormat">NumericFormat as ##,##,###.##</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.NewInstanceByObject(System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Create a new instance from a Master Object HashTable by its KeyName as objectname.
+ </summary>
+	<param name="ObjectName">KeyName of object of new instance in hashtable.</param>
+	<param name="NewInstanceName">Name of new instance </param>
+	<param name="ObjectsHashTable">Master Hashtable having all objects.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddComboBoxItems(System.String,System.Windows.Forms.ComboBox@,System.Data.DataTable)">
+	<summary>
+ Add items to a new or existing combobox , according to MasterOptionsString
+ </summary>
+	<param name="MasterOptionsString">RangeCode~Index ,Where RangeCode is the row element of Global datatable variable </param>
+	<param name="ComboObject"></param>
+	<param name="DtMasterOptions"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.AddListBoxItems(System.String,System.Windows.Forms.ListBox@,System.Data.DataTable)">
+	<summary>
+ Add items to a new or existing ListBox , according to MasterOptionsString
+ </summary>
+	<param name="MasterOptionsString">RangeCode~Index ,Where RangeCode is the row element of Global datatable variable </param>
+	<param name="ListObject"></param>
+	<param name="DtMasterOptions"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CheckIfKeyNameExistsinHashTable(System.Collections.Hashtable,System.String)">
+	<summary>
+ Return True if the given keyname is present in the given hashtable otherwise false.
+ </summary>
+	<param name="ht1"></param>Represent a Hashtable.
+ <param name="Keyname"></param>Represent the keyname value which has to be searched in the given hashtable.
+ <returns></returns>
+</member><member name="M:GlobalFunction1.GlobalFunction1.NewInstanceByObject(System.Object,System.String)">
+	<summary>
+ Create a new instance from a Master Object HashTable by its KeyName as objectname.
+ </summary>
+	<param name="BaseObject">BaseObject for  new instance.</param>
+	<param name="NewInstanceName">Name of new instance </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.NewInstanceByType(System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Create a new instance from a Master Object HashTable by its KeyName as objectname.
+ </summary>
+	<param name="TypeName">Key of  type of new instance in hashtable.</param>
+	<param name="NewInstanceName">Name of new instance </param>
+	<param name="mTypesHashTable">Master Hashtable having all types key is typename and value as type object.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.NewInstanceByTypeCode(System.String,System.String,System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ Create a new instance from a Master Object HashTable by its KeyName as objectname.
+ </summary>
+	<param name="TypeCode">TypeCode of  new instance in hashtable.</param>
+	<param name="NewInstanceName">Name of new instance </param>
+	<param name="DtControlsList">Full Control List as datatable</param>
+	<param name="mTypesHashTable">Master Hashtable having all types key is typename and value as type object.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.NewInstanceByDLL(System.String,System.String)">
+	<summary>
+ Function to create an instance of a DLL assembly.
+ </summary>
+	<param name="DLLFullPath">Dll file full path</param>
+	<param name="NameOfClass">Optional, if main class name is different from DLL name</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CopyFileNewNameIfExist(System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ System copy of a file into given destination if file already exists in given destination.New FileName created by subscript.
+ </summary>
+	<param name="FileToBeCopied">FileName with folder to be copied</param>
+	<param name="TargetPath">Folder location A=In the application bin, D=In the DataFolder of application ,T=In TempFolder of application or any other fixed path.</param>
+	<param name="ConfirmCopy">Show message and ask for confirmation ,if new file name is created.</param>
+	<returns>New File Name</returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateChildPathInFolderLocation(System.String,System.String)">
+	<summary>
+ Create SubFolder in some given data folder.
+ </summary>
+	<param name="FolderLocation">Folder location A=In the application bin, D=In the DataFolder of application ,T=In TempFolder of application or any other fixed path.</param>
+	<param name="ChildFolderName">SubFolderName to be added in FolderLocation as child</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.GetChildPathInFolderLocation(System.String,System.String)">
+	<summary>
+ Get child folder path as string in FolderLocation.
+ </summary>
+	<param name="FolderLocation">Folder location A=In the application bin, D=In the DataFolder of application ,T=In TempFolder of application or any other fixed path.</param>
+	<param name="ChildFolderName">SubFolderName to be added in FolderLocation as child</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.CreateFolderInApplication(System.String)">
+	<summary>
+ Create folder in application.
+ </summary>
+	<param name="FolderName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction1.GlobalFunction1.SetFormLocation(System.Windows.Forms.Form@,System.String,System.Object)">
+	<summary>
+ Permissible Form Location TopLeft,TopCenter,TopRight,MiddleLeft,MiddleCenter,MiddleRight,BottomLeft,BottomCenter,BottomRight.
+ </summary>
+	<param name="FormObj">Form object whose location to be set</param>
+	<param name="FormPosition">Permissible Form Location TopLeft,TopCenter,TopRight,MiddleLeft,MiddleCenter,MiddleRight,BottomLeft,BottomCenter,BottomRight</param>
+	<param name="LocationReference">If with respect to screen , then left nothing</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ColorScheme
+</name>
+</assembly>
+<members>
+<member name="P:ColorScheme.ColorScheme.RowStatusFlag">
+	<summary>
+ All rows are defined with RowStatus, active rowstatus is 0, previous history in 1,2,3...etc
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.TblMetaData">
+	<summary>
+ Define metadata of table as hashtable keys are PrimaryKey,ExcludeToCompare(Comma separated field names which will exclude while comparing),PlusValueFields(Comma separated field names in which new values will increament by one for all rows in datatable),CommonValueFields(Comma separated field names in which new values will be replaced by a common value for all rows of datatable),RowStatusFlag(True,if Row history to be maintained,),TableEntryFlag(A=Append,M=Modify,D=Delete),TextField (Default sorting Field apeared in a drop-down-list) 
+ </summary>
+</member><member name="F:ColorScheme.ColorScheme._Updated">
+	<summary>
+ True if table rows are updated in current session
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.RepeatAsNew">
+	<summary>
+ True if  previous row is added as new row with new primary key
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.TableEntryType">
+	<summary>
+ TableEntryFlag(A=Append,M=Modify,D=Delete) 
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.LastKeyValues">
+	<summary>
+ A hashtable having incrementing fields of sql table are as keys and values are  new values to be inserted in SqlTable,Keys are Table,Field1,Field2..etc.
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.FieldsPlusCollection">
+	<summary>
+ An array of collection having the values of keys are [Table,LastKeyField,Condition,Variables] where all are string and varibles as hashtable(Keys are variablenames and values are variable values] 
+ </summary>
+</member><member name="P:ColorScheme.ColorScheme.SchemaTable">
+	<summary>
+ SchemaTable as datatable with columns Column_Name,Data_Type,Size
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ColorScheme.ColorScheme.MultyRowsSqlHandling">
+	<summary>
+ Type of rows insertion/updation for sql querry 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

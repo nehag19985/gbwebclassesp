@@ -1,0 +1,181 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ErpControlsList
+</name>
+</assembly>
+<members>
+<member name="P:ErpControlsList.ErpControlsList.RowStatusFlag">
+	<summary>
+ True, if all rows are defined with RowStatus, active rowstatus is 0, previous history in 1,2,3...etc
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.HeaderRowStatusFlag">
+	<summary>
+ If it is a subtable of headertable ,Hold rowstatusflag of header table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.HeaderRowStatusNo">
+	<summary>
+ If it is a subtable of headertable ,hold  last RowStatusNo of header table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.SqlUpdation">
+	<summary>
+ True, if  modifications in the table are taken place for this table therefore sql statements are executed.
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.CurrDt">
+	<summary>
+ Current DataTable associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=True)
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.CurrRow">
+	<summary>
+Current DataRow associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=False)
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.CurrRowsArray">
+	<summary>
+An array of Current DataRows associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=False)
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PrevDt">
+	<summary>
+ Previous DataTable associated to sql Table with old values of fields from sql table used in sql querry.(MultyRowsSqlHandling=True) 
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PrevRow">
+	<summary>
+ Previous DataRow associated to sql Table with old values of fields from sql table used in sql querry.(MultyRowsSqlHandling=Flase) 
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.FieldsFinalValues">
+	<summary>
+ To hold final values of Table Fields ,Values are AutoAssinged for Y,O,R,S,D,A type fields
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TableOpenMode">
+	<summary>
+ TableOpenMode of Parent table ,acceptable values Append=A,Modify=M,Delete=D,View=V
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.WhereClauseDefault">
+	<summary>
+ WhereClauseDefault is a default condition to fetch active datarow/datatable from sql table )
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TableType">
+	<summary>
+ Table Type=M (Main Table), S=Sub Table,H=Header Table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.ParentTables">
+	<summary>
+ Comma separated Names of ParentTables Tables for this table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.RepeatAsNew">
+	<summary>
+ True if  previous row is added as new row with new primary key
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TableEntryType">
+	<summary>
+ TableEntryFlag(A=Append,M=Modify,D=Delete,S=Initial Flag) 
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.FieldsPlusCollection">
+	<summary>
+ An array of collection having the values of keys are [Table,LastKeyField,Condition,Variables] where all are string and varibles as hashtable(Keys are variablenames and values are variable values] 
+ </summary>
+</member><member name="T:ErpControlsList.ErpControlsList.Fields">
+	<summary>
+ Enumeration of all fields of table.
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.GroupFieldsType">
+	<summary>
+ A hashtable with Key of row (PrimaryKey types Y=Always,R=Key with row status,S=RowStatus,O=OtherKey,D=Increase In DataTable(StartValue will be  LastValue from SqlTable),E=ExcludeToCompare,C=Common value in datatable,I=Value Input by user,C=Calculated value,T=Default Text field),P=Increase in datatable (Start value will be 1 ) ,A=AutoPick Field Value of other table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.AllFields">
+	<summary>
+ Comma separated all fields with m1 table alias.
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.AllColumns">
+	<summary>
+ Comma separated all fields without table alias.
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PrimaryKey">
+	<summary>
+Primary key of table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PrimaryKeyValue">
+	<summary>
+Primary key value of table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PreviousSameRows">
+	<summary>
+RowNos. of PrevDt which are same in CurrDt
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PreviousExtraRows">
+	<summary>
+RowNos. of PrevDt which are not available in CurrDt
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.CurrentSameRows">
+	<summary>
+RowNos. of CurrDt which are same in PrevDt
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.CurrentExtraRows">
+	<summary>
+RowNos. of CurrDt which are not available in PrevDt
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.ServerDatabase">
+	<summary>
+ ServerDatabase in the format 0_srv_0.0_mdf_0
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.Server">
+	<summary>
+ Server in the format 0_srv_0
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.Database">
+	<summary>
+ Database in the format 0_mdf_0
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TableWithSQLPath">
+	<summary>
+Full sqlpath of table
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TableName">
+	<summary>
+Table Name as string
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.ExcludeFromCompare">
+	<summary>
+Comma separated fields excluded from comparing datarows
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PlusOneFields">
+	<summary>
+Comma separated Fields of Table which will be set as increamental values starts from  last field's value of stored sql table. 
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.PlusOneColumns">
+	<summary>
+Comma separated Columns of CurrDt DataTable which  will be set as increamental values starts from  last column value of datatable
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.SameValueFields">
+	<summary>
+Comma separated Columns of CurrDt DataTable which  will be set as same values for all rows of currdt
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.TextField">
+	<summary>
+TextField of data table used for default sorting
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.KeyPlusGroups">
+	<summary>
+KeyPlusGroups of increamenting fields for sql querry,permissible groups are Y,R,S,O,D
+ </summary>
+</member><member name="P:ErpControlsList.ErpControlsList.SchemaTable">
+	<summary>
+ SchemaTable as datatable with columns Column_Name,Data_Type,Size
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ErpControlsList.ErpControlsList.MultyRowsSqlHandling">
+	<summary>
+ Type of rows insertion/updation for sql querry 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:ErpControlsList.ErpControlsList.NewRow">
+	<summary>
+New row created for CurrDt association
+ </summary>
+</member>
+</members>
+</doc>

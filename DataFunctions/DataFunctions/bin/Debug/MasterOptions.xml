@@ -1,0 +1,181 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MasterOptions
+</name>
+</assembly>
+<members>
+<member name="P:MasterOptions.MasterOptions.RowStatusFlag">
+	<summary>
+ True, if all rows are defined with RowStatus, active rowstatus is 0, previous history in 1,2,3...etc
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.HeaderRowStatusFlag">
+	<summary>
+ If it is a subtable of headertable ,Hold rowstatusflag of header table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.HeaderRowStatusNo">
+	<summary>
+ If it is a subtable of headertable ,hold  last RowStatusNo of header table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.SqlUpdation">
+	<summary>
+ True, if  modifications in the table are taken place for this table therefore sql statements are executed.
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.CurrDt">
+	<summary>
+ Current DataTable associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=True)
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.CurrRow">
+	<summary>
+Current DataRow associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=False)
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.CurrRowsArray">
+	<summary>
+An array of Current DataRows associated to sql Table with final values of fields of sql table used in sql querry.(MultyRowsSqlHandling=False)
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PrevDt">
+	<summary>
+ Previous DataTable associated to sql Table with old values of fields from sql table used in sql querry.(MultyRowsSqlHandling=True) 
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PrevRow">
+	<summary>
+ Previous DataRow associated to sql Table with old values of fields from sql table used in sql querry.(MultyRowsSqlHandling=Flase) 
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.FieldsFinalValues">
+	<summary>
+ To hold final values of Table Fields ,Values are AutoAssinged for Y,O,R,S,D,A type fields
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TableOpenMode">
+	<summary>
+ TableOpenMode of Parent table ,acceptable values Append=A,Modify=M,Delete=D,View=V
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.WhereClauseDefault">
+	<summary>
+ WhereClauseDefault is a default condition to fetch active datarow/datatable from sql table )
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TableType">
+	<summary>
+ Table Type=M (Main Table), S=Sub Table,H=Header Table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.ParentTables">
+	<summary>
+ Comma separated Names of ParentTables Tables for this table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.RepeatAsNew">
+	<summary>
+ True if  previous row is added as new row with new primary key
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TableEntryType">
+	<summary>
+ TableEntryFlag(A=Append,M=Modify,D=Delete,S=Initial Flag) 
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.FieldsPlusCollection">
+	<summary>
+ An array of collection having the values of keys are [Table,LastKeyField,Condition,Variables] where all are string and varibles as hashtable(Keys are variablenames and values are variable values] 
+ </summary>
+</member><member name="T:MasterOptions.MasterOptions.Fields">
+	<summary>
+ Enumeration of all fields of table.
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.GroupFieldsType">
+	<summary>
+ A hashtable with Key of row (PrimaryKey types Y=Always,R=Key with row status,S=RowStatus,O=OtherKey,D=Increase In DataTable(StartValue will be  LastValue from SqlTable),E=ExcludeToCompare,C=Common value in datatable,I=Value Input by user,C=Calculated value,T=Default Text field),P=Increase in datatable (Start value will be 1 ) ,A=AutoPick Field Value of other table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.AllFields">
+	<summary>
+ Comma separated all fields with m1 table alias.
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.AllColumns">
+	<summary>
+ Comma separated all fields without table alias.
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PrimaryKey">
+	<summary>
+Primary key of table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PrimaryKeyValue">
+	<summary>
+Primary key value of table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PreviousSameRows">
+	<summary>
+RowNos. of PrevDt which are same in CurrDt
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PreviousExtraRows">
+	<summary>
+RowNos. of PrevDt which are not available in CurrDt
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.CurrentSameRows">
+	<summary>
+RowNos. of CurrDt which are same in PrevDt
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.CurrentExtraRows">
+	<summary>
+RowNos. of CurrDt which are not available in PrevDt
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.ServerDatabase">
+	<summary>
+ ServerDatabase in the format 0_srv_0.0_mdf_0
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.Server">
+	<summary>
+ Server in the format 0_srv_0
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.Database">
+	<summary>
+ Database in the format 0_mdf_0
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TableWithSQLPath">
+	<summary>
+Full sqlpath of table
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TableName">
+	<summary>
+Table Name as string
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.ExcludeFromCompare">
+	<summary>
+Comma separated fields excluded from comparing datarows
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PlusOneFields">
+	<summary>
+Comma separated Fields of Table which will be set as increamental values starts from  last field's value of stored sql table. 
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.PlusOneColumns">
+	<summary>
+Comma separated Columns of CurrDt DataTable which  will be set as increamental values starts from  last column value of datatable
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.SameValueFields">
+	<summary>
+Comma separated Columns of CurrDt DataTable which  will be set as same values for all rows of currdt
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.TextField">
+	<summary>
+TextField of data table used for default sorting
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.KeyPlusGroups">
+	<summary>
+KeyPlusGroups of increamenting fields for sql querry,permissible groups are Y,R,S,O,D
+ </summary>
+</member><member name="P:MasterOptions.MasterOptions.SchemaTable">
+	<summary>
+ SchemaTable as datatable with columns Column_Name,Data_Type,Size
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:MasterOptions.MasterOptions.MultyRowsSqlHandling">
+	<summary>
+ Type of rows insertion/updation for sql querry 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:MasterOptions.MasterOptions.NewRow">
+	<summary>
+New row created for CurrDt association
+ </summary>
+</member>
+</members>
+</doc>

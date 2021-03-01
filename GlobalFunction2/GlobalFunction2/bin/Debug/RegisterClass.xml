@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RegisterClass
+</name>
+</assembly>
+<members>
+<member name="M:RegisterClass.ValidateClass.TextToAscii(System.String)">
+	<summary>
+ Convert Character string into ascii string
+ </summary>
+	<param name="TextString "></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:RegisterClass.ValidateClass.AsciiToText(System.String)">
+	<summary>
+ Convert ascii string into character string
+ </summary>
+	<param name="AsciiString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:RegisterClass.ValidateClass.SendingEmail(System.String,System.String,System.String,System.String)">
+	<summary>
+ To send emails with attatchments
+ </summary>
+	<param name="ToMailId">Email id to which mail to be sent</param>
+	<param name="MailSubject">Subject of email</param>
+	<param name="MyMailText">Body of email</param>
+	<param name="AttachmentFileName">Comma separated FileNames with path to be attatched</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

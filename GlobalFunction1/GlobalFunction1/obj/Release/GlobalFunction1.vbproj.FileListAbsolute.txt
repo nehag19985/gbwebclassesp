@@ -1,0 +1,9 @@
+D:\saralwin_old\webdlls\GlobalFunction1.dll
+D:\saralwin_old\webdlls\GlobalFunction1.pdb
+D:\saralwin_old\webdlls\GlobalFunction1.xml
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\ResolveAssemblyReference.cache
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.Resources.resources
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.vbproj.GenerateResource.Cache
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.dll
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.xml
+D:\saralwin_old\Webclasses\GlobalFunction1\GlobalFunction1\obj\Release\GlobalFunction1.pdb

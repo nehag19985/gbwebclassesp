@@ -1,0 +1,278 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GlobalControl
+</name>
+</assembly>
+<members>
+<member name="P:GlobalControl.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GlobalControl.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GlobalControl.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:GlobalControl.Variables.CustomKeyBoardValues">
+	<summary>
+  Gets or Sets HashTable of values of custom keyboard. where key is e.keycode and value is string corressponding to this keycode ,Values are set or get in ApplicationControlData.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ObjectsHashTable">
+	<summary>
+ A hashtable having values are different objects and keys are object names.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.LastProcessingData">
+	<summary>
+ Containing processing row or  data  of exception thrown
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.TypesHashTable">
+	<summary>
+ A hashtable having values are different System.Types and keys are type names.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ConversionTypeHashTable">
+	<summary>
+ A hashtable having values are conversion codes and keys are  fullname of types.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.NavigationHashTable">
+	<summary>
+ A hashtable having values are conversion codes and keys are  fullname of types.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebHostingServer">
+	<summary>
+  Hosting webserver Name default is 182.50.133.109
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebHostingUserPassword">
+	<summary>
+  Hosting webserver user password.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.DataFolderServerPhysicalPath">
+	<summary>
+  Returns Server Physical path
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.SaralType">
+	<summary>
+  SaralType acceptable values are WebLocal,WebAzure,WebGodaddy,WebCloud,ErpLAN,ErpSNG
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebHostingUserName">
+	<summary>
+  Hosting webserver user name default is "SaralWeb".
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.LocalMTPServerEnableSsl">
+	<summary>
+ Option is true if website is running on local computer.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ProcNAmeFile">
+	<summary>
+ This datatable contains controls of all the forms 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ENTformstru">
+	<summary>
+ This datatable contains controls of all the forms 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.EntControlProperties">
+	<summary>
+ This datatable contains rowwise properties of all the controls of the forms 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.FormsProjectFiles">
+	<summary>
+ This datatable contains rows of all forms  
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.GridCodeMain">
+	<summary>
+ This datatable contains rows for all grids  
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.GridColumns">
+	<summary>
+ This datatable contains rows for all grids  
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebSMTPServerEnableSsl">
+	<summary>
+ Option is false if website is running on web computer.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.RunningAtWeb">
+	<summary>
+ True if RunningAtWeb.Txt found on web server.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebSMTPServerHost">
+	<summary>
+  WebSMTPServerHost used as sending email id in WebServer website application default "relay-hosting.secureserver.net".
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebEmailPwd">
+	<summary>
+ Email id  Password used as sending email id in WebServer website application.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebEmailId">
+	<summary>
+ Email id  used as sending email id in WebServer website application default is "info@saralerp.com".
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.LocalSMTPServerPort">
+	<summary>
+ Gmail emailid SMTPSERVERport used in sending email id in Local website application default is 587.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.WebSMTPServerPort">
+	<summary>
+ Gmail emailid SMTPSERVERport used in sending email id in Local website application default is 587.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.LocalSMTPServerHost">
+	<summary>
+ Gmail emailid SMTP SERVER HOST NAME used as sending email id in Local website application default is smtp.gmail.com. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.EmailPassword">
+	<summary>
+ Gmail emailid password used as sending email id in local website application.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.EmailId">
+	<summary>
+ Gmail emailid  used as sending email id in local website application. default is saraluser2012@gmail.com
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.LocalHostNo">
+	<summary>
+ Local Host no. used in local website application.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.DelayImage">
+	<summary>
+Gif image control used in delay loop 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.MasterOptions">
+	<summary>
+ A datatable having the rows of ~ separated fixed values, columns are FixedValues_Key,ValuesSet
+ 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.MenusList">
+	<summary>
+ A datatable having the rows of  ContextMenu  details of  all controls
+ 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ErrorString">
+	<summary>
+ Containing error string of exception thrown
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ColorFontScheme">
+	<summary>
+ A datatable of active color scheme used in application
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ERPControlsList">
+	<summary>
+ A datatable having the informations of all controls used in ERPapplication
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GlobalControl.Variables.ERPControlPropertiesList">
+	<summary>
+ A datatable having the informations of all controls used in ERPapplication
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

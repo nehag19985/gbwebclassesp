@@ -1,0 +1,36 @@
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\RegistrationLib.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\RegistrationLib.pdb
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\RegistrationLib.xml
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\BillPayFlag.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\Customers.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\CustomerServices.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\DataFunctions.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\GlobalFunction1.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\GlobalFunction2.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\UserProgressBar.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\RegisterDllClass.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\GlobalControl.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\EnvDTE80.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\EnvDTE.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\office.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\Microsoft.Vbe.Interop.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\bin\Debug\stdole.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.vbprojResolveAssemblyReference.cache
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.Resources.resources
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.vbproj.GenerateResource.Cache
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.dll
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.xml
+E:\final libraries and build\final libraries and build\final libraries and build\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.pdb
+E:\final libraries and build\final libraries and build\final libraries and build\webdlls\RegistrationLib.dll
+E:\final libraries and build\final libraries and build\final libraries and build\webdlls\RegistrationLib.pdb
+E:\final libraries and build\final libraries and build\final libraries and build\webdlls\RegistrationLib.xml
+D:\saralwin_old\webdlls\RegistrationLib.dll
+D:\saralwin_old\webdlls\RegistrationLib.pdb
+D:\saralwin_old\webdlls\RegistrationLib.xml
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.vbprojResolveAssemblyReference.cache
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.Resources.resources
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.vbproj.GenerateResource.Cache
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.dll
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.xml
+D:\saralwin_old\Webclasses\RegistrationLib\RegistrationLib\obj\Debug\RegistrationLib.pdb

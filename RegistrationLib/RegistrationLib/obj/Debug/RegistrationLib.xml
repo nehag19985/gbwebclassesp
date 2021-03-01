@@ -1,0 +1,322 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+RegistrationLib
+</name>
+</assembly>
+<members>
+<member name="T:RegistrationLib.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:RegistrationLib.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:RegistrationLib.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetServiceNoCservices(System.Int32)">
+ <summary>
+ This Function fetches service no from CustomerService table. 
+ </summary>
+ <param name="P_customers"></param>
+ <returns>Service no</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.getCountofUnpaidReg">
+ <summary>
+ FUNCTION TO GET THE COUNT OF ROWS of unpaid 15 days registartions
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.RegistrationOpenUnpaiddt(System.Int32,System.Int32,System.Data.DataTable)">
+ <summary>
+ paginated function to get dt of 15days open regstrations
+ </summary>
+ <param name="start"></param>
+ <param name="psize"></param>
+ <param name="Dtinfotable"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.CreateDtFromEpl(System.Data.DataTable,System.String,System.Data.DataRow)">
+ <summary>
+ This Function Creates datatable from Epl file after Epl is Uploaded for Customer Registration.
+ </summary>
+ <param name="CustDT">datatable created from  GF1.CreateDataTableFromHashTable(abc) function.</param>
+ <param name="Lfilenames">Full path and file name of the uploaded epl file(s)</param>
+ <param name="Dealerrow">linkcode of Current Login user from Websessions table.</param>
+ <returns>datatable from epl with calculated date columns.</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.CalculateAllowUptodate(System.String,System.String,System.String,System.Data.DataRow)">
+ <summary>
+ Function Calculates AllowUpto date when Customer registration is being opened.
+ </summary>
+ <param name="CUSTCODE">Custcode from customer epl file/Customer table.</param>
+ <param name="regtype">Regtype of Customer i.e amc or new</param>
+ <param name="regtype2">regtype2 of customer i.e main or home</param>
+ <param name="DealerRow">linkcode of Current Login user from Websessions table.</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetLanandNodeFromChargingItems(System.Int32)">
+ <summary>
+ Function gets the values of Lan and nodes from ChargingItems Table.
+ </summary>
+ <param name="P_Customers"></param>
+ <returns>Lan and nodes value</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessCustomersforRegistrationPreOrder(System.Data.DataTable,System.Data.DataRow,System.Data.DataRow,System.Data.DataTable,System.String)">
+ <summary>
+ This function stores the relevant data into tables(Customers,CustomerServices,Registration,RegistrationTrans and websessions) in database after CustomerRegistration is opened.
+ </summary>
+ <param name="dt1">datatable with data to be used while saving in tables in database.</param>
+ <param name="sessionRow">Session Row contain details of the current login user.</param>
+ <param name="dealerRow">Session Row which contain details of main dealer as per loggedin user</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessCustomersforRegistrationPostOrder(System.Data.DataTable,System.Data.DataRow,System.Data.DataRow,System.String)">
+ <summary>
+ This function stores the relevant data into tables(Customers,CustomerServices,Registration,RegistrationTrans and websessions) in database after CustomerRegistration is opened.
+ </summary>
+ <param name="dt1">datatable with data to be used while saving in tables in database.</param>
+ <param name="sessionRow">Session Row contain details of the current login user.</param>
+ <param name="DealerRow">Session Row contain details of the main dealer row as per logged in user</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.updateBilleduptoPostPayment(System.Data.DataTable)">
+ <summary>
+ 
+ </summary>
+ <param name="dtcust"></param>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.getPaymentDataForDealer(System.String,System.String,System.Int32,System.Int32,System.Data.DataTable)">
+ <summary>
+ function to get data from payments for dealer after creating dealer entry
+ </summary>
+ <param name="lcondition">condition from fronend </param>
+ <param name="Lorder">Order by string</param>
+ <param name="start">starting row no</param>
+ <param name="pSize">No of rows to fetch</param>
+ <param name="DtInfoTable">Infotable</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.CalculatePaymentGatewayChargesRowinOrder(System.Data.DataTable,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Decimal)">
+ <summary>
+ 
+ </summary>
+ <param name="Orderdt">Input Order datatable to which payment gateway is added</param>
+ <param name="AMTwithPGcharges">Amount to be paid by paymentgateway . Payment gateway charges not included</param>
+ <param name="paymentGatewayPercentage"></param>
+ <param name="GrandTotalWithTax">OrderValue including tax</param>
+ <param name="grandtotalWithoutTax">Ordervalue without including tax</param>
+ <param name="WT">Tax applicable or not</param>
+ <param name="AvalBal">Available Balance of main dealer of logged in user</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessCustomersDtForRate(System.Data.DataTable,System.Data.DataRow,System.Collections.Hashtable)">
+ <summary>
+ Populates Order table corresponding to uploaded registration file as per payment status according to logged in Dealer
+ </summary>
+ <param name="Customers"></param>
+ <param name="DealerRow "></param>
+ <param name="NodeIncreasedHashTable"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessOrder(System.Decimal,System.Data.DataTable,System.Data.DataTable,System.Data.DataRow,System.String,System.Data.DataTable,System.String,System.Collections.Hashtable,System.Data.DataRow)">
+ <summary>
+ Processes order populating orderheader , chargingheader, chargingitems tables 
+ </summary>
+ <param name="GrandTotalAmt"> total ordervalue inclusive/exclusive tax</param>
+ <param name="customersDt">Datatable containing details of customers</param>
+ <param name="OrderFinal">Datatable containing details of Order lines</param>
+ <param name="sessionRow">Datarow containing login user details</param>
+ <param name="paymentby">Payment done by user or customer</param>
+ <param name="custrec1">In case of duplicate order, containing details related to previous order </param>
+ <param name="WT">if Tax is applicable or not</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.updateBillPayFlag(System.Decimal,System.Int32,System.Data.DataRow,System.Int32,System.Data.DataRow,System.String,System.Data.DataTable,System.Int32)">
+ <summary>
+  logic to update billpay flag table as per FIFO logic and user selected payment voucher
+ </summary>
+ <param name="amtPG"> total amount to </param>
+ <param name="orderheader"></param>
+ <param name="sessionrow"></param>
+ <param name="p_acccode"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.getLedgerBalance(System.Int32,System.String,System.String,System.Data.DataTable,System.Int32)">
+ <summary>
+ To get available balance for a dealer of a particular acccode 
+ </summary>
+ <param name="p_acccode"></param>
+ <param name="WT"> With Tax yes or No</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.EmailFormatOfMasterRegistrationDetails(System.Data.DataTable,System.DateTime)">
+ <summary>
+ Function creates the Email structure i.e,Subject,Body title etc. from datatable and sends the email to the desired email id.
+ </summary>
+ <param name="RegistrationDetails">Registrationdetails datatable from which email is to be prepared</param>
+ <param name="fromDate"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.PayVerifiedMasterReport(System.DateTime,System.DateTime,System.Data.DataTable)">
+ <summary>
+  Prepares the Payment Verified Today details datatable for all dealers to be sent through email or excel.
+ </summary>
+ <param name="fromDate"></param>
+ <param name="Todate"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.EmailFormatOfPaymentVerifiedDetails(System.Data.DataTable,System.DateTime)">
+ <summary>
+ Function creates the Email structure i.e,Subject,Body title etc. from datatable and sends the email to the desired email id.
+ </summary>
+ <param name="Paymentdt"> datatable from which email is to be prepared</param>
+ <param name="fromDate"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.RegCreatedMasterReport(System.DateTime,System.DateTime)">
+ <summary>
+  Prepares the CustomerRegistration details datatable for all dealers to be sent through email or excel.
+ </summary>
+ <param name="fromDate"></param>
+ <param name="Todate"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.getLastcharFromClname(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="mClname"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessOrderPostpaymentSuccessFull(System.Int32,System.Decimal,System.Decimal,System.Decimal,System.String,System.Data.DataRow,System.Int32,System.Data.DataRow)">
+ <summary>
+ Used for Processing and updating order after payment is done from registration create functionality and is successfull
+ </summary>
+ <param name="lorderHeader"></param>
+ <param name="totalamt">Total amount paid by payment gateway</param>
+ <param name="TotalAmtLessPaymentGateway">Total amount as sum total of chargingheaders</param>
+ <param name="amtwithoutPGCharges">Total available amount offset by dealer/emp ledger</param>
+ <param name="calledFrom"></param>
+ <param name="sessionrow"></param>
+ <param name="p_acccode"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.VerifyPaymentDataGrid(System.Int32,System.Int32,System.String,System.Data.DataTable)">
+ <summary>
+ Function to send dt for verify payment in CRM controller
+ </summary>
+ <param name="start">integer indicating from which rows are to be brought</param>
+ <param name="psize">No. of rows to be brought</param>
+ <param name="lcondition"> condition</param>
+ <param name="DtInfoTable">dt containing infotable</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessOrderFromUnpaidGrid(System.Data.DataTable,System.Data.DataRow,System.Decimal,System.Decimal,System.Decimal)">
+ <summary>
+ 
+ </summary>
+ <param name="dtunpaidorderList"></param>
+ <param name="sessionrow"></param>
+ <param name="totalamt">Total amount paid by payment gateway</param>
+ <param name="TotalAmtLessPaymentGateway">Total amount as sum total of chargingheaders</param>
+ <param name="amtwithoutPGCharges">Total amount offset by dealer/emp ledger</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.ProcessOrderPostPaymentUnpaidGrid(System.Int32,System.Data.DataRow,System.Data.DataTable,System.Decimal,System.Decimal,System.Decimal)">
+ <summary> 
+ </summary>
+ <param name="lorderheader"></param>
+ <param name="sessionRow"></param>
+ <param name="dtunpaidorderList"></param>
+ <param name="totalamt">Total amount paid by payment gateway</param>
+ <param name="TotalAmtLessPaymentGateway">Total amount as sum total of chargingheaders</param>
+ <param name="amtwithoutPGCharges">Total available amount offset by dealer/emp ledger</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.cancelorderheader(System.Int32,System.Data.DataRow,System.Int32)">
+ <summary>
+ Function to Cancel whole Order according to P_OrderHeader provided.
+ </summary>
+ <param name="P_orderHeader">P_OrderHeader from OrderHeader table</param>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.CreateOrderHeaderforPayment(System.Decimal,System.Data.DataRow,System.Int32)">
+ <summary>
+ function to create orderHeader row for payment from paymentdetails  page.
+ </summary>
+ <param name="TotalAmt">Amount to be paid</param>
+ <param name="sessionrow">session row contain details of login user</param>
+ <param name="p_acccode">p_acccode of login user</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetDtForCustomerExcel(System.Data.DataTable)">
+ <summary>
+ This function prepares datatable with Relevant Columns which are to be shown in Customers Excel.
+ </summary>
+ <param name="dt">Datatable from Customers table according to conditions.</param>
+ <returns>datatable containing columns to be write in excel.</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.CreateJoinDT2(System.Data.DataTable)">
+ <summary>
+ Function creates joined datatable of Chargingheader table and Customer table.  
+ </summary>
+ <param name="chargingheader">datatable containing data from chargingheader.</param>
+ <returns>Joined datatable with data from chargingheader and customer tables</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.RegistrationsCreatedReport(System.DateTime,System.DateTime,System.String,System.Data.DataRow)">
+ <summary>
+ Prepares the CustomerRegistration details datatable for each dealer to be sent trrough email or excel.
+ </summary>
+ <param name="fromDate"></param>
+ <param name="Todate"></param>
+ <param name="Fullfilepath"></param>
+ <param name="dealerRow"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.OrderStatementReport(System.DateTime,System.DateTime,System.String,System.Data.DataRow,System.Data.DataTable)">
+ <summary>
+ Prepares the CustomerRegistration details datatable for each dealer to be sent trrough email or excel.
+ </summary>
+ <param name="fromDate"></param>
+ <param name="Todate"></param>
+ <param name="Fullfilepath"></param>
+ <param name="dealerRow"></param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.SendEmailOfRegistrationDetails(System.Data.DataTable,System.DateTime,System.String,System.String)">
+ <summary>
+ Function creates the Email structure i.e,Subject,Body title etc. from datatable and sends the email to the desired email id.
+ </summary>
+ <param name="RegistrationDetails">Registrationdetails datatable from which email is to be prepared</param>
+ <param name="fromDate"></param>
+ <param name="emailId">Email id on which email is to be sent.</param>
+ <param name="attachmentfilepath">Full path of excel file to be attached.</param>
+ <returns></returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetCustomerVerificationDataCount(System.String)">
+ <summary>
+ This function get data for CustomerVerificationgrid  from db
+ </summary>
+ <param name="lcondition">lcondition</param>
+ <returns>dt</returns>
+</member>
+<member name="M:RegistrationLib.RegistrationLib.GetCustomerVerificationData(System.Nullable{System.Int32},System.Data.DataTable,System.String,System.Int32)">
+ <summary>
+ This function get data for CustomerVerificationgrid  from db
+ </summary>
+ <param name="start">start no of row</param>
+ <param name="DtInfoTable">dt containing data from Infotable</param>
+ <param name="lcondition">lcondition</param>
+ <param name="pSize">pagesize</param>
+ <returns>dt</returns>
+</member>
+</members>
+</doc>

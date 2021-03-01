@@ -1,0 +1,9 @@
+D:\saralwin_old\webdlls\GlobalControl.dll
+D:\saralwin_old\webdlls\GlobalControl.pdb
+D:\saralwin_old\webdlls\GlobalControl.xml
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\ResolveAssemblyReference.cache
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\GlobalControl.Resources.resources
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\GlobalControl.vbproj.GenerateResource.Cache
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\GlobalControl.dll
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\GlobalControl.xml
+D:\saralwin_old\Webclasses\GlobalControl\GlobalControl\obj\Release\GlobalControl.pdb

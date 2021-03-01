@@ -1,0 +1,9 @@
+D:\saralwin_old\webdlls\GetHardWareDtls.dll
+D:\saralwin_old\webdlls\GetHardWareDtls.pdb
+D:\saralwin_old\webdlls\GetHardWareDtls.xml
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\ResolveAssemblyReference.cache
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\GetHardWareDtls.Resources.resources
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\GetHardWareDtls.vbproj.GenerateResource.Cache
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\GetHardWareDtls.dll
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\GetHardWareDtls.xml
+D:\saralwin_old\Webclasses\GetHardWareDtls\GetHardWareDtls\obj\Debug\GetHardWareDtls.pdb

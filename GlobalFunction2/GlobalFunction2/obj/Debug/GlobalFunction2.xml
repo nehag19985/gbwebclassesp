@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GlobalFunction2
+</name>
+</assembly>
+<members>
+<member name="M:GlobalFunction2.GlobalFunction2.QuitError(System.Exception,Microsoft.VisualBasic.ErrObject,System.String)">
+	<summary>
+ Error Message box before quitting the application
+ </summary>
+	<param name="ex">Error on exception </param>
+	<param name="err"> error object </param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.QuitMessage(System.String,System.String)">
+	<summary>
+ Message box before quitting the application
+ </summary>
+	<param name="MessageString"> message as string</param>
+	<param name="QuitProcedure">Function or sunroutine name from exception thrown</param>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.Edit_NT_Files(System.String,System.String,System.Boolean)">
+	<summary>
+ Function is used to edit existing Config.NT or Autoexec.NT files  separately
+ </summary>
+	<param name="FullNTFile">Name of NT file with path</param>
+	<param name="EditingLines">Comma separated Entries to be edited, such as files=145 or set clipper=F:145;swapk:32000,set l_n=Y,set ydi=c:\nod1 etc. </param>
+	<param name="RemoveFlag">True if EditingLines are to be removed from FullNTFile or False if editted</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.GetTempFileName(System.String,System.String)">
+	<summary>
+ To creates temporary file at particular path by adding any suffix in original file name-----------'
+ </summary>
+	<param name="FileFullPath"></param>
+	<param name="AddSuffix"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GlobalFunction2.GlobalFunction2.SendingEmail(System.String,System.String,System.String,System.String)">
+	<summary>
+ To send emails with attatchments
+ </summary>
+	<param name="ToMailId">Email id to which mail to be sent</param>
+	<param name="MailSubject">Subject of email</param>
+	<param name="MyMailText">Body of email</param>
+	<param name="AttachmentFileName">Comma separated FileNames with path to be attatched</param>
+	<remarks></remarks>
+</member><member name="P:GlobalFunction2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GlobalFunction2.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GlobalFunction2.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UserProgressBar
+</name>
+</assembly>
+<members>
+<member name="P:UserProgressBar.ProgressBar.FixedTitle">
+	<summary>
+ True, if form title is fixed and false, if it is variable.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.frmTitle">
+	<summary>
+ Sets the title of the form.If frmTitle is null then title bar of form is invisible.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.Size">
+	<summary>
+ Sets the size of the form.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.Location">
+	<summary>
+ Sets the location of the form.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.Value">
+	<summary>
+ Sets the location of the form.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.lblBkColor">
+	<summary>
+ Sets the backcolor of the labels.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.lblForeColor">
+	<summary>
+  Sets the forecolor of the labels.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.ProgressBarStyle">
+	<summary>
+ Sets the style of ProgressBar.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.ProgBarColor">
+	<summary>
+ Sets the color of ProgressBar.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UserProgressBar.ProgressBar.BtnText">
+	<summary>
+ Sets the text of stop button.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

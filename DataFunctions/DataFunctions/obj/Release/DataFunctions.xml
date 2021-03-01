@@ -1,0 +1,2804 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DataFunctions
+</name>
+</assembly>
+<members>
+<member name="M:DataFunctions.DataFunctions.GetDatafromCSV1(System.String)">
+	<summary>
+ To get the data of .csv file to a datatable using comma split
+ </summary>
+	<param name="csvpath">In this the full path with name of the .csv file is given.</param>
+	<returns></returns>
+</member><member name="M:DataFunctions.DataFunctions.QuitError(System.Exception,Microsoft.VisualBasic.ErrObject,System.String)">
+	<summary>
+ Error Message box before quitting the application
+ </summary>
+	<param name="ex">Error on exception </param>
+	<param name="err"> error object </param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.QuitMessage(System.String,System.String)">
+	<summary>
+ Message box before quitting the application
+ </summary>
+	<param name="MessageString"> message as string</param>
+	<param name="QuitProcedure">Function or sunroutine name from exception thrown</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ArrayAppendSqlParameter(System.Data.SqlClient.SqlParameter[]@,System.Data.SqlClient.SqlParameter,System.Boolean)">
+	<summary>
+ Add a control element at the last of an array
+ </summary>
+	<param name="ArrayName"> Array to be added</param>
+	<param name="LastValue">SqlParameter element added at last position </param>
+	<param name="IgnoreIfExists">Ignore if item already exists in the array</param>
+	<returns> Output array after adding new control </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.BreakServerDataBase(System.String)">
+	<summary>
+ Break String of serverdatabase string into a list of string where index item (0) is Sql Server Name and index item (1) is database name 
+ </summary>
+	<param name="ServerDataBase">Full identifier of database with server</param>
+	<returns>Return a list of server name and data base name</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.OpenSqlConnection(System.String,System.Int32,System.Int32)">
+	<summary>
+ To open new SQL connection
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database eg. server1.database1</param>
+	<param name="MaxPoolSize">Max pool size connections at a time default is 100</param>
+	<param name="ConnectionTimeOut">Connection time out in seconds defau</param>
+	<returns>An new sql connection</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.OpenSqlConnectionLocal(System.String,System.Int32,System.Int32)">
+	<summary>
+ To open new Local SQL connection
+ </summary>
+	<param name="DataBaseName">Database name to be connected</param>
+	<param name="MaxPoolSize">Max pool size connections at a time default is 100</param>
+	<param name="ConnectionTimeOut">Connection time out in seconds defau</param>
+	<returns>An new sql connection</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.OpenSqlConnectionRemote(System.String,System.Int32,System.Int32)">
+	<summary>
+ To open new Remote SQL connection
+ </summary>
+	<param name="DataBaseName">Database name to be connected</param>
+	<param name="MaxPoolSize">Max pool size connections at a time default is 100</param>
+	<param name="ConnectionTimeOut">Connection time out in seconds defau</param>
+	<returns>An new sql connection</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RemoveSquareBrackets(System.String)">
+	<summary>
+ Remove square brackets from serever or database name or both.
+ </summary>
+	<param name="ServerOrDatabaseName">Server Or DatabaseName</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddSquareBrackets(System.String)">
+	<summary>
+ Add square brackets to serever or database name or both.
+ </summary>
+	<param name="ServerOrDatabaseName">Server Or DatabaseName</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.IsLocalServer(System.String)">
+	<summary>
+ Check server name is local or not
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.OpenSqlConnection(System.String,System.String,System.Int32,System.Int32)">
+	<summary>
+ To open new SQL connection
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="DataBaseName">Database name</param>
+	<param name="MaxPoolSize">Max pool size connections at a time default is 100</param>
+	<param name="ConnectionTimeOut">Connection time out in seconds defau</param>
+	<returns>An Sql connection</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AttachDataBase(System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Attach a database to server
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc. </param>
+	<param name="DataBaseFullName">Full path of database name</param>
+	<param name="DeleteMessageAlert">Delete message alert if database already attached to server</param>
+	<param name="NetworkedFolder">True if file is attached from a Networked Computer</param>
+	<returns>Completion flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AttachDataBase(System.String,System.String,System.String,System.Boolean)">
+	<summary>
+ Attach a database to server
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="DataBaseFolder">Folder name where database exists</param>
+	<param name="DataBaseName">Name of Database</param>
+	<param name="DeleteMessageAlert">Delete message alert if database already attached to server</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DetachDataBase(System.String,System.String)">
+	<summary>
+ Detach connected database to the server
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="DataBaseName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateDataBase(System.String,System.String)">
+	<summary>
+ To create a new database 
+ </summary>
+	<param name="SqlServer">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="FullFileName">Database name with path</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateDataBase(System.String,System.String,System.String)">
+	<summary>
+ To create a new database 
+ </summary>
+	<param name="SqlServer">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="DataBaseFolder">DataBaseFolder name</param>
+	<param name="DataBaseName">DataBase Name</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CopyDatabase(System.String,System.String,System.String,System.String)">
+	<summary>
+ Copy sql database to another location
+ </summary>
+	<param name="SourceFolder"></param>
+	<param name="SourceDatabaseName"></param>
+	<param name="TargetFolder"></param>
+	<param name="TargetDatabaseName"></param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ServerExists(System.String,System.String)">
+	<summary>
+ To check wether a server name contained by local server
+ </summary>
+	<param name="LocalServer1">Local Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="FindServerName">Server Name as string to be searched in local server</param>
+	<returns>Existing flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DataBaseExists(System.String,System.String)">
+	<summary>
+ To check wether a database name contained by server
+ </summary>
+	<param name="ServerName">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="FindDataBaseName">Database name to be checked by existence</param>
+	<returns>Existing Flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TableExists(System.String,System.String)">
+	<summary>
+ To check wether a table name exists in a database 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or 0_srv_0.0_mdf_0 format</param>
+	<param name="FindTableName">Table name to be searched</param>
+	<returns>Flag for existence</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TableExists(System.Data.SqlClient.SqlConnection,System.String)">
+	<summary>
+ To check wether a table name exists in a sql connection
+ </summary>
+	<param name="LSqlConnection ">Opened sql connection</param>
+	<param name="FindTableName">Table name to be searched</param>
+	<returns>Flag for existence</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TableExists(System.String,System.String,System.String)">
+	<summary>
+ To check wether a table name exists in a database
+ </summary>
+	<param name="SQServer">Server name as constant or as in the convention 0_srv_0 ,1_srv_1 etc.</param>
+	<param name="SqDataBase">Sql Database name</param>
+	<param name="FindTableName">Table name to be searched</param>
+	<returns>Flag for existence</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LinkServer(System.Boolean)">
+	<summary>
+ To add a remote server to local server
+ </summary>
+	<param name="Detach">True if Remote server droped without prompting if already linked </param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropServer(System.String,System.String)">
+	<summary>
+ To drop existing Linked server
+ </summary>
+	<param name="LocalServer1">Local server name</param>
+	<param name="RemoteServerName ">Remote server name to be linked to local server</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or 0_srv_0.0_mdf_0 format</param>
+	<param name="Ltable">Sql Table names of  FROM CLAUSE . if SeverDataBase is blank then these names must be full qualifier table names eg. (Server1.SQLBASE1.DBO.TABLE1) or from the mapped table names such as "_srv_0._mdf_0.table1 where srv0 is a key of global collection of servers and mdf0 is a key of global collection of databases</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL JOIN CLAUSE of querry</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="RecordPosition">Record posintion  F=FirstRecord,L=LastRecord, or "*"=All</param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.Data.SqlClient.SqlConnection,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="Sql_Connection">Database sql connection</param>
+	<param name="Ltable">Sql Table names of  FROM CLAUSE . if SeverDataBase is blank then these names must be full qualifier table names eg. (Server1.SQLBASE1.DBO.TABLE1) or from the mapped table names such as "_srv_0._mdf_0.table1 where srv0 is a key of global collection of servers and mdf0 is a key of global collection of databases</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL JOIN CLAUSE of querry</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="RecordPosition">Record posintion  F=FirstRecord,L=LastRecord, or "*"=All</param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.Object@,System.String,System.String,System.String,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.Object@,System.Collections.Hashtable,System.String,System.String,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="Hcondition"> condition as hashtable after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.checkIfDuplicateExists(System.Object,System.String,System.Object,System.String)">
+	<summary>
+ To check if duplicate value exists for a particular column in a table as per given condition
+ </summary>
+	<param name="clsTableclass">Table class of table in which value has to be searched </param>
+	<param name="colname">Name of column whose value is to be searched</param>
+	<param name="colValue">Value of column which needs to be check for duplicate</param>
+	<param name="WhereClause">additional condition which needs to be applied in query while searching for duplicate</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataQuery(System.Object@,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.Data.SqlClient.SqlTransaction@,System.Object@,System.String,System.String,System.String,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="MyTrans">Sql Transanction</param>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecordFromSql(System.Object@,System.Int32,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data row from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="PrimaryKeyValue">Primary key value to be searched</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecordFromSql(System.Object@,System.Collections.Hashtable,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="WhereClause">A hash table having the conditions of where clause , key is field name,value is fieldvalue,logical gate=And</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecordFromSql(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Int32,System.Object,System.Collections.Hashtable)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="PrimaryKeyValue">Primary key value to be searched</param>
+	<param name="aClsObject">An array of all classobjects if there values are assigned or element of expression to any column of  datatable</param>
+	<param name="HashPublicValues">A hashtable with keys of all public variables of the form</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.String,System.String,System.String,System.String,System.Collections.Hashtable,System.String,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or 0_srv_0.0_mdf_0 format</param>
+	<param name="Ltable">Sql Table names of  FROM CLAUSE . if SeverDataBase is blank then these names must be full qualifier table names eg. (Server1.SQLBASE1.DBO.TABLE1) or from the mapped table names such as "_srv_0._mdf_0.table1 where srv0 is a key of global collection of servers and mdf0 is a key of global collection of databases</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL JOIN CLAUSE of querry</param>
+	<param name="Hcondition">Condition as hashtable,where key is field and value is condition value with equality operator and logical gate AND </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="RecordPosition">Record posintion  F=FirstRecord,L=LastRecord, or "*"=All</param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSqlIdentifier(System.String,System.String,System.String,System.Collections.Hashtable,System.String,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="SqlTableIdentifier">Full identifier of a sqltable with server name eg. server0.database0.dbo.table or 0_srv_0.0_mdf_0.dbo.table format</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL JOIN CLAUSE of querry</param>
+	<param name="Hcondition">Condition as hashtable,where key is field and value is condition value with equality operator and logical gate AND </param>
+	<param name="LFilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="RecordPosition">Record posintion  F=FirstRecord,L=LastRecord, or "*"=All</param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or 0_srv_0.0_mdf_0 format</param>
+	<param name="Ltable">Sql Table names of  FROM CLAUSE . if SeverDataBase is blank then these names must be full qualifier table names eg. (Server1.SQLBASE1.DBO.TABLE1) or from the mapped table names such as "_srv_0._mdf_0.table1 where srv0 is a key of global collection of servers and mdf0 is a key of global collection of databases</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSqlIdentifier(System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="SqlTableIdentifier">Full identifier of a sqltable with server name eg. server0.database0.dbo.table or 0_srv_0.0_mdf_0.dbo.table format</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetNewRowTemplateFromSqlIdentifier(System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and conditions 
+ </summary>
+	<param name="SqlTableIdentifier">Full identifier of a sqltable with server name eg. server0.database0.dbo.table or 0_srv_0.0_mdf_0.dbo.table format</param>
+	<returns>DatRow  tempplate</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetServerDataBase(System.String,System.Boolean)">
+	<summary>
+ To get a  string of  server.database format from  0_srv_0.0_mdf_0 or srv1.mdf1 fromat
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or 0_srv_0.0_mdf_0 format </param>
+	<param name="WithBrackets">True, if servername will be enclosed in square brackets
+ </param>
+	<returns>Comma Separated string of SQL databases</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ConvertFromSrv0Mdf0(System.String,System.Boolean)">
+	<summary>
+ To convert  a querry string in which tables are in the format (0_srv_0.0_mdf_0.dbo.table1)  are converted into format (server0.database0.dbo.table0)  
+ </summary>
+	<param name="StringToConvert">String having tables in the format (0_srv_0.0_mdf_0.dbo.table1) </param>
+	<param name="WithBrackets">True, if servername will be enclosed in square brackets</param>
+	<returns>String of SQL databases with servers</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ConvertFromSrv0(System.String,System.Boolean)">
+	<summary>
+ To convert  a server string in which server name is in the format (_srv_0)  are converted into fixed name  
+ </summary>
+	<param name="SeverString">Server string in the format 0_srv_0 or fixed servername </param>
+	<param name="WithBrackets">True, if servername will be enclosed in square brackets</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ConvertFromMdf0(System.String,System.Boolean)">
+	<summary>
+ To convert  a mdf name string in which database name is in the format (mdf0)  are converted into fixed name  
+ </summary>
+	<param name="MdfString">database string in the format 0_mdf_0 or fixed databasename</param>
+	<param name="WithBrackets">True, if servername will be enclosed in square brackets</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFixedRows(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,Microsoft.VisualBasic.Collection@,System.String,System.Int32@,System.Int32@,System.String)">
+	<summary>
+ To get datatable of fixed rows from sql table on specified order and conditions 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format , if space or used table names are full identifier then this will extracted from full table names</param>
+	<param name="Ltable">Sql Table names (For more than one table ,comma should be used as delimited,If serverdatabase="" ,Table names must be full identifier ,such as SQLBase1.DBO.Table1 ,SQLBase2.DBO.Table3 etc. or  mdf0.table1,mdbf3.table2,mdf4.table2 ,where mdf0,mdf3,mdf4 are the keys of a collection having databasenames</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL Join Clause of querry</param>
+	<param name="Lcondition">String condition after Where Clause</param>
+	<param name="Lfilter">Filter criteria added in where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="NoOfRows">No of rows to be populated</param>
+	<param name="StartPoint">A collection object having keys col0=Name of keyfield of main table,col1=Start Value of keyfield,Concanated start value of Order columns </param>
+	<param name="NavigstionType">"F"=Forward accessing of main table,"R"=Reverse accessing of main table</param>
+	<param name="StartRowPostion ">Rows count in the main table from top to the start point on this condition and filter criteria</param>
+	<param name="TotalRows  ">Total Rows in the main table on this condition and filter criteria </param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSqlFixedRows(System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Int32@,System.Int32,System.Int32@,System.String)">
+	<summary>
+ To get datatable of fixed rows from sql table on specified order and conditions 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format , if space or used table names are full identifier then this will extracted from full table names</param>
+	<param name="Ltable">Sql Table names (For more than one table ,comma should be used as delimited,If serverdatabase="" ,Table names must be full identifier ,such as SQLBase1.DBO.Table1 ,SQLBase2.DBO.Table3 etc. or  mdf0.table1,mdbf3.table2,mdf4.table2 ,where mdf0,mdf3,mdf4 are the keys of a collection having databasenames</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="LJoinStmt">SQL Join Clause of querry</param>
+	<param name="Lcondition">String condition after Where Clause</param>
+	<param name="Lfilter">Filter criteria to get page offset value within the above condition</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="StartRowPostion ">Rows count in the main table from top to the start point on this condition and filter criteria</param>
+	<param name="NoOfRows">No of rows to be populated</param>
+	<param name="TotalRows  ">Total Rows in the main table on this condition and filter criteria, calculated if -1 passed </param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns</param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromSql(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To get data table from Sql Table on specified order and condition 
+ </summary>
+	<param name="Sql_Transaction">Sql transaction name</param>
+	<param name="Ltable">Sql Table name</param>
+	<param name="LJoinStmt">SQL Join Clause of querry</param>
+	<param name="LfieldList">Comma separated field list to get (*) for all</param>
+	<param name="Lcondition">String condition after Where Clause </param>
+	<param name="Lfilter">Additional filter string for where clause</param>
+	<param name="Lorder">Comma separated field string after Order by Clause</param>
+	<param name="RecordPosition">Record posintion  F=FirstRecord,L=LastRecord, or "*"=All</param>
+	<param name="PrimaryCols">Comma separated string of data table primary columns </param>
+	<returns>Data Table Object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.Data.DataTable,System.String,System.String,System.Int32)">
+	<summary>
+ To get increamental last key of a data table
+ </summary>
+	<param name="LDataTable">Data table from which lastkey found</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="Prefix">Prefix of lastkey</param>
+	<param name="LastKeyFieldSize">Size of the keyfield </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetFinalFieldsValuesOneTable(System.Object@)">
+	<summary>
+ Set final values of  currdt or currrow  of TableClass object according to InterFieldValues.
+ </summary>
+	<param name="clsObject">TableClass object after defining FieldsFinalValues property</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetFinalFieldsValues(System.Object[]@,System.Collections.Hashtable)">
+	<summary>
+ Set final values of  currdt or currrow  of an array of TableClass object according to InterFieldValues.
+ </summary>
+	<param name="clsObject">An array of TableClass object after defining FieldsFinalValues property for each table class.</param>
+	<param name="HashPublicValues">A hashtable having keys as variablenames and values are variable's values used in expressions to assign fieldvalues</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AutoIncreaseInfSno(System.Object@,System.String,System.String)">
+	<summary>
+ This Function returns an auto increased integer value for a pertcular column in a table as per given condition
+ </summary>
+	<param name="aTableClass">Tableclass of table in which value has to be searched</param>
+	<param name="columnName"> Name of the column whose value is to be searched</param>
+	<param name="WhereClause">Additional condition which needs to be applied in query for searching.</param>
+	<returns>This function returns an Integer value</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastValuePlusOne(System.Data.DataTable@,System.String,System.Boolean,System.Boolean,System.Int32)">
+	<summary>
+ To get and assign increamental last value in a data table for a given field.
+ </summary>
+	<param name="LDataTable">Data table from which lastkey found and replaced</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="AssignValueToField">True  if LastValuePlusOne to be assigned to column values of datatable. </param>
+	<param name="OnlyEmpty">True ,if only empty ,zero or null cells to be replace</param>
+	<param name="StartFrom">Field Value to be start from </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.String,System.String@,System.String,System.String,System.Int32,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format , if space or used table names are full identifier then this will extracted from full table name</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="Prefix">Prefix of lastkey</param>
+	<param name="LastKeyFieldSize">Size of the keyfield </param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyValues">A hashtable having LastKeyPlus  values.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.String,System.String@,System.String,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format , if space or used table names are full identifier then this will extracted from full table name</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyValues">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String,System.Int32,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="Ltrans">Sql Transaction</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="Prefix">Prefix of lastkey</param>
+	<param name="LastKeyFieldSize">Size of the keyfield </param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyPlusInTransaction">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String,System.Int32,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="LConnection">Sql Transaction</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="Prefix">Prefix of lastkey</param>
+	<param name="LastKeyFieldSize">Size of the keyfield </param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyPlusInTransaction">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="Ltrans">Sql Transaction</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="LCondition">Optional condition for lastkeyplus query</param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyPlusInTransaction">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeyPlus(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String,System.Data.DataRow@,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from an SQL Table
+ </summary>
+	<param name="LConnection">SqlConnection</param>
+	<param name="Ltable">Sql Table name as string</param>
+	<param name="LastKeyField">Field name of lastkey</param>
+	<param name="LCondition">Optional condition for lastkeyplus query</param>
+	<param name="NewRowTemplate">NewRowTemplate for RowSource used for new insert in sql table </param>
+	<param name="LastKeyPlusInTransaction">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeysPlus(System.Data.SqlClient.SqlTransaction@,System.Object,System.String,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from  SQL Tables ,If a constraints are given in a collection
+ </summary>
+	<param name="Ltrans">Sql Transaction object</param>
+	<param name="ClsTable">A table class object</param>
+	<param name="KeyPlusGroups">Comma separated type of field group from grouptype Y,R,S,O,D default is Y</param>
+	<param name="LastKeysValues">A Hash Table with keys are tablename and values are another hash table (keys= Increamenting fields(Including primary keys),Values= LastValue + 1 of sql table,</param>
+	<returns>A  ClsTable object with updated LastKeyValues</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeysPlus(System.Data.SqlClient.SqlConnection@,System.Object,System.String,System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from  SQL Tables ,If a constraints are given in a collection
+ </summary>
+	<param name="LConnection">SqlConnection object</param>
+	<param name="ClsTable">A table class object</param>
+	<param name="KeyPlusGroups">Comma separated type of field group from grouptype Y,R,S,O,D default is Y</param>
+	<param name="LastKeysValues">A Hash Table with keys are tablename and values are another hash table (keys= Increamenting fields(Including primary keys),Values= LastValue + 1 of sql table,</param>
+	<returns>A  ClsTable object with updated LastKeyValues</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeysPlus(System.Data.SqlClient.SqlTransaction@,System.Object[],System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from  SQL Tables ,If a constraints are given in a collection
+ </summary>
+	<param name="Ltrans">Sql Transaction object</param>
+	<param name="aClsTable">An array of  table class object</param>
+	<param name="LastKeysValues">A Hash Table with keys are tablename and values are another hash table (keys= Increamenting fields(Including primary keys),Values= LastValue + 1 of sql table,</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.LastKeysPlus(System.Data.SqlClient.SqlConnection@,System.Object[],System.Collections.Hashtable@)">
+	<summary>
+ To get increamental last key from  SQL Tables ,If a constraints are given in a collection
+ </summary>
+	<param name="LConnection">SqlConnection object</param>
+	<param name="aClsTable">An array of  table class object</param>
+	<param name="LastKeysValues">A Hash Table with keys are tablename and values are another hash table (keys= Increamenting fields(Including primary keys),Values= LastValue + 1 of sql table,</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlStringLastKey(System.String,Microsoft.VisualBasic.Collection,System.Boolean,System.Boolean,System.String,System.String)">
+	<summary>
+ To create SQL querry/non querry string for sql command execution 
+ </summary>
+	<param name="LTableName">Main Table name</param>
+	<param name="LastKeyCollection">A collection having fields informations of primary key and additional keyno.{col0=FieldName_PrimaryKey, col1=PrimaryFieldType, col2=PrimaryFieldSize, col3=PrimaryfieldPrefix, col4=FieldName_VoucherType, col5=FieldName_VoucherNo, col6=FieldName_Date, col7=IncreamentType(A=Always,F=Financial year wise,Y=Yearwise,M=Month wise,D=DateWise), col8=StringOfVoucherTypes Separated by ! for common voucher no increament}</param>
+	<param name="AddLast">TRUE, if row of lastkey is added onto the table ,otherwise take False if lastkey is only computed</param>
+	<param name="LPrimaryKey">True if primary key is calculated,False if additional key calculated</param>
+	<param name="CurrentDate">Current Date on which additional key generated</param>
+	<param name="LVoucherType">Current Voucher Type on which additional key generated</param>
+	<returns>String of SQL querry</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.IndexFileExists(System.String,System.String,System.String)">
+	<summary>
+ Check wether an index of an SQL table exists
+ </summary>
+	<param name="SqServer">Server name as string</param>
+	<param name="LDataBase">DataBase name as string</param>
+	<param name="IndexName">Index Name to be searched</param>
+	<returns>Existing flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.IndexFileExists(System.String,System.String)">
+	<summary>
+ Check wether an index of an SQL table exists
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="IndexName">Index name to be searched</param>
+	<returns>Existing flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DbfConnection(System.String)">
+	<summary>
+ To open a coonection for a dbase III file
+ </summary>
+	<param name="DBFFolder">Folder which contains a DBF file</param>
+	<returns>An ODBC connection </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetStructureDBFFile(System.String,System.String)">
+	<summary>
+ Get structure of a DBF file
+ </summary>
+	<param name="FullDBFName ">FullNameDBFFile</param>
+	<returns>Strucure of DBF as DataTable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetPrimaryColumns(System.Data.DataTable@,System.String)">
+	<summary>
+ Set Primary columns of data table for fast searching
+ </summary>
+	<param name="LdataTable">Datatable as datatable</param>
+	<param name="PrimaryCols">Comma separated list of primary columns</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetPrimaryColumns(System.Data.DataTable@,System.Collections.Hashtable)">
+	<summary>
+ Set Primary columns of data table for fast searching
+ </summary>
+	<param name="LdataTable">Datatable as datatable</param>
+	<param name="PrimaryCols">Primary columns with type as hashtable,where key is columnname,value is columntype</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetPrimaryColumns(System.Data.DataTable@,System.String[])">
+	<summary>
+ Set Primary columns of data table for fast searching
+ </summary>
+	<param name="LdataTable">Datatable as datatable</param>
+	<param name="PrimaryCols">Array of primary columns</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaTable(System.String,System.String,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="SqServer">Sql Server name as string</param>
+	<param name="lDatabase">Data base name as string</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaTable(System.String,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetTableNameFromSqlIdentifier(System.Object)">
+	<summary>
+ Get base table name from full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format
+ </summary>
+	<param name="SqlTableFullIdentifier"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetServerFromSqlIdentifier(System.Object)">
+	<summary>
+ Get Server name from full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format 
+ </summary>
+	<param name="SqlTableFullIdentifier"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetServerDataBaseFromSqlIdentifier(System.Object)">
+	<summary>
+ Get ServerDatabase  from full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format 
+ </summary>
+	<param name="SqlTableFullIdentifier"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataBaseFromSqlIdentifier(System.Object)">
+	<summary>
+ Get database name from full sql table identifier i.e. server.database.dbo.table format or 0_srv_0.0_mdf_0.dbo.Table format
+ </summary>
+	<param name="SqlTableFullIdentifier"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaInformations(System.String,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetPrimaryKey(System.String,System.String)">
+	<summary>
+ Get  SQL table's primary key field name.
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Return Primary key column name of the table</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetPrimaryKey(System.Data.SqlClient.SqlConnection,System.String)">
+	<summary>
+ Get  SQL table's primary key field name.
+ </summary>
+	<param name="mSqlConnection">opened sql connection</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Return Primary key column name of the table</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetPrimaryKey(System.Data.DataTable)">
+	<summary>
+ Get  SQL table's primary key field name from SchemaInformation.
+ </summary>
+	<param name="SchemaTable">SchemaTable of a SQL Table returned by GetSchemaTable or GetSchemaInformations </param>
+	<returns>Return Primary key column name of the table</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaTable(System.Data.SqlClient.SqlTransaction@,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaTable(System.Data.SqlClient.SqlConnection@,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="LConnection">Sql Connection</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSchemaInformations(System.Data.SqlClient.SqlTransaction@,System.String)">
+	<summary>
+ Get schema/structure of a SQL table in a data table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction</param>
+	<param name="TableName">Name of Table of getting structue/schema</param>
+	<returns>Structure in a datatable object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.String,System.String,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="SqServer">Sql server name</param>
+	<param name="lDatabase">Sql database name containing table</param>
+	<param name="TableName">Table from which rows deleted </param>
+	<param name="lCondition">Where Clause as string</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.String,System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="SqServer">Sql server name</param>
+	<param name="lDatabase">Sql database name containing table</param>
+	<param name="TableName">Table from which rows deleted </param>
+	<param name="lCondition">Where Clause as HashTable</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.String,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="ServerDatabase ">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table from which rows deleted </param>
+	<param name="lCondition">Where Clause as string</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="ServerDatabase ">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table from which rows deleted </param>
+	<param name="HCondition">Where Clause as hashtable</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlTransaction@,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="lCondition">Where Clause as string</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.Int32)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="PrimaryKey">Primary key field name</param>
+	<param name="PrimaryKeyValue">Primary Key field value </param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="PrimaryKey">Primary key field name</param>
+	<param name="PrimaryKeyValue">Primary Key field value </param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlTransaction@,System.String,System.Collections.Hashtable)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="FieldValues">FieldValues as hashtable where key is fieldname and field value is hashtable value</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlConnection@,System.Data.SqlClient.SqlCommand@,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="SQL_Connection">SQL connection already open</param>
+	<param name="SQL_Command">SQL command already created</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="lCondition">Where Clause as string</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecords(System.Data.SqlClient.SqlConnection@,System.String,System.String)">
+	<summary>
+ Delete records from an SQL Table
+ </summary>
+	<param name="SQL_Connection">SQL connection already open</param>
+	<param name="TableName">Table from which rows deleted</param>
+	<param name="lCondition">Where Clause as string</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromDBF(System.String,System.String,System.String,System.String)">
+	<summary>
+ Get Datatable from a DBF table
+ </summary>
+	<param name="FullDBFName">Full dbf file name with path and extension</param>
+	<param name="Lcondition">Where Clause as string</param>
+	<param name="Lorder ">Order By Clause as string </param> ''' 
+ <param name="PrimaryCols">Comma separated string of primary columns</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromExcel(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Get data table from an excel file
+ </summary>
+	<param name="FullExcelFile">Full exel file name with path and extension</param>
+	<param name="LCondition">Where Clause as string , it is case sensitive</param>
+	<param name="Lorder">Order By Clause as string</param>
+	<param name="PrimaryCols">Comma separated string of primary columns</param>
+	<param name="SheetName">SheetName of excel from which data fetched,default is first sheet</param>
+	<returns>Data table of rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDuplicateRows(System.Data.DataTable,System.String)">
+	<summary>
+ To Get Duplicate rows having common column values
+ </summary>
+	<param name="LdataTable">DataTable whose rows to be checked</param>
+	<param name="ColumnsToCheck">Comma separated columns , whose values to be checked for duplicacy</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateIndexByExcelList(System.String,System.String,System.String,System.String)">
+	<summary>
+ Create index files of sql tables , whoose names are stored in an excel file(column name -fname) and index fields and index filename are stored in (column name-ntxf) eg. value of ntfx may be (  IndexFld1*IndexFile1~IndexFld2*IndexFile2~IndexFld3*IndexFile3)
+ </summary>
+	<param name="Sqserver">Sql Server Name </param>
+	<param name="LDataBase">Sql DataBase Name</param>
+	<param name="ExcelSource">Excel file name with path and extension</param>
+	<param name="IncludeTables">Comma separated String of Table names, default is all</param>
+	<returns>Completion flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateIndex(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ To create index files on an SQL Table specifying its key fields and index file names
+ </summary>
+	<param name="SqServer">Sql Server Name</param>
+	<param name="LDataBase">Sql Data Base name</param>
+	<param name="LTable">Sql Table Name</param>
+	<param name="IndexKey ">Comma separated list of index fields</param>
+	<param name="IndexFile">Name of index file</param>
+	<returns>Completion flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query statements 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format </param>
+	<param name="SqlStr">Sql Non querry statements</param>
+	<param name="SqlParameterArr">Sql Parameters array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.String,System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query statements 
+ </summary>
+	<param name="ServerName">servername </param>
+	<param name="LDataBase">Database name</param>
+	<param name="SqlStr">Sql Non querry statements</param>
+	<param name="SqlParameterArr">Sql Parameters array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.Data.SqlClient.SqlTransaction@,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query string command
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="SqlStr">Non querry string to be executed</param>
+	<param name="SqlParameterArr">Sql parameters as array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.Data.SqlClient.SqlTransaction@,System.Data.SqlClient.SqlCommand@,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query string command
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction by reference</param>
+	<param name="Lcommand">sql command</param>
+	<param name="SqlStr">Non querry string to be executed</param>
+	<param name="SqlParameterArr">Sql parameters as array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.Data.SqlClient.SqlConnection@,System.Data.SqlClient.SqlCommand@,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query string command
+ </summary>
+	<param name="SQL_Connection">SQL connection already open </param>
+	<param name="SQL_Command">SQL command already created</param>
+	<param name="SqlStr">Non querry string to be executed</param>
+	<param name="SqlParameterArr">Sql parameters as array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteNonQuery(System.Data.SqlClient.SqlConnection@,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>
+ Execute T-SQL non query string command
+ </summary>
+	<param name="SQL_Connection">SQL connection already open </param>
+	<param name="SqlStr">Non querry string to be executed</param>
+	<param name="SqlParameterArr">Sql parameters as array</param>
+	<returns>No. of rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteScalarQuery(System.String,System.String)">
+	<summary>
+ Execute T-SQL Scaler querry  statement 
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="Sqlstr">Scaler Querry Strig command to be executed</param>
+	<returns>An object type return</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteScalarQuery(System.Data.SqlClient.SqlTransaction@,System.String)">
+	<summary>
+  Execute T-SQL Scaler querry  statement 
+ </summary>
+	<param name="Sql_Transaction">Sql transaction by reference</param>
+	<param name="Sqlstr">Scaler Querry Strig command to ben executed</param>
+	<returns>An integer type return</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteScalarQuery(System.Data.SqlClient.SqlConnection@,System.String)">
+	<summary>
+  Execute T-SQL Scaler querry  statement 
+ </summary>
+	<param name="Sql_Connection">Sql Connection by reference</param>
+	<param name="Sqlstr">Scaler Querry Strig command to ben executed</param>
+	<returns>An integer type return</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataTable(System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  querry  statement
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SqlStr"></param>
+	<param name="FromClauseTable">TableName used in from clause of sqlstr query</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.String,System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="FromClauseTables">Comma separated string of tables used in from clause(s) of sqlstr query,Set as TableName property  of DataTable(server.database.dbo.table)</param>
+	<param name="PrimaryColumns">~  separated string of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatables ,These columns may be different sql tables primary keys,If not defined, Sql tables primary keys will be DataTables primary key</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.String,System.String,System.Int32,System.Int32,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="StartRecord">Start Record No</param>
+	<param name="MaxRecord">Maximum Records to fetch</param>
+	<param name="PrimaryColumns">~  separated string of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatables ,These columns may be different sql tables primary keys,If not defined, Sql tables primary keys will be DataTables primary key</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataTable(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction </param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="FromClauseTable">Comma separated string of tables used in from clause(s) of sqlstr query,Set as TableName property  of DataTable(server.database.dbo.table)</param>
+	<param name="PrimaryColumns">String of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatable ,These columns may be different sql table's primary keys,If not defined, Sql tables primary keys will be DataTable primary key</param>
+	<returns>return a data table object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataTable(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="LConnection">Sql Connection </param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="FromClauseTable">Comma separated string of tables used in from clause(s) of sqlstr query,Set as TableName property  of DataTable(server.database.dbo.table)</param>
+	<param name="PrimaryColumns">String of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatable ,These columns may be different sql table's primary keys,If not defined, Sql tables primary keys will be DataTable primary key</param>
+	<returns>return a data table object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction </param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="FromClauseTables">Comma separated string of tables used in from clause(s) of sqlstr query,Set as TableName property  of DataTable(server.database.dbo.table)</param>
+	<param name="PrimaryColumns">~  separated string of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatables ,These columns may be different sql tables primary keys,If not defined, Sql tables primary keys will be DataTables primary key</param>
+	<returns>return a data set object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.Data.SqlClient.SqlTransaction@,System.Object[])">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="Sql_Transaction">Sql Transaction </param>
+	<param name="aClsTables">An array of tableclass objetcs</param>
+	<returns>return a data set  object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.Object[])">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="aClsTables">An array of tableclass objetcs</param>
+	<returns>return a data set  object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteDataSet(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String)">
+	<summary>
+ Execute T-SQL  query  statement
+ </summary>
+	<param name="LConnection">SqlConnection </param>
+	<param name="SqlStr">Querry Strig command to be executed</param>
+	<param name="FromClauseTables">Comma separated string of tables used in from clause(s) of sqlstr query,Set as TableName property  of DataTable(server.database.dbo.table)</param>
+	<param name="PrimaryColumns">~  separated string of columns(Pcol1,Pcol2 etc.) will be used as primarykeys of datatables ,These columns may be different sql tables primary keys,If not defined, Sql tables primary keys will be DataTables primary key</param>
+	<returns>return a data table object </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateTableByFields(System.String,System.String,System.String)">
+	<summary>
+ Create SQL Table 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table Name to be created</param>
+	<param name="mfields">String of fields eg "LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255)" </param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateTable(System.String,System.String,System.Data.DataTable)">
+	<summary>
+ Create SQL Table 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table Name to be created</param>
+	<param name="StructureTable">A datatable containing the values of structure columns as rows</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateTable(System.String,System.String,System.String)">
+	<summary>
+ Create SQL Table by excel structure worksheet 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table Name to be created</param>
+	<param name="StructureExcelFile">Full path of excel work sheet containing the whole schema as rows</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateDataTable(System.Data.DataTable,System.String)">
+	<summary>
+ Create a new datatable whose structure is in a datatable
+ </summary>
+	<param name="StructureTable">Structure table as datatable</param>
+	<param name="StructureColumns">Comma separated names of columns which are corresponding to  Field_Name and Field_Type and PrimaryKeyFlag field </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AlterSQLTable(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Alter fields of  SQL Table 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table Name to be altered</param>
+	<param name="FieldsToAdd">String of fields to add  eg "LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255)"</param>
+	<param name="FieldsToRemove">String of fields eg "LastName ,FirstName,Address,City"</param>
+	<param name="FieldsToModify">String of modifying fields eg "LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255)"</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AlterDataTable(System.Data.DataTable,System.String,System.String,System.Boolean)">
+	<summary>
+ Alter (Add/Remove) columns in a datatable. 
+ </summary>
+	<param name="LDataTable">DataTable name to be modified</param>
+	<param name="ColumnsToAdd">Comma separated ColumnNames  as string to be added</param>
+	<param name="ColumnsToRemove">Comma separated ColumnNames  as string to be removed</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ShrinkDataTable(System.Data.DataTable,System.String,System.Boolean)">
+	<summary>
+ Shrink a datatable for given columns. 
+ </summary>
+	<param name="LDataTable">DataTable name to be shrinked</param>
+	<param name="RemainingColumns">Comma separated ColumnNames  as string to be remained</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ShrinkSqlTable(System.String,System.String,System.String)">
+	<summary>
+ Shrink an SQL Table for remaining fields. 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table Name to be altered</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateSQLTableFromExcel(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+	<summary>
+ Create SQL Table From Excel taking first row as header fields
+ </summary>
+	<param name="sqServer">SqL server name</param>
+	<param name="SqFolder">Folder where data base created if not exists in server</param>
+	<param name="SqDataBase">Sql DataBase Name</param>
+	<param name="TableName">Name of Table created</param>
+	<param name="ExcelFilePath">Excel file with full path</param>
+	<param name="RefreshTable">Remove Table </param>
+	<param name="WhereClause">Searching clause on excel file</param>
+	<param name="OrderClause">Orderby clause on excel file</param>
+	<returns>True if successful</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateSQLTableFromExcel(System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+	<summary>
+ Create SQL Table From Excel taking first row as header fields
+ </summary>
+	<param name=" ServerDataBase ">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name=" TableName">Name of Table created</param>
+	<param name="ExcelFilePath">Excel file with full path</param>
+	<param name="RefreshTable">Remove Table </param>
+	<param name="WhereClause">Searching clause on excel file</param>
+	<param name="OrderClause">Orderby clause on excel file</param>
+	<returns>True if successful</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateTable(System.Data.SqlClient.SqlTransaction@,System.String,System.String)">
+	<summary>
+ Create SQL Table
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="TableName">Table Name to be created</param>
+	<param name="mfields">String of fields eg "LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255)"</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropTable(System.String,System.String,System.String)">
+	<summary>
+ Remove table from sql database
+ </summary>
+	<param name="SqServer">Sql Server name</param>
+	<param name="SqDataBase">Sql Database name</param>
+	<param name="TableName">Table name to be remove</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropTable(System.Data.SqlClient.SqlTransaction@,System.String)">
+	<summary>
+ Remove SQL Table
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="TableName">Table Name to be removed</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropTable(System.String,System.String)">
+	<summary>
+ Remove table from sql database
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table name to be removed</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TruncateTable(System.String,System.String,System.String)">
+	<summary>
+ To remove all rows from a sql table
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Rows of Table name to  be removed</param>
+	<param name="WhereClause">Filter condition on sql table</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TruncateTable(System.Data.SqlClient.SqlTransaction@,System.String,System.String)">
+	<summary>
+ To remove all rows from a sql table
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="TableName">Rows of Table name to  be removed</param>
+	<param name="WhereClause">Filter condition on sql table</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RenameTable(System.String,System.String,System.String)">
+	<summary>
+ To Rename sql table of one database
+ </summary>
+	<param name="ServerDatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="OldTableName ">Old table name to  be renamed</param>
+	<param name="NewTableName ">New Table Name</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RenameTable(System.Data.SqlClient.SqlTransaction@,System.String,System.String)">
+	<summary>
+ To Rename sql table of one database
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="OldTableName">Old table name to  be renamed</param>
+	<param name="NewTableName">New Table Name</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropDataBase(System.String)">
+	<summary>
+ To remove SQL database 
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DropDataBase(System.String,System.String)">
+	<summary>
+ TO Remove SQL Database
+ </summary>
+	<param name="ServerName">Server Name</param>
+	<param name="LDataBase">DataBase Name to be removed</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CopySqlTable(System.Data.SqlClient.SqlTransaction@,System.String,System.String)">
+	<summary>
+ Create a table by copying another table of same or distinct database/server
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="To_Table">Target table name</param>
+	<param name="From_Table">Source table name</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CopySqlTable(System.String,System.String,System.String)">
+	<summary>
+ Create a table by copying another table of same or distinct database/server
+ </summary>
+	<param name="ServerDataBase ">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="To_Table">Target table name</param>
+	<param name="From_Table">Source table name</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RowsCount(System.String,System.String,System.String,System.String)">
+	<summary>
+ To count total no. of rows  
+ </summary>
+	<param name="Serverdatabase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table name</param>
+	<param name="lCondition">Where clause of querry</param>
+	<param name="lorder">Order clause of querry</param>
+	<returns>Total nos. of rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RowsCount(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String)">
+	<summary>
+ To count total no. of rows
+ </summary>
+	<param name="LTransaction">Transaction object passed by reference</param>
+	<param name="TableName">Table name</param>
+	<param name="lCondition">Where clause of querry</param>
+	<param name="lorder">Order clause of querry</param>
+	<returns>Total nos. of rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RowsCount(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String)">
+	<summary>
+ To count total no. of rows
+ </summary>
+	<param name="LSqlConnection">SqlConnection object passed by reference</param>
+	<param name="TableName">Table name</param>
+	<param name="lCondition">Where clause of querry</param>
+	<param name="lorder">Order clause of querry</param>
+	<returns>Total nos. of rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FirstExcelSheetName(System.String)">
+	<summary>
+ To get first excel work sheet name of excel file
+ </summary>
+	<param name="FullExcelFile">Excel file name with path and extension</param>
+	<returns>First work shhet name</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataBasePath(System.String,System.String)">
+	<summary>
+ To get physical path of a database in a sql server
+ </summary>
+	<param name="ServerName">Server name as string</param>
+	<param name="DatabaseName">Data base name to be searched</param>
+	<returns>Full path of database name</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetSqlDataBasePath(System.String)">
+	<summary>
+ To get physical path of a database in a sql server
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<returns>Physical path of database</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AppendExcelToSQL(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+	<summary>
+ To add excel rows to an existing SQL table whoose columns are same as fields of sql table
+ </summary>
+	<param name="FullExcelFile">Full path of excel table</param>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TableName">Table name on which excel rows are added</param>
+	<param name="WhereClause">Where clause to filter excel table</param>
+	<param name="ExcelColumns">Identify excel columns by "name" or "index"  </param>
+	<param name="RemoveALLRows">If True, remove all existing rows in target table</param>
+	<returns>Execution flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InserExcelToSql(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+	<summary>
+ To add excel rows to an existing SQL table whoose columns are same as fields of sql table
+ </summary>
+	<param name="FullExcelFile">Full path of excel table</param>
+	<param name="SqServer">Sql server name</param>
+	<param name="SqDatabase">Database name</param>
+	<param name="TableName">Table name on which excel rows are added</param>
+	<param name="WhereClause">Where clause to filter excel table</param>
+	<param name="ExcelColumns">Mapping of  excel columns and sql table fields by "name" or "index"</param>
+	<param name="RemoveALLRows">If True, remove all existing rows in target table</param>
+	<returns>Execution flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertStringDataToSql(System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+	<summary>
+ To add a compatible string data template to an existing SQL table. </summary>
+	<param name="DataStringTemplate">String data template columns are separated by | and rows by chr(13)</param>
+	<param name="ServerDatabase ">Sql server name</param>
+	<param name="TableName">Table name on which excel rows are added</param>
+	<param name="RemoveALLRows">If True, remove all existing rows in target table</param>
+	<returns>Execution flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertCSVFileToSql(System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String)">
+	<summary>
+ To insert a CSV file into  SQL table. </summary>
+	<param name="CSVFileName">CSV File Name columns are separated by , and rows by chr(13)</param>
+	<param name="ServerDatabase ">Sql server name</param>
+	<param name="TableName">Table name on which excel rows are added</param>
+	<param name="StartRowNo">Start row no of  CSV file from which data to be added i.e. rowno excluding header</param>
+	<param name="RemoveALLRows">If True, remove all existing rows in target table</param>
+	<param name="ColSeparator">Column separator of CSV/TXT file</param>
+	<param name="RowSeparator">Row separator of CSV/TXT file</param>
+	<returns>Execution flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataFromCSV(System.String,System.Int32,System.String,System.String)">
+	<summary>
+ To get data table from a CSV file . </summary>
+	<param name="CSVFileName">CSV File Name columns are separated by , and rows by chr(13)</param>
+	<param name="StartRowNo">Start row no of  CSV file from which data to be added i.e. rowno excluding header</param>
+	<param name="ColSeparator">Column separator of CSV/TXT file</param>
+	<param name="RowSeparator">Row separator of CSV/TXT file</param>
+	<returns>Execution flag</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertExcelRowsToSql(System.Data.SqlClient.SqlTransaction@,System.Data.DataTable,System.Data.DataTable,System.String,System.String)">
+	<summary>
+ Private function to insert a range of rows of datatable of excel work sheet into sql table
+ </summary>
+	<param name="LTransaction">Sql Transaction</param>
+	<param name="ExcelRows">DataTable object of excel worksheet</param>
+	<param name="Lschema">DataTable of Schema of SQL Table to be inserted </param>
+	<param name="TableName">Table name into rows will be inserted</param>
+	<param name="ExcelCoumns">Mapping of  excel columns and sql table fields by "name" or "index"</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AppendSQLToSQL(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ To add/update rows from source sql table to target sql table for common field names,primary key names are same for both tables.  
+ </summary>
+	<param name="LocalServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTable">Source table name or full identifier table name</param>
+	<param name="TargetServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="TargetTable">Target table name or full identifier table name</param>
+	<param name="WhereClause">Filter condition on source table</param>
+	<param name="OrderClause">Order by Clause on source table</param>
+	<param name="ReplaceFlag">If True, update row if it exists in target table</param>
+	<param name="RemoveALLRows">If True, remove all existing rows in target table</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertDataTableToSql(System.Data.SqlClient.SqlTransaction@,System.Data.SqlClient.SqlConnection@,System.Data.SqlClient.SqlCommand@,System.Data.DataTable,System.Data.DataTable,System.String,System.Boolean,System.String)">
+	<summary>
+ To insert rows of a datatable into sql table
+ </summary>
+	<param name="LTransaction">Sql Transaction</param>
+	<param name="Lcons">Opened Sql Connection</param>
+	<param name="lcmd0">Command object</param>
+	<param name="LDtSource">DataTable object of source table</param>
+	<param name="LTargetSchema">DataTable of Schema of Target Table</param>
+	<param name="TableName">Target Table name </param>
+	<param name="ReplaceFlag">If True, update row if it exists in target table</param>
+	<param name="TargetPrimaryKey">Primary key of Target table</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertRowToSqlTable(System.String,System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Insert Record to an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="RowSource">DataRow having the column names as field names of table and values as  field's value  of record </param>
+	<param name="TargetTable">Name of table in which record inserted</param>
+	<param name="TargetPrimaryKey">Primary key field name of table , (if the key exists, record is updated otherwise inserted)</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertDataTableToSql(System.String,System.Data.DataTable,System.String,System.String)">
+	<summary>
+ Insert Record to an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="DtSource ">DataTable having the column names as field names of table and values as  field's value  of record </param>
+	<param name="TargetTable">Name of table in which record inserted</param>
+	<param name="TargetPrimaryKey">Primary key of table , if the key exists, record is updated otherwise inserted</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertRowToSqlTable(System.Data.SqlClient.SqlTransaction@,System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Insert Record to an SQL Table
+ </summary>
+	<param name="Ltrans">sql transaction </param>
+	<param name="RowSource">DataRow having the column names as field names of table and values as  field's value  of record </param>
+	<param name="TargetTable">Name of table in which record inserted</param>
+	<param name="TargetPrimaryKey">Primary key of table , if the key exists, record is updated otherwise inserted</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertRowToSqlTable(System.Data.SqlClient.SqlConnection@,System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Insert Record to an SQL Table
+ </summary>
+	<param name="LConnection">sql transaction </param>
+	<param name="RowSource">DataRow having the column names as field names of table and values as  field's value  of record </param>
+	<param name="TargetTable">Name of table in which record inserted</param>
+	<param name="TargetPrimaryKey">Primary key of table , if the key exists, record is updated otherwise inserted</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Data.SqlClient.SqlTransaction@,System.Object[],System.Boolean)">
+	<summary>
+ Insert Records  to  multiple SQL Tables in a single batch execution.
+ </summary>
+	<param name="Ltrans">sql transaction </param>
+	<param name="TableClassObject">An array of Class objects of tables</param>
+	<param name="SqlExecutionFlag">Sql Execution Flag</param>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Data.SqlClient.SqlTransaction@,System.Object[],System.Int32@,System.Boolean)">
+	<summary>
+ Insert Records  to  multiple SQL Tables in a single batch execution.
+ </summary>
+	<param name="Ltrans">sql transaction </param>
+	<param name="TableClassObject">An array of Class objects of tables</param>
+	<param name="Rowseffected">Sql Execution Flag</param>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Object[])">
+	<summary>
+ Insert Records  to  multiple SQL Tables in a single batch execution.
+ </summary>
+	<param name="TableClassObject">An array of Class objects of tables</param>
+</member><member name="M:DataFunctions.DataFunctions.SqlExecuteQueriesInTransaction(System.String,System.String)">
+	<summary>
+ function to execute multiple queries in a transaction
+ </summary>
+	<param name="serverdatabase">serverdatabase name</param>
+	<param name="queries">space or semicolon separated queries</param>
+	<returns></returns>
+</member><member name="M:DataFunctions.DataFunctions.CheckTableClassUpdations(System.Object[]@)">
+	<summary>
+ Check  for data updations wether sql statements on TableClassOject() will be executed or not.
+ </summary>
+	<param name="TableClassObject">An array of Class objects of tables</param>
+</member><member name="M:DataFunctions.DataFunctions.CheckTableClassUpdation(System.Object@)">
+	<summary>
+ Check for data updations wether sql statements on TableClassOject will be executed or not.
+ </summary>
+	<param name="TableClassObject">An array of Class objects of tables</param>
+</member><member name="M:DataFunctions.DataFunctions.SameDataSource(System.Data.SqlClient.SqlTransaction,System.Object)">
+	<summary>
+ Check the connection server-database with  table class object server-database
+ </summary>
+	<param name="SqlTrans"></param>
+	<param name="TableClas"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SameDataSource(System.Data.SqlClient.SqlConnection,System.Object)">
+	<summary>
+ Check the connection server-database with  table class object server-database
+ </summary>
+	<param name="SqlConn"></param>
+	<param name="TableClas"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetServerMDFForTransanction(System.Object[])">
+	<summary>
+ Get most used server database connection available in tables of  TableClass()
+ </summary>
+	<param name="TableClass"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Data.SqlClient.SqlTransaction@,System.Object,System.Boolean)">
+	<summary>
+ Insert Records  to  SQL Tables in  rowwise batch execution.
+ </summary>
+	<param name="Ltrans">sql transaction </param>
+	<param name="TableClassObject">A Class object of sql table</param>
+	<param name="FinalFlag">Final datatable updated</param>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Data.SqlClient.SqlTransaction@,System.Object,System.Int32@)">
+	<summary>
+ Insert Records  to  SQL Tables in  rowwise batch execution.
+ </summary>
+	<param name="Ltrans">sql transaction </param>
+	<param name="TableClassObject">A Class object of sql table</param>
+	<param name="RowsEffected">Number of Rows effected</param>
+</member><member name="M:DataFunctions.DataFunctions.CreateInsertQuery(System.Data.SqlClient.SqlCommand@,System.Data.DataRow,System.String,System.Data.DataTable,System.Int32,System.Int16)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="Lcommand">Command as sql command</param>
+	<param name="mRow">row of values inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="RowSNo">If sql command has more than one row then row no</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateInsertQuery(System.Data.DataRow,System.String,System.Data.DataTable,System.Int32,System.Int16)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="mRow">row of values inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="RowSNo">If sql command has more than one row then row no</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateUpdateQuery(System.Data.SqlClient.SqlCommand@,System.Data.DataRow,System.String,System.Data.DataTable,System.Int32,System.Int16,System.String)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="Lcommand">Command as sql command</param>
+	<param name="mRow">row of values inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="RowSNo">If sql command has more than one row then row no</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateUpdateQuery(System.Data.DataRow,System.String,System.Data.DataTable,System.Int32,System.Int16,System.String)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="mRow">row of values inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="RowSNo">If sql command has more than one row then row no</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateInsertQuery(System.Data.SqlClient.SqlCommand@,System.Data.DataRow[],System.String,System.Data.DataTable,System.Int16)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="Lcommand">Command as sql command</param>
+	<param name="mRows">An array of datarows  to be  inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateInsertQuery(System.Data.DataRow[],System.String,System.Data.DataTable,System.Int16)">
+	<summary>
+ Create a string query with sql parameters from a datarow to be inserted.
+ </summary>
+	<param name="mRows">An array of datarows  to be  inserted</param>
+	<param name="mTable">Table name</param>
+	<param name="DtSchema">Schema of table</param>
+	<param name="TableNo">If sql command has more than one table than table no.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertUpdateDeleteSqlTables(System.Object)">
+	<summary>
+ Insert Records  to  multiple SQL Tables in a single batch execution.
+ </summary>
+	<param name="TableClassObject">An Class objects of tables</param>
+</member><member name="M:DataFunctions.DataFunctions.UpdateValuesToSqlRecords(System.String,System.Collections.Hashtable,System.String,System.String)">
+	<summary>
+ Update Record field's values of  an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="ValueSource">Updating values as hashtable, where columnname as key and fieldvalue as hashtable value </param>
+	<param name="TargetTable">Name of table in which record updated</param>
+	<param name="WhereClause">Condition for records updated</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.UpdateValuesToSqlRecords(System.String,System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Update Record field's values of  an SQL Table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="ValueSource">Updating values in datarow , where columnnames are fieldNames </param>
+	<param name="TargetTable">Name of table in which record updated</param>
+	<param name="WhereClause">Condition for records updated</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.UpdateValuesToSqlRecords(System.Data.SqlClient.SqlTransaction,System.Data.DataRow,System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Update Record field's values of  an SQL Table
+ </summary>
+	<param name="mSqlTransanction">sql transanction already created</param>
+	<param name="ValueSource">Updating values in datarow , where columnnames are fieldNames </param>
+	<param name="TargetTable">Name of table in which record updated</param>
+	<param name="WhereClause">Condition for records updated</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.String)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="Ltransaction">Sql Transaction already specified</param>
+	<param name="LTableName">Sql Table Nale</param>
+	<param name="PrimaryKeyName">Primary Key field name on which searching to be done</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.String)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="LConnection">Sql Connection already specified</param>
+	<param name="LTableName">Sql Table Nale</param>
+	<param name="PrimaryKeyName">Primary Key field name on which searching to be done</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlTransaction@,System.String,System.String,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="Ltransaction">Sql Transaction already specified</param>
+	<param name="LTableName">Sql Table Nale</param>
+	<param name="PrimaryKeyName">Primary Key field name on which searching to be done</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlConnection@,System.String,System.String,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="LConnection">SqlConnection already specified</param>
+	<param name="LTableName">Sql Table Nale</param>
+	<param name="PrimaryKeyName">Primary Key field name on which searching to be done</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="Ltransaction">Sql Transaction already specified</param>
+	<param name="ClsObject">Sql Table Nale</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlConnection@,System.Object@,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="LConnection">SqlConnection already specified</param>
+	<param name="ClsObject">Sql Table class object</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Collections.Hashtable)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="Ltransaction">Sql Transaction already specified</param>
+	<param name="ClsObject">Sql Table Nale</param>
+	<param name="WhereClause">A hashtable to define whereclause ,where key is fieldname and value is field value</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Data.SqlClient.SqlConnection@,System.Object@,System.Collections.Hashtable)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="LConnection">SqlConnection already specified</param>
+	<param name="ClsObject">Sql Table Class object</param>
+	<param name="WhereClause">A hashtable to define whereclause ,where key is fieldname and value is field value</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.Object@,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ClsObject">Sql Table Nale</param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.String,System.String,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="PrimaryKey">Source Table Primary key field name </param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>DataRow of keyValue</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.String,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="SqlTableFullIdentifier">full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format </param>
+	<param name="PrimaryKey">Source Table Primary key field name </param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>DataRow of keyValue</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.Int32)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="SqlTableFullIdentifier">full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format </param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>DataRow of keyValue</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecord(System.String,System.Int32)">
+	<summary>
+ delete  row   from a Sql table
+ </summary>
+	<param name="SqlTableFullIdentifier">full sql table identifier i.e. server.database.dbo.table or 0_srv_0.0_mdf_0.dbo.Table format </param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>no. of record deleted successfully</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DeleteRecord(System.Object@,System.Int32)">
+	<summary>
+ To delete  row from Sql Table on specified primary key. 
+ </summary>
+	<param name="ClsObject">Class object of Sql table</param>
+	<param name="PrimaryKeyValue">Primary key value to be searched</param>
+	<returns>Rows affected</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.String,System.String,System.String)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="PrimaryKey">Source Table Primary key field name </param>
+	<param name="SearchKeyValue">Primary key field value of row to be fetched</param>
+	<returns>DataRow of keyValue</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.BackupDatabaseFiles(System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates the backup of database (.mdf and .ldf files) at the target folder
+ </summary>
+	<param name="servername">Servername</param>
+	<param name="databasename">Databasename without mdf for ex. saralweb</param>
+	<param name="sourcefolder">Source folder where the database is located</param>
+	<param name="targetfolder">Target folder location where you want to copy database files</param>
+	<remarks>returns exception message if error occurs else return ""</remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetConditionExpressionOnAllRows(System.String,System.String,System.String,System.String,System.String,System.String,System.String[]@)">
+	<summary>
+ Fetch  all  values of a fieldname in a string array,return an sql  condition expression for where clause
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="SourceFieldName">Name of field of source table which values to be considered</param>
+	<param name="TargetFieldName">Name of field of condition expression</param>
+	<param name="mOperator">Equaily operator i.e  "="  or  "#" for not equal  </param>
+	<param name="mLogicGate">AND or  OR  used in condition expression</param>
+	<param name="FieldValues">A string arrays of field values</param>
+	<returns>Condition clause as string</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetConditionExpressionOnAllRows(System.Data.DataTable,System.String,System.String,System.String,System.String,System.String[]@)">
+	<summary>
+ Fetch  all  values of a fieldname in a string array,return an sql  condition expression.
+ </summary>
+	<param name="LdataTable">DataTable as datatable </param>
+	<param name="SourceFieldName">Name of field of source table which values to be considered</param>
+	<param name="TargetFieldName">Name of field of condition expression</param>
+	<param name="mOperator">Equaily operator i.e  "="  or  "#" for not equal  </param>
+	<param name="mLogicGate">AND or  OR  used in condition expression</param>
+	<param name="FieldValues">A string arrays of field values</param>
+	<returns>Condition clause as string</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekDataRow(System.String,System.String,System.Collections.Hashtable)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="SearchKeyValue">A hash table containg Primary key field as key and value as item</param>
+	<returns>data row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.String,System.Collections.Hashtable,System.Data.DataRow@)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="SearchKeyValue">A hash table containg Primary key field as key and value as item</param>
+	<param name="SearchKeyRow">DataRow to hold searhed result</param>
+	<returns>True if row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.String,System.String)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<param name="Lcondition">A string type sql condition</param>
+	<returns>Data row is found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SeekRecord(System.String,System.Collections.Hashtable,System.String)">
+	<summary>
+ Fetch  row as datarow  from a Sql table
+ </summary>
+	<param name="ServerDataBase">Full identifier of a database with server name eg. server0.database0 or _srv_0._mdf_0 format</param>
+	<param name="SearchKeyValue">A hash table containg Primary key field as key and value as item</param>
+	<param name="SourceTableName">Source table name or full identifier table name</param>
+	<returns> datarow found</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SortDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ To sort a datatable on specified columns
+ </summary>
+	<param name="DtTable">DataTable to be sorted</param>
+	<param name="SortedOnColumns">Comma separated string of column names on which sorting executed eg "Col1,Col2,col3" ,if SortOrder not defined it is ascending by default </param>
+	<param name="SortingDirection">Default value is "ASC" ,Permissible values are ASC,DESC and * =Set sort direction with column name eg. "column1 ASC ,column2 DESC" etc.</param>
+	<returns>Return sorted datatable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SortFilterDataTable(System.Data.DataTable,System.String[],System.String,System.String)">
+	<summary>
+ This function sorts and filter a datatable on  columns and expression  specified
+ </summary>
+	<param name="LDataTable">DataTable to be sorted</param>
+	<param name="SortColumns">An array of column names on which datatable sorted</param>
+	<param name="SortingDirection">Default value is "ASC" ,Permissible values are ASC,DESC and * =Set sort direction with column name eg. "column1 ASC ,column2 DESC" etc.</param>
+	<param name="FilterString">Filter expression string eg "Column1 = 'Value1" </param>
+	<returns>Sorted DataTable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SortFilterDataTable(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ This function sorts and filter a datatable on  columns and expression  specified
+ </summary>
+	<param name="LDataTable">DataTable to be sorted</param>
+	<param name="SortColumns">Comma separated column names on which datatable sorted</param>
+	<param name="SortingDirection">Default value is "ASC" ,Permissible values are ASC,DESC and * =Set sort direction with column name eg. "column1 ASC ,column2 DESC" etc.</param>
+	<param name="FilterString">Filter expression string eg "Column1 = 'Value1" </param>
+	<returns>Sorted DataTable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTable(System.Data.DataTable,System.String,System.Boolean)">
+	<summary>
+ Search datatable on a specified condition.
+ </summary>
+	<param name="LDataTable">Table to be saerched </param>
+	<param name="FilterString">Filter condition as string eg. column1=Value1 and column2&gt; Value2 etc.</param>
+	<param name="OnlyFirst">False if return datatable contains only first row of specified criteria</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableFirstRow(System.Data.DataTable,System.String)">
+	<summary>
+ Search datatable on a specified condition and return first row.
+ </summary>
+	<param name="LDataTable">Table to be saerched </param>
+	<param name="FilterString">Filter condition as string eg. column1=Value1 and column2&gt; Value2 etc.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetCellValue(System.Data.DataTable,System.String,System.Int32,System.String)">
+	<summary>
+ Get Cell value from a data table.
+ </summary>
+	<param name="LDataTable">Data table </param>
+	<param name="LColumnName">Column Name of cell</param>
+	<param name="RowNo">Row no of cell</param>
+	<param name="ValueType">Permissible values are String,Integer,Date and default is Object</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetCellValue(System.Data.DataRow,System.String,System.String)">
+	<summary>
+ Get Cell value from a data table.
+ </summary>
+	<param name="LDataRow">DataRow of cell </param>
+	<param name="LColumnName">Column Name of cell</param>
+	<param name="ValueType">Permissible values are String,Integer,Date and default is Object</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRowIndex(System.Data.DataTable,System.String,System.Boolean)">
+	<summary>
+ Search DataTable on a specified condition
+ </summary>
+	<param name="LDataTable"></param>
+	<param name="FilterString"></param>
+	<param name="OnlyFirst"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataRowValuesByColumns(System.Data.DataRow,System.String[])">
+	<summary>
+ Fetch the array of column values from the given datarow and columnames array
+ </summary>
+	<param name="LDataRow ">DataTable to be sorted</param>
+	<param name="RowColumns ">An array of column namesd</param>
+	<returns>Array of object values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDistinctRowsFromDataTable(System.Data.DataTable,System.String,System.Boolean)">
+	<summary>
+ This function creates a unique/distinct rows datatable on  specified columns from a datatable to remove duplicacy of specified columns.
+ </summary>
+	<param name="LDataTable">DataTable with duplicate rows  on specified columns</param>
+	<param name="UniqueColumns ">Comma separated column names   specified columns on which distinct clause executed eg. "Column1,Column2, ..  } etc.</param>
+	<param name="SameColumns">false if unique file has only unique columns specified,true if returming datatable has same schema</param>
+	<returns>Unique rows datatable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddTwoDataTables(System.Data.DataTable,System.Data.DataTable,System.Boolean)">
+	<summary>
+ This function adds two datatables of same structure creates a new data table.
+ </summary>
+	<param name="FirstDataTable">First data table to be added</param>
+	<param name="SecondDataTable">Second data table to be added</param>
+	<param name="IgnoreDuplicateRows">Ignore duplicate rows</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.UpdateDataTables(System.Data.DataTable,System.Data.DataTable,System.Boolean,System.String,System.String)">
+	<summary>
+ This function updates all rows of firstdatatable according to second datatable.
+ </summary>
+	<param name="FirstDataTable">First data table to be updated.</param>
+	<param name="SecondDataTable">Second data table from column's value updated.</param>
+	<param name="RemoveExcessRows">Remove excess rows of first datatable w.r.to second datatable.</param>
+	<param name="UpdatingColumns">Comma separated columnnames of firstdatatable to be updated,if exist in second datatable,* for all</param>
+	<param name="IgnoreColumns">Comma separated columnnames of firstdatatable to be ignored for updation</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.UpdateDataRows(System.Data.DataRow,System.Data.DataRow,System.String,System.String)">
+	<summary>
+ This function updates FirstDataRow  according to SecondDataRow.
+ </summary>
+	<param name="FirstDataRow">First data table to be updated.</param>
+	<param name="SecondDataRow">Second data table from column's value updated.</param>
+	<param name="UpdatingColumns">Comma separated columnnames of firstdatarow to be updated,if exist in second datarow,* for all</param>
+	<param name="IgnoreColumns">Comma separated columnnames of firstdatarow to be ignored for updation</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RenameDataTableColumn(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ This function rename oldcolumnname to newcolumnname of a datatable.
+ </summary>
+	<param name="LDataTable">DataTable in which columns renamed</param>
+	<param name="OldColumnName">Column name to be renamed</param>
+	<param name="NewColumnName">New Column Name </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoDataRows(System.Data.DataRow,System.Data.DataRow,System.String)">
+	<summary>
+ Compare two data rows 
+ </summary>
+	<param name="FirstDataRow">First data row to be compared</param>
+	<param name="SecondDataRow">Second data row to be compared</param>
+	<param name="ExcludeColumns">Comma separated list of columns to be excluded for comparing datarows</param>
+	<returns>If matched return true</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoHashTables(System.Collections.Hashtable,System.Collections.Hashtable,System.String)">
+	<summary>
+ Compare two hashtables 
+ </summary>
+	<param name="FirstHashTable">First hash table to be compared</param>
+	<param name="SecondHashTable">Second hash table to be compared</param>
+	<param name="ExcludeKeys">Comma separated list of keys to be excluded for comparing datarows</param>
+	<returns>If matched return true</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoDataRowsValues(System.Data.DataRow,System.Data.DataRow,System.String)">
+	<summary>
+ Compare two data rows 
+ </summary>
+	<param name="FirstDataRow">First data row to be compared</param>
+	<param name="SecondDataRow">Second data row to be compared</param>
+	<param name="ExcludeColumns">Comma separated list of columns to be excluded for comparing datarows</param>
+	<returns>Comma separated column names of first table which values not equal to second table column's value</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CheckRowInDataTable(System.Data.DataRow,System.Data.DataTable,System.String)">
+	<summary>
+ Check  row if it exists in a datatable and return its row index ,-1 if not found 
+ </summary>
+	<param name="SearchingRow">DataRow is being Checked for existence</param>
+	<param name="TableToBeSearched">Table object where above row to be searched</param>
+	<param name="ExcludeColumns">Comma separated list of columns to be excluded for comparing datarows</param>
+	<returns>Return first row index of table if found, otherwise -1</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CheckColumnInDataTable(System.String,System.Data.DataTable)">
+	<summary>
+ Check  ColumnName if it exists in a DataTable and return its column index ,-1 if not found 
+ </summary>
+	<param name="ColumnName">ColumnName to be searched</param>
+	<param name="TableToBeSearched">TableName being searched</param>
+	<returns>Return column index in table if found, otherwise -1</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoDataTableRows(System.Data.DataTable,System.Data.DataTable)">
+	<summary>
+ Compare FirstDataTableRows to SecondDataTable rows and return index() of SecondDataTable rows not found in first table
+ </summary>
+	<param name="FirstDataTable">Table to be searched</param>
+	<param name="SecondDataTable">Table being searched</param>
+	<returns>Mismatched array of row indexes of Second Data Table as integer</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoDataTables(System.Data.DataTable,System.Data.DataTable,System.String)">
+	<summary>
+ Compare FirstDataTableRows to SecondDataTable rows and return index() of SecondDataTable rows not found in first table
+ </summary>
+	<param name="CurrentDataTable">Table to be searched</param>
+	<param name="PreviousDataTable">Table being searched</param>
+	<param name="ExcludeColumns">Comma separated ColumnNames which are excluded from comparing</param>
+	<returns>CompareFlag as True or False</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareTwoDataTablesRows(System.Data.DataTable,System.Data.DataTable,System.String,System.Int32[]@,System.Int32[]@,System.Int32[]@,System.Int32[]@)">
+	<summary>
+ Compare Previous DataTable Rows to Current DataTable Rows and return Row index array of on SecondDataTable rows not found in first table
+ </summary>
+	<param name="PreviousDataTable">Table to be searched</param>
+	<param name="CurrentDataTable">Table being searched</param>
+	<param name="ExcludeColumns">Comma separated list of columns to be excluded for comparing datarows</param>
+	<param name="PreviousExtraRows">An array of row indexes of previous datatable which are missing in current datatable </param>
+	<param name="CurrentExtraRows">An array of row indexes of current datatable which are missing in previous datatable</param>
+	<param name="PreviousSameRows">An array of row indexes of previous datatable which are same in current datatable</param>
+	<param name="CurrentSameRows">An array of row indexes of previous datatable which are same in current datatable</param>
+	<returns>An array of row indexes of current datatable which are same in previous datatable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CompareDataColumns(System.Data.DataTable,System.Data.DataTable,System.Collections.Hashtable@,System.Collections.Hashtable@,System.Collections.Hashtable@,System.Collections.Hashtable@)">
+	<summary>
+ Compare columns of two data tables and get missing columns
+ </summary>
+	<param name="FirstDataTable">First Data Table whoose columns compared</param>
+	<param name="SecondDataTable">Second Data Table whoose columns compared</param>
+	<param name="MissingColumns">Missing columns in second table as hashtable where key is columnname and value is type</param>
+	<param name="MismatchColumnsTYpe">Mismattched columns types  in second table as hashtable where key is columnname and value is type</param>
+	<param name="ExtraColumns">Extra columns in second table as hashtable where key is columnname and value is type</param>
+	<param name="SameColumns">Same columns in second table as hashtable where key is columnname and value is type</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRowIndex(System.Data.DataTable,System.String[],System.Object[],System.Boolean)">
+	<summary>
+ Searching a DataTable row on  columns() with values() and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchColumns  ">An array of  column names eg. {"Column1","Column2", ..  } etc.</param>
+	<param name="SearchValues">An array of values eg. {value1,value2,value3...  </param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRowIndexSingleColumn(System.Data.DataTable,System.String,System.Object,System.Boolean)">
+	<summary>
+ Searching a DataTable row on  a column with value and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchColumn  ">column name as string</param>
+	<param name="SearchValue">Column value  as object..  </param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRow(System.Data.DataTable,System.String,System.Object)">
+	<summary>
+ Searching a DataTable row on  a column with value and return a datarow
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchColumn  ">column name as string</param>
+	<param name="SearchValue">Column value  as object..  </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRowIndex(System.Data.DataTable,System.String,System.String,System.Boolean)">
+	<summary>
+ Searching a DataTable row on  columns with values and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchColumns  ">Comma separated column name as string</param>
+	<param name="SearchValues">Comma separated Column values  as string..  </param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataGridViewRowIndex(System.Windows.Forms.DataGridView,System.String,System.String,System.Boolean)">
+	<summary>
+ Searching a DataTable row on  columns with values and return RowIndex()
+ </summary>
+	<param name="LGridView">DataGridViewe is being searched</param>
+	<param name="SearchColumns  ">Comma separated column name as string</param>
+	<param name="SearchValues">Comma separated Column values  as string..  </param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataGridViewRowIndex(System.Windows.Forms.DataGridView,System.Collections.Hashtable,System.Boolean)">
+	<summary>
+ Searching a DataTable row on  columns with values and return RowIndex()
+ </summary>
+	<param name="LGridView">DataGridViewe is being searched</param>
+	<param name="SearchHashValues  ">A hash table having keys as field names and values as fieldvalues</param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableFirstRow(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ Searching a DataTable row on  columns with values and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchColumns  ">Comma separated column name as string</param>
+	<param name="SearchValues">Comma separated Column values  as string..  </param>
+	<returns>A datarow with specified condition</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableFirstRow(System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ Searching a DataTable row on  columns with values and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchFieldValues  ">HashTable Containg the Key is FieldName and value is selectedkeyfieldvalue.</param>
+	<returns>A datarow with specified condition</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowByPrimaryCols(System.Data.DataTable,System.Object[])">
+	<summary>
+ Find a DataTable row on  primary columns() with values() and return Row
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValues">An array of values of primary columns eg. {value1,value2,value3...  </param>
+	<returns>A DataRow having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowByPrimaryCols(System.Data.DataTable,System.Collections.Generic.Dictionary{System.String,System.Int32})">
+	<summary>
+ Find a DataTable row on  primary columns() with values() and return Row
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchKeyValues">A Dictionary of having values in integerto be searched,hashset key is column names</param>
+	<returns>A DataRow having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowByPrimaryCols(System.Data.DataTable,System.Object)">
+	<summary>
+ Find a DataTable row on   primary column with value and return Row
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValue">value of primary column...  </param>
+	<returns>A DataRow having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowByPrimaryCols(System.Data.DataTable,System.Int32)">
+	<summary>
+ Find a DataTable row on   primary column with value and return Row
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValue">value of primary column...  </param>
+	<returns>A DataRow having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowByPrimaryCols(System.Data.DataTable,System.String)">
+	<summary>
+ Find a DataTable row on string type   primary column with value and return Row
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValues">Comma separated values of primary column...  </param>
+	<returns>A DataRow having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowIndexByPrimaryCols(System.Data.DataTable,System.Object[])">
+	<summary>
+ Find a DataTable row on  primary columns() with values() and return RowIndex
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValues">An array of values of primary columns eg. {value1,value2,value3...  </param>
+	<returns>A DataRow index as integer  having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowIndexByPrimaryCols(System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ Find a DataTable row on  primary columns() with values() and return RowIndex
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="PrimaryKeyHashTable">A hashtable having keys as primary columns and values are primary key values..  </param>
+	<returns>A DataRow index as integer  having primary keys of values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowIndexByPrimaryCols(System.Data.DataTable,System.Object)">
+	<summary>
+ Find a DataTable row on  primary columns with value and return RowIndex
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValue">value of primary column to be found...  </param>
+	<returns>A DataRow index as integer  having primary key of value</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FindRowIndexByPrimaryCols(System.Data.DataTable,System.String)">
+	<summary>
+ Find a DataTable row on  primary columns with value and return RowIndex
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="SearchValues">Comma separated values of string primary column to be found...  </param>
+	<returns>A DataRow index as integer  having primary key of value</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTableRowIndex(System.Data.DataTable,System.Collections.Hashtable,System.Boolean)">
+	<summary>
+ Searching a DataTable row on  columns() with values() and return RowIndex()
+ </summary>
+	<param name="LDataTable">DataTable is being searched</param>
+	<param name="ColumnValuePair">A hashtable oject of columns where key is columnname and value is column value</param>
+	<param name="OnlyFirstIndex">True=Only first row index returned to match the criteria </param>
+	<returns>An integer array of rowindex</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddingNameForCodes(System.Data.DataTable,System.String,System.String,System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+Adding Name column and its value to a datatable corresponding to its code value searching from a code master data table
+ </summary>
+	<param name="LDataTable">DataTable object on which name columns added</param>
+	<param name="TableCodeFields">Comma separated string of column names of table,their values to be searched in code master</param>
+	<param name="AddingName">ColumnName to be inserted in ldatatable for name value of masternamefield</param>
+	<param name="CodeMaster">A datatable having columns corressponding to TableKeyColumn and TableNameColumn</param>
+	<param name="MasterCodeFields">Comma separated string of column names of CodeMastertable to be linked</param>
+	<param name="MasterNameField">ColumnName of CodeMaster table which contains the name</param>
+	<param name="AddCodeInName">"P" if table column code is added as prefix,"S" if table column code is added as suffix,"N" for do not add</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddingNameColumnsForCodes(System.Data.DataTable,System.String,System.String,System.Data.DataTable,System.String,System.String)">
+	<summary>
+Adding Name columns and its value to a datatable corresponding to its code value searching from a code master data table
+ </summary>
+	<param name="LDataTable">DataTable object on which name columns added</param>
+	<param name="TableCodeFields">Comma separated string of column names of table,their values to be searched in code master</param>
+	<param name="AddingNames">Corresponding comma separated ColumnNames to be inserted in ldatatable for name value of masternamefield</param>
+	<param name="CodeMaster">A datatable having a primary key with values corressponding to columns of TableCodeFields</param>
+	<param name="MasterCodeFields">Comma separated string of column names of CodeMasterTable to be linked</param>
+	<param name="MasterNameField">ColumnName of CodeMaster table which contains the name</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReplaceValuesInDataTable(System.Data.DataTable,System.Collections.Hashtable,System.String)">
+	<summary>
+ Replace Column Values into a DataTable of selective rows by a condition 
+ </summary>
+	<param name="LDataTable">DataTable whoose columns replaced</param>
+	<param name="ColumnNamesValuePair">A hash table containing column names as key and value as column value</param>
+	<param name="Lcondition">Condition string eg.  "Column1 = 'Value1' etc.</param>
+	<returns>Final data table </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReplaceValuesInDataTable(System.Data.DataTable,System.Collections.Hashtable,System.Collections.Hashtable)">
+	<summary>
+ Replace Column Values into a DataTable of selective rows by a condition 
+ </summary>
+	<param name="LDataTable">DataTable whoose columns replaced</param>
+	<param name="ColumnNamesValuePair">A hash table containing column names as key and value as column value</param>
+	<param name="Hcondition">Condition HashTable where key is column names and values are column values,nothing for none.</param>
+	<returns>Final data table </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReplaceValuesInDataTable(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ Replace Column Values into a DataTable of selective rows by a condition 
+ </summary>
+	<param name="LDataTable">DataTable whoose columns replaced</param>
+	<param name="ColumnNames">A comma separated string of  column names</param>
+	<param name="ColumnValues">A comma  separated string of  column values</param>
+	<param name="Lcondition">Condition string eg.  "Column1 = 'Value1' etc.</param>
+	<returns>Final data table </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReplaceValuesInDataTable(System.Data.DataTable,System.String,System.String,System.Collections.Hashtable,System.Int32@)">
+	<summary>
+ Replace Column Values into a DataTable of selective rows by a condition 
+ </summary>
+	<param name="LDataTable">DataTable whoose columns replaced</param>
+	<param name="ColumnNames">A comma separated string of  column names</param>
+	<param name="ColumnValues">A comma  separated string of  column values</param>
+	<param name="Hcondition">Condition hash table where key is column name and value is column value.</param>
+	<param name="LastRowNo">Last row no which was replaced</param>
+	<returns>Final data table </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReplaceValuesInDTbyPrimaryKey(System.Data.DataTable@,System.String,System.String,System.String)">
+	<summary>
+ Replace Column Values into a DataTable of selective row by primary key value
+ </summary>
+	<param name="LDataTable">DataTable whoose columns replaced</param>
+	<param name="ColumnNames">A comma separated string of  column names</param>
+	<param name="ColumnValues">A comma  separated string of  column values</param>
+	<param name="PrimaryKeyValue">Primary key value </param>
+	<returns>Final data table </returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddingNameForCodesPrimamryCols(System.Data.DataTable,System.String,System.String,System.Data.DataTable,System.String,System.String)">
+	<summary>
+Adding Names column and its value to a datatable corresponding to its code value searching from a code master data table
+ </summary>
+	<param name="LDataTable">DataTable object on which name columns added</param>
+	<param name="TableCodeFields">Comma separated  string whoose items are column names of table,their values to be searched in code master</param>
+	<param name="AddingName">Column separated ColumnName to be inserted in ldatatable for name value of masternamefield</param>
+	<param name="CodeMasterWithPrimaryColumns">A datatable having Primary columns corressponding to TableCodeFields and TableNameColumn</param>
+	<param name="MasterNameField">ColumnName of CodeMaster table which contains the name</param>
+	<param name="AddCodeInName">"P" if table column code is added as prefix,"S" if table column code is added as suffix,"N" for do not add</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FillValuesForBlanks(System.Data.DataTable,System.String[],System.Object[])">
+	<summary>
+Fill Values for blank fields in a datatable 
+ </summary>
+	<param name="LDataTable">Data table to be filled</param>
+	<param name="TableCodeFields">Array of field's names to be checked for blank</param>
+	<param name="TableValues">Array of field values to be filled</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTable(System.Data.DataTable,System.String[],System.Object[])">
+	<summary>
+ This function searches a DataTable on specified columns with values and return datatable satisfying the criteria.
+ </summary>
+	<param name="LDataTable">DataTable searched on specified columns</param>
+	<param name="SearchColumns">An array of  column names eg. {"Column1","Column2", ..  } etc.</param>
+	<param name="SearchValues">An array of values eg. {value1,value2,value3...  </param>
+	<returns>Datatable of specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ This function searches a DataTable on specified columns with values and return datatable satisfying the criteria.
+ </summary>
+	<param name="LDataTable">DataTable searched on specified columns</param>
+	<param name="SearchColumns">Comma separated column names to be searched eg column1,column2,column3} etc.</param>
+	<param name="SearchValues">Comma separated string values to be searched eg. {value1,value2,value3...  </param>
+	<returns>Datatable of specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTable(System.Data.DataTable,System.String,System.Int32)">
+	<summary>
+ This function searches a DataTable on specified column with its integer value and return datatable satisfying the criteria.
+ </summary>
+	<param name="LDataTable">DataTable searched on specified columns</param>
+	<param name="SearchColumn">column name to be searched</param>
+	<param name="SearchValue">integer value to be searched  </param>
+	<returns>Datatable of specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchStringInDTColumn(System.Data.DataTable,System.String,System.String,System.Boolean)">
+	<summary>
+ This function searches a string value into a column of DataTable and return datatable .
+ </summary>
+	<param name="LDataTable">DataTable to be searched.</param>
+	<param name="SearchColumn">Column name to be searched.</param>
+	<param name="SearchString">String value to be Sought.  </param>
+	<param name="IgnoreCase">if Searching is not case sensitive.</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchInSortedDataTable(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ This function searches  value of  specified column of Sorted DataTable on specified column .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumns.</param>
+	<param name="SearchColumns">Comma separated column name(s) to be searched(2 columns only).</param>
+	<param name="SearchValues">Comma separated column value(s) to be Sought.  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchColumnInStringExpression(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ This function searches  value of  specified column of Sorted DataTable in a ~ separated string expression .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumn.</param>
+	<param name="SearchColumn">Column name to be sought in StringExpression.</param>
+	<param name="StringExpression">~  separated string expression of  column value(s) to be searched  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchInSortedDataTable(System.Data.DataTable,System.String,System.Int32,System.String)">
+	<summary>
+ This function searches  value of  specified column of Sorted DataTable on specified column .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumn.</param>
+	<param name="SearchColumn">Column name to be searched.</param>
+	<param name="SearchValue">Column value to be Sought.  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchRowInSortedDataTable(System.Data.DataTable,System.String,System.Int32,System.String)">
+	<summary>
+ This function searches  value of  specified column of Sorted DataTable on specified column .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumn.</param>
+	<param name="SearchColumn">Column name to be searched.</param>
+	<param name="SearchValue">Column value to be Sought.  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchRowInSortedDataTable(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ This function searches  value of  specified column of Sorted DataTable on specified column .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumn.</param>
+	<param name="SearchColumn">Column name to be searched.</param>
+	<param name="SearchValue">Column value to be Sought.  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchStringInSortedDTColumn(System.Data.DataTable,System.String,System.String,System.String)">
+	<summary>
+ This function searches string in a specified column of Sorted DataTable on search column .
+ </summary>
+	<param name="LDataTable">DataTable to be searched originally sorted on SearchColumn.</param>
+	<param name="SearchColumn">Column name to be searched.</param>
+	<param name="SearchString">String value to be Sought from left.  </param>
+	<param name="OutputOnSorting">Comma separated columnnames on which output datatable must be sorted</param>
+	<returns>Datatable on specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RemoveRowsFromDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ This function searches a DataTable on specified columns with values and return datatable after removing the rows that satisfy the criteria.
+ </summary>
+	<param name="LDataTable">DataTable with duplicate rows  on specified columns</param>
+	<param name="SearchColumns  ">Comma separated column names to be searched eg column1,column2,column3} etc.</param>
+	<param name="SearchValues">Comma separated string values to be searched eg. {value1,value2,value3...  </param>
+	<returns>Datatable after removing rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RemoveRowsFromDataTable(System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ Removed specified rows from a table.
+ </summary>
+	<param name="LDataTable">DataTable</param>
+	<param name="HashColumnValues  ">A Hashtable having the keys are column names and values are column values.</param>
+	<returns>Datatable after removing rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RemoveRowFromDataTable(System.Data.DataTable,System.Int32)">
+	<summary>
+ Remove data row from a datatable on primary key.
+ </summary>
+	<param name="LDataTable">DataTable with duplicate rows  on specified columns</param>
+	<param name="PrimaryKeyValue">Value of primary key to be removed  </param>
+	<returns>Datatable after removing rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.RemoveRowsFromDataTable(System.Data.DataTable,System.String,System.Object[])">
+	<summary>
+ This function searches a DataTable on specified columns with values and return datatable after removing the rows that satisfy the criteria.
+ </summary>
+	<param name="LDataTable">DataTable with duplicate rows  on specified columns</param>
+	<param name="SearchColumns  ">Comma separated column names to be searched eg column1,column2,column3} etc.</param>
+	<param name="aSearchValues">An array of value object to be searched eg. {value1,value2,value3...  </param>
+	<returns>Datatable after removing rows</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SearchDataTable(System.Data.DataTable,System.Collections.Hashtable)">
+	<summary>
+ This function searches a DataTable on specified columns with values and return datatable satisfying the criteria.
+ </summary>
+	<param name="LDataTable">DataTable to be searched on specified columns</param>
+	<param name="SearchColumnsValues  ">A hashtable containg columnnames as keys and column values as valu of hashtable .</param>
+	<returns>Datatable of specified criteria</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.TotalOnDataTable(System.Data.DataTable,System.String,System.String,System.Boolean,System.Collections.Hashtable)">
+	<summary>
+ This function creates a unique/distinct rows datatable on  specified columns from a datatable and make totals of numeric columns.
+ </summary>
+	<param name="LDataTable">DataTable with duplicate rows  on specified columns</param>
+	<param name="TotalOnColumns">comma separated  column names on which total of numeric columns will be calculated eg. "Column1,Column2, ..  } etc.</param>
+	<param name="NumericColumns">comma separated  numeric columns names which are added to get total </param>
+	<param name="AllColumns">if false the returning total table will has TotalOnColumns+Numeric Columns only,if true it has the same columns as original datatable</param>
+	<param name="ColumnsOfSameValues">A hashtable which has keys as columnnames,values as columnvalues, which are same for all rows of TotalTable</param>
+	<returns>Unique rows datatable</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetParentNodes(System.Data.DataTable,System.String,System.String,System.String,System.String,System.Int32)">
+	<summary>
+ To Get Parent nodes/groups of a groupcode from a GroupMasterDataTable as an array of ParentGroupCodes
+ </summary>
+	<param name="DtGroupMaster">GroupMaster datatable where groupcode to be searched </param>
+	<param name="GroupCodeField">Name of Groupcode Field in GroupMaster </param>
+	<param name="GroupCodeValue">Value of GroupCode whoose parents to be found</param>
+	<param name="ParentCodeField">Name of ParentCode Field</param>
+	<param name="LastParentValue">Value of Last/Top parent code </param>
+	<param name="ParentCodeCeiling">Final size of parent array,If No. of parents are less than this then add lastparentvalue to compele the size,(-1)  for actual size</param>
+	<returns>An array of parent codes</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.getDateTimeISTNow">
+	<summary>
+ This Function converts dateTime.Now  of server into dateTime.Now of IST time zone.
+ </summary>
+	<returns>Current date in IST</returns>
+</member><member name="M:DataFunctions.DataFunctions.getDateTimeUTCNow">
+	<summary>
+ This function converts dateTime.Now of server into dateTime.Now of UTC time.
+ </summary>
+	<returns>Current date in UTC</returns>
+</member><member name="M:DataFunctions.DataFunctions.ConvertDateTimeUTC_IST(System.DateTime,System.String)">
+	<summary>
+ This function will convert date from IST to UTC or viceversa. Date argument should be either in IST or UTC time zone.
+ </summary>
+	<param name="dt">Date to be converted. If Zone is IST then it should be in UTC timezone and viceversa </param>
+	<param name="zone">Zone is the time zone in which dt is to be converted. It can only be IST or UTC</param>
+	<returns></returns>
+</member><member name="M:DataFunctions.DataFunctions.AddRowInDataTable(System.Data.DataTable,System.Collections.Hashtable,System.Collections.Hashtable)">
+	<summary>
+ To add row in data table ,whoose column values are given as hash table
+ </summary>
+	<param name="LDataTable">Data table in which rows are to be added</param>
+	<param name="ColumnValues">ColumnValues as hashtable where key is columnname and value is its content</param>
+	<param name="CheckColumnValues">Check wether row exists for specified columns of separate hash table</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddRowInDataTable(System.Data.DataTable,System.Int32,System.Collections.Hashtable)">
+	<summary>
+ To add row in data table ,whoose column values are given as hash table
+ </summary>
+	<param name="LDataTable">Data table in which rows are to be added</param>
+	<param name="RepeatRowAsNew">RowNo whoose ColumnValues will be repeated</param>
+	<param name="ReplacedColumnValues">ColumnValues as hash table to be replaced,Key is columnname,Value is column value</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddRowInDataTable(System.Data.DataTable,System.Data.DataRow,System.Collections.Hashtable)">
+	<summary>
+ To add row in data table ,whoose column values are given as hash table
+ </summary>
+	<param name="LDataTable">Data table in which rows are to be added</param>
+	<param name="RepeatRowAsNew">DataRow  whoose ColumnValues will be repeated</param>
+	<param name="ReplacedColumnValues">ColumnValues as hash table to be replaced,Key is columnname,Value is column value</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddRowInDataTable(System.Data.DataTable,System.Data.DataRow,System.Boolean)">
+	<summary>
+ To add row in data table ,whoose column values are given as hash table
+ </summary>
+	<param name="LDataTable">Data table in which rows are to be added</param>
+	<param name="NewDataRow">DataRow  which is added to datatable.</param>
+	<param name="NoAdditionIfExists">If row exists, no datarow will be added</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddRowInDataTable(System.Data.DataTable,System.Data.DataRow[],System.Boolean)">
+	<summary>
+ To add row in data table ,whoose column values are given as hash table
+ </summary>
+	<param name="LDataTable">Data table in which rows are to be added</param>
+	<param name="DataRowsArray">An array of DataRows  which is added to datatable.</param>
+	<param name="NoAdditionIfExists">If row exists, no datarow will be added</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AssignValuesToRow(System.Data.DataRow,System.Collections.Hashtable)">
+	<summary>
+ To assign column values to a data row 
+ </summary>
+	<param name="BaseRow">DataRow inwhich values to assigned</param>
+	<param name="ColumnValues">ColumnValues as hashtable, with key as columnname and value as columnvalue</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AssignValuesToRow(System.Data.DataRow,System.String[],System.Object[])">
+	<summary>
+ To assign column values to a data row 
+ </summary>
+	<param name="BaseRow">DataRow inwhich values to assigned</param>
+	<param name="ColumnNames">Column names as string array</param>
+	<param name="ColumnValues">Column Values as object array</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddColumnsInDataTable(System.Data.DataTable,System.String,System.String,System.String,System.String)">
+	<summary>
+ To add columns  in data table 
+ </summary>
+	<param name="LDataTable">Data table in which columns  are to be added</param>
+	<param name="ColumnNames">Comma separated ColumnNames  as string&gt;</param>
+	<param name="ColumnTypes">Comma separated system.types as string eg system.string,system.decimal,system.int16,system.int32,system.byte[] etc</param>
+	<param name="ColumnsAfter">Existing ColumnName after which columns added</param>
+	<param name="ColumnsBefore">Existing ColumnName before which columns added</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetColumnValuesFromRow(System.Data.DataRow,System.String)">
+	<summary>
+ To get an array objects of given comma separated columns of a datarow 
+ </summary>
+	<param name="LdataRow">DataRow of columns</param>
+	<param name="LcolumnNames">Comma separated string of column names</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetColumnValuesFromRowAsString(System.Data.DataRow,System.String)">
+	<summary>
+ To get a comma separated string values  of comma separated columns of a datarow 
+ </summary>
+	<param name="LdataRow">DataRow of columns</param>
+	<param name="LcolumnNames">Comma separated string of column names</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.MatchColumnValuesOfRow(System.Data.DataRow,System.String,System.Object[])">
+	<summary>
+ To compare a valueObject with ColumnValues oject of a datarow of given columns
+ </summary>
+	<param name="LdataRow">DataRow of columns</param>
+	<param name="LcolumnNames">Comma separated string of column names</param>
+	<param name="ValueObject">An array of obects to be compared with array of columnsvalue object of a datarow</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateExcelFromDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ Create an excel worksheet by a datatable
+ </summary>
+	<param name="LdataTable">DataTable to be exported as work sheet</param>
+	<param name="OutputExcelFile">Full identifier of excel sheet</param>
+	<param name="LeaveColumns">Comma separated columns name which are not transfered</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetDataTableFromExcel(System.String)">
+	<summary>
+ Create a datatable from excel worksheet -1 without using ADO.NET
+ </summary>
+	<param name="InputExcelFile">Full identifier of excel sheet</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateDelimitedTxtFileFromDataTable(System.Data.DataTable,System.String,System.String,System.String,UserProgressBar.ProgressBar@)">
+	<summary>
+ Create a delimited text file from a datatable
+ </summary>
+	<param name="LdataTable">DataTable to be exported as delimited text file.</param>
+	<param name="OutputTextFile">Full identifier of delimited text file</param>
+	<param name="Delimiter">Delimiter as character default is ","</param>
+	<param name="LProgressBar">Progress bar</param>
+	<param name="LeaveColumns">Comma separated columns name which are not transfered</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateExcelFromDataTable(System.Data.DataTable,System.String,System.Data.DataTable,System.String,System.String,System.Data.DataTable,System.String,System.String,System.String[],UserProgressBar.ProgressBar@)">
+	<summary>
+ Create an excel worksheet by a datatable
+ </summary>
+	<param name="LdataTable">DataTable to be exported as work sheet</param>
+	<param name="OutputExcelFile">Full identifier of excel sheet</param>
+	<param name="DtColumnNames">DataTable having Column names descriptions </param>
+	<param name="KeyField1">Key Field name of DtColumnNames for searching of description of columnns of ldatatable</param>
+	<param name="DescriptionField1">Field name of dtcolumnnames holding column descriptions</param>
+	<param name="DtColumnValues">DataTable having cell value corresponding to column code</param>
+	<param name="KeyField2">Comma separated key fields for dtcolumnvalues,key is combination of two values i.e columnname and cellvalue of ldatatable</param>
+	<param name="DescriptionField2">field name of description of columnvalues strored in cells</param>
+	<param name="LeaveColumns">An array of column names witch are not transfered to excel worksheet</param>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.BeginTransaction(System.String,System.String,System.Int32,System.Int32)">
+	<summary>
+ To start an sql  transaction.
+ </summary>
+	<param name="ServerDataBase"></param>
+	<param name="mIsolationLevel"></param>
+	<param name="MaxPoolSize"></param>
+	<param name="ConnectionTimeOut"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CommitTransaction(System.Data.SqlClient.SqlTransaction@,System.String,System.Collections.Hashtable[]@)">
+	<summary>
+ Function to commit transanction or rollback.
+ </summary>
+	<param name="Mtrans">Transanction object</param>
+	<param name="LastKeyPlusInTransaction">An array of hashtable having LastKeyPlus  values involved in this transaction.</param>
+	<param name="TransName">Name of transanction supplied for identification</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.BeginTransaction(System.Data.SqlClient.SqlConnection@,System.String)">
+	<summary>
+ To start an sql transanction.
+ </summary>
+	<param name="LConnection"></param>
+	<param name="mIsolationLevel"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.AddUpperNodeColumns(System.Data.DataTable,System.Data.DataTable,System.String,System.Int16@,System.String)">
+	<summary>
+ Add upper node columns to a datatable,which has upper key in UpperNodeField  eg Town,District,State,Country.
+ </summary>
+	<param name="LdataTable">DataTable with upperNode field and on which columns to be added</param>
+	<param name="SourceNodes">DataTable having primary keys of all uppernodes</param>
+	<param name="UpperNodeField">Name of field which has group value of datarow.</param>
+	<param name="TotalColumnsAdded">No. of columns to be added.</param>
+	<param name="NewColumnNames">Comma separated column Names to be added</param>
+	<returns>New data table with new columns and values</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.CreateTreeView(System.Data.DataTable,System.String,System.String,System.String,System.Windows.Forms.TreeView@,System.String)">
+	<summary>
+ Create a treeview object from a datatable having a hierarchical strucure fields,eg. ParentField,ChildField,NodeTextField and other fields attatched in tag.
+ </summary>
+	<param name="LdataTable">Data table from which tree created</param>
+	<param name="ChildField">Primary key field of datatable </param>
+	<param name="ParentField">Field name contains the parent key field of datarow</param>
+	<param name="NodeTextField">Text field name which is shown as node.text</param>
+	<param name="OtherDisplayfields">Other Fields value stored in treeview.tag</param>
+	<param name="TreeViewObject">A TreeView Object sent by reference with other initial property settings.</param>
+	<returns>Tree View object</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetTreeNodeDetail(System.Windows.Forms.TreeNode)">
+	<summary>
+ Get associated Tag details  of a TreeNode object
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.IsDataRowEmpty(System.Data.DataRow)">
+	<summary>
+ Check wether a datarow has all fields empty.
+ </summary>
+	<param name="LDataRow">DataRow to be checked</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.InsertForNewTownInInfoTable(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Collections.Hashtable)">
+	<summary>
+  Insert rows in CurrRowArray in table class object for new country,state,district,town for later sql stmt. execution.
+ 
+ </summary>
+	<param name="MyTrans">Sql Transanction</param>
+	<param name="ClsTownTable">Class of info table</param>
+	<param name="HashTownDetails">Hash table of inserting values keys are Country,CountryKey,State,StateKey,District,DistrictKey,HomwTown,HomeTownKey</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetCurrRowArrayIfNewInsert(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Collections.Hashtable,System.String)">
+	<summary>
+  Insert rows in CurrRowArray in table class object if new record is selected by the user for later sql stmt. execution.
+ </summary>
+	<param name="MyTrans">Sql Transanction </param>
+	<param name="ClsInfoTable">Class of table</param>
+	<param name="HashInfoDetails">Hash table of inserting values with extra keys are  "NewRowFlag" =true,and "KeyValue" as primary key value  </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetCurrRowArrayIfNewUchkInsert(System.Data.SqlClient.SqlTransaction@,System.Object@,System.Collections.Hashtable,System.String)">
+	<summary>
+  Insert rows in CurrRowArray in table class object if new record is selected by the user for later sql stmt. execution.
+ </summary>
+	<param name="MyTrans">Sql Transanction </param>
+	<param name="ClsInfoTable">Class of table</param>
+	<param name="HashInfoDetails">Hash table of inserting values with extra keys are  "NewRowFlag" =true,and "KeyValue" as primary key value  </param>
+	<param name="mKeyField">Key name  of hashtable ,whose value assigned to maintable</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.SetKeyValueIfNewInsert(System.Data.SqlClient.SqlTransaction@,System.Object[]@)">
+	<summary>
+  Insert rows in CurrRowArray in table class object if new record is selected by the user for later sql stmt. execution.
+ </summary>
+	<param name="MyTrans">Sql Transanction </param>
+	<param name="ClsTables">Class of table</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.FormattedDisplayValue(System.Object@)">
+	<summary>
+ Convert fieldvalue to formatted value in diffrent FRMT prefixed fieldname.
+ </summary>
+	<param name="ClsObject"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ValidateFields(System.Object@,System.Collections.Hashtable,System.String@,System.String)">
+	<summary>
+ Validate  fieldvalues of a table class.
+ </summary>
+	<param name="ClsObject"></param>
+	<param name="HashUnloadValues">A hashtable having keys as CondionVariable names and value is variablevalue </param>
+	<returns>Return controlname to be focussed</returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.ReverseDataTable(System.Data.DataTable,System.Boolean)">
+	<summary>
+ Reverse Rows of a DataTable. i.e. LastRow becomes FirstRow.
+ </summary>
+	<param name="mDataTabale">DataTable to be reversed</param>
+	<param name="Row_IdColumn">True if datatable contains Row_Id column.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.GetUserFilterClause(System.Data.DataTable,System.Data.DataTable,System.Int32)">
+	<summary>
+ To create an sql filter querry by tables FilterDetails,FilterSelected
+ </summary>
+	<param name="FilterDetails"></param>
+	<param name="FilterSelected"></param>
+	<param name="ParentDetailKey"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DataTableToString(System.Data.DataTable,System.Object,System.Object,System.String,System.Boolean)">
+	<summary>
+ Convert a datatable into string with or without ColumnNames.String started with chrw(248) if columnheaders present in the string. 
+ </summary>
+	<param name="FileDt">DataTable for which output string is to be obtained</param>
+	<param name="mColumnsSeparator">Separator used to separate different column values.Default is |</param>
+	<param name="mRowsSeparator">Separator used to separate different column values.Default is chrw(13)</param>
+	<param name="ExcludeFields">, separated string of Columns to be Excluded while creating string</param>
+	<param name="mHeader">Indicates whether columnnames of the data table  to be saved on not on first row position.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.DataRowToString(System.Data.DataRow,System.Object,System.Object,System.String,System.Boolean)">
+	<summary>
+ Convert a datatRow into string with or without ColumnNames.Columnames and row itemarray  seperated by carriage return. 
+ </summary>
+	<param name="FileRw">DataRow for which output string is to be obtained</param>
+	<param name="mColumnsSeparator">Separator used to separate different column values.Default is |</param>
+	<param name="mRowsSeparator">Separator used to separate different row values.Default is chrw(13)</param>
+	<param name="ExcludeFields">Comma separated string of Columns to be Excluded while creating string</param>
+ ''' <param name="mHeader">Indicates whether Heading of the table is to be saved on not.</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.StringToDataTable(System.String,System.String,System.String,System.Data.DataTable)">
+	<summary>
+ To make a datatable object from a string protocol,string starts with chrw(248),if header exists
+ </summary>
+	<param name="InputString">Input string from which data is to be converted into datatable</param>
+	<param name="mColumnsSeparator">Separator used to separate different column values.Default is |</param>
+	<param name="mRowsSeparator">Separator used to separate different column values.Default is chrw(13)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.StringToDataRow(System.String,System.String,System.String)">
+	<summary>
+ To make a datarow object from a string protocol,string starts with chrw(248),if header exists
+ </summary>
+	<param name="InputString">Input string from which data is to be converted into datatable</param>
+	<param name="mColumnsSeparator">Separator used to separate different column values.Default is |</param>
+	<param name="mRowsSeparator">Separator used to separate different column values.Default is chrw(13)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DataFunctions.DataFunctions.WriteInsertQueryScript(System.String,System.String,System.String,System.String,System.Int32,System.Boolean)">
+	<summary>
+ To create a textfile of insert queries as per the records fetched by database table
+ </summary>
+	<param name="filePath">Full file path including name where text file is to be created</param>
+	<param name="serverDataBaseName">Serverdatabase name in 0_srv_0.0_mdf_0 format</param>
+	<param name="tableName">Name of table</param>
+	<param name="condition">Condition in SQL query</param>
+	<param name="NoOfRows">No. of rows to be taken in one script</param>
+	<param name="WithFieldNames">False ,if all fields values supplied in value clause</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
